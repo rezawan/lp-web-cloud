@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Cloud Host Cloud Hosting</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#a33500",
+                        "on-primary-fixed": "#001848",
+                        "surface": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "inverse-primary": "#b2c5ff",
+                        "tertiary-fixed": "#ffdbcf",
+                        "primary": "#003d9b",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-container": "#b6c8fe",
+                        "on-surface-variant": "#434654",
+                        "primary-fixed": "#dae2ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#344573",
+                        "on-secondary-fixed": "#021945",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#7b2600",
+                        "secondary-fixed": "#dae2ff",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#c4d2ff",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "surface-variant": "#e0e3e5",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0052cc",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ffc6b2",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#0c56d0",
+                        "secondary-fixed-dim": "#b4c5fb",
+                        "outline-variant": "#c3c6d6",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#737685",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "surface-container": "#eceef0",
+                        "on-secondary-container": "#415382",
+                        "secondary": "#4c5d8d",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "background": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f9fb;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant/20">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter text-blue-800">Cloud Host</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-slate-600 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
+                    href="#">Hosting</a>
+                <a class="text-slate-600 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
+                    href="#">VPS</a>
+                <a class="text-slate-600 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
+                    href="#">Datacenter</a>
+                <a class="text-slate-600 hover:text-blue-600 font-medium text-sm transition-colors duration-200"
+                    href="#">Domains</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-slate-600 font-medium text-sm hover:text-blue-600 transition-all">Login</button>
+                <button
+                    class="bg-primary text-on-primary px-5 py-2.5 rounded-lg text-sm font-semibold kinetic-gradient hover:opacity-90 active:scale-95 transition-all">Get
+                    Started</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[600px] flex items-center overflow-hidden bg-on-primary-fixed">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <img alt="Cloud Infrastructure" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI7ijHp2kQFSHyb0P6aa70JQn3ksjniAFq3JuhzV-nFJKgF1UmynblFZ1-B7S72L38XxUhaVcVssv1mtadXnPgF15vqNLHdZ6ARmsTcX5xEsOgc8EnGHTdxxOYaZMkeckMVyCz5AO4RAzKBKjTLPeG3KC_gHSLTqNLVO1MjNIa6-nfheQHjS8Dr6Gz0JltI1WdN-zd-UlWukm13Xu_hdidXgSSC7ZmGw_CwIHakHHctIsfeIthzcijEiEvWEwVAUzvR7oHPx5EIV48" />
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed via-on-primary-fixed/60 to-transparent z-10">
+            </div>
+            <div class="container max-w-7xl mx-auto px-6 relative z-20">
+                <div class="max-w-2xl">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-primary-container/30 text-primary-fixed text-xs font-bold tracking-widest uppercase mb-6">Established
+                        2014</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-tight mb-6">
+                        Architecting the <span class="text-primary-fixed">Digital Future.</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 leading-relaxed font-medium mb-10">
+                        Cloud Host provides high-performance cloud infrastructure designed for reliability, scalability,
+                        and extreme speed. We don't just host; we empower.
+                    </p>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-slate-100 transition-all">Our
+                            Story</button>
+                        <button
+                            class="border border-white/20 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all">Global
+                            Network</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Detailed Info & Stats -->
+        <section class="py-24 bg-surface">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <label class="text-primary font-bold text-sm tracking-widest uppercase mb-4 block">About
+                            Cloud Host</label>
+                        <h2
+                            class="text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight mb-8 leading-tight">
+                            Reliability isn't a feature. <br />It's our foundation.
+                        </h2>
+                        <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+                            <p>
+                                Founded in 2014, Cloud Host emerged from a simple realization: the cloud was becoming too
+                                complex and too slow. We set out to build an infrastructure company that prioritizes
+                                high-performance.
+                            </p>
+                            <p>
+                                Today, we operate multiple Tier III certified data centers across Indonesia and global
+                                points of presence with N+1 redundancy at every layer.
+                            </p>
+                            <div class="grid grid-cols-2 gap-8 pt-8">
+                                <div class="border-l-4 border-primary pl-6">
+                                    <h4 class="text-4xl font-extrabold text-primary mb-1">99.99%</h4>
+                                    <p class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Uptime SLA
+                                    </p>
+                                </div>
+                                <div class="border-l-4 border-primary pl-6">
+                                    <h4 class="text-4xl font-extrabold text-primary mb-1">250+</h4>
+                                    <p class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Peering
+                                        Points</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img alt="Data Center" class="rounded-2xl shadow-2xl z-10 relative"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGlWO1nomXgnFVwvnEJo4X832VqNHFkjOsIMCto-hyY-bDBVhimc5BjmvgcBqTPiB76KHVahQ8rEhU9Myf03z8HeApXmzZiyVp1N-b7dK4MzxMUn-X8aGDEDbnaNDbodWRj4K4Or4B1JmPQuNYAzKh2hl-Tw_DyUjDpAqyEMRRSdTVi59nK9PvJkUhyIkNDwGEgv9ljo_siFhnd0D1YVgOjsaheaA7kkpT67XFe1IC7YNPuBxI64aM_WEk9IeYSVu8u399DpjwWCCo" />
+                        <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/10 rounded-2xl -z-10"></div>
+                        <div
+                            class="absolute -top-6 -left-6 w-32 h-32 bg-secondary-container/30 rounded-full blur-3xl -z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mission & Vision (With Background Images) -->
+        <section class="py-24 overflow-hidden">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Mission -->
+                    <div class="relative group h-[500px] rounded-3xl overflow-hidden shadow-xl">
+                        <img alt="Innovation"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUwHNX_jj4ju7PAIDxy6AhLFIbvCkhXPkvJXF0lqk3n1K6lVeIFQbiIvd8VrutIBYVBWnu3Leu_ymB2AcO6JbjeinO_aU-v_Scz7Eh2Lv9dQU8ctgrgZgL1jBJlyrDt-Cy_ThDge8gbK4agKoPpWzRCP78XO-MCoZjZb7GbEnRNftVidtyCcS8MTkFJNWLzwD0NevuS4rK1ku38nFIe9tRluD43XD0a8G4dE37dp9Jb9PtU5RPoulq2VO6YvsJLM45miinwNlo5207" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-12 text-white">
+                            <span
+                                class="material-symbols-outlined text-primary-fixed text-5xl mb-6">rocket_launch</span>
+                            <h3 class="text-3xl font-bold mb-4">Our Mission</h3>
+                            <p class="text-slate-200 text-lg max-w-md leading-relaxed">
+                                To democratize high-performance cloud computing by providing world-class infrastructure
+                                that is accessible, secure, and infinitely scalable for businesses of all sizes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Vision -->
+                    <div class="relative group h-[500px] rounded-3xl overflow-hidden shadow-xl">
+                        <img alt="Future Technology"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW2nLmgUwr0ZeVzLzmC2fi2DvB58awz0prmJHClPSQFTaRDzLzYco2J2ItqUI_3VNkRoBRNTRR2pFoR5NTMeQJejrvFGUo7qwRZezhlRDcdJZ2tCcZ7evhqEZJEL9xzS1MLNoa7sXNACgE8KEFXQbjr7nDTf-ysmJi4XqA62O-pGMBITXJD6qe5POpKGG7fYuzR3zmZL-mbKVuc-Fo9SNwbuZj2fOcuq9L4Wz9sp2JmkXHniR3CR_81AuYY4Ya4CVxSuVSOZNR84hb" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-12 text-white">
+                            <span class="material-symbols-outlined text-white text-5xl mb-6">visibility</span>
+                            <h3 class="text-3xl font-bold mb-4">Our Vision</h3>
+                            <p class="text-blue-100 text-lg max-w-md leading-relaxed">
+                                Becoming the leading global backbone for the digital economy, recognized for
+                                unparalleled performance and innovation in cloud architecture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Horizontal Milestone Timeline (Based on IMAGE_6) -->
+        <section class="py-24 bg-surface-container-low border-y border-outline-variant/10">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface">Our Journey</h2>
+                    <p class="text-on-surface-variant mt-4">A decade of pioneering cloud infrastructure</p>
+                </div>
+                <div class="relative overflow-x-auto pb-12 hide-scrollbar">
+                    <div class="flex min-w-[1000px] justify-between relative px-4">
+                        <!-- Connector Line -->
+                        <div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -translate-y-1/2 -z-10">
+                        </div>
+                        <!-- Milestone 2014 -->
+                        <div class="flex-1 px-4 text-center group">
+                            <div
+                                class="mb-8 p-4 bg-white rounded-xl shadow-md transform group-hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+                                <span class="text-primary font-black text-2xl">2014</span>
+                                <h5 class="text-sm font-bold text-on-surface mt-1 uppercase tracking-tight">The
+                                    Beginning</h5>
+                                <p class="text-xs text-on-surface-variant mt-2">First boutique VPS hosting service
+                                    launched in Jakarta.</p>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center mx-auto shadow-lg relative">
+                                <span class="material-symbols-outlined text-primary text-xl">start</span>
+                            </div>
+                            <img alt="Jakarta Office"
+                                class="mt-8 rounded-lg mx-auto opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all shadow-sm"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLsdg1A-Siy1D8cSK_bX3pYQOFn8UVVz36hcfNBg8nfwA8ZG28btFdU7laDSwhZdoL07XVne6SC-0cyeE5oenHF9wR86Fv0JRHEDHiVnQirX1rjHSDAPQmOs1rnP5-r2J_de6KeGAvxnOAQzGOgQkVc4NljDHD2Ku8a_0gX_g0bj03PcUbBsU7qKFQGYY5NjHp4SKxI7ePFXsouKe7-63qMQS75dhDLDqj_vyi1e9T-SLAam_mei2W2Wi-iaj9jGjcDXD5DnMpNx6D" />
+                        </div>
+                        <!-- Milestone 2017 -->
+                        <div class="flex-1 px-4 text-center group pt-16 md:pt-0 flex flex-col-reverse">
+                            <div
+                                class="mt-8 p-4 bg-white rounded-xl shadow-md transform group-hover:translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+                                <span class="text-primary font-black text-2xl">2017</span>
+                                <h5 class="text-sm font-bold text-on-surface mt-1 uppercase tracking-tight">Enterprise
+                                    Pivot</h5>
+                                <p class="text-xs text-on-surface-variant mt-2">Introduced Tier III Data Center services
+                                    for corporate clients.</p>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center mx-auto shadow-lg relative">
+                                <span class="material-symbols-outlined text-primary text-xl">business</span>
+                            </div>
+                            <img alt="Enterprise DC"
+                                class="mb-8 rounded-lg mx-auto opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all shadow-sm"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc5fy4-iC9WjJ1boVqJkeZYEpzuOyztVm6yPt1SFV9h91WN5xUe0dgBDdQeQdOG1n1zbiCld8iwc2E1KvoHu0-z5Cr8VmuUu-fyBBWsYNIhdM-4ypR77vTME-wAAWUANyW5v91An0QRIMhMthofRMZ648jbbpAcX5FxjY6lXgYU-wKFTJ4YUg6nk61jlidvFXlXTKVfABlaMfS7qz0SyzD5mN0pekQ7Lq0fHijeZ2Rk94vMlqwRKqfpZ0DmuLtj69w8nPmUO4yDYTm" />
+                        </div>
+                        <!-- Milestone 2020 -->
+                        <div class="flex-1 px-4 text-center group">
+                            <div
+                                class="mb-8 p-4 bg-white rounded-xl shadow-md transform group-hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+                                <span class="text-primary font-black text-2xl">2020</span>
+                                <h5 class="text-sm font-bold text-on-surface mt-1 uppercase tracking-tight">Cloud
+                                    Revolution</h5>
+                                <p class="text-xs text-on-surface-variant mt-2">Launched Herza Cloud Platform with
+                                    NVMe-only storage.</p>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center mx-auto shadow-lg relative">
+                                <span class="material-symbols-outlined text-primary text-xl">cloud</span>
+                            </div>
+                            <img alt="NVMe Cloud"
+                                class="mt-8 rounded-lg mx-auto opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all shadow-sm"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM7ZZ_U-h-Ih3B82krrrt4wz4c68BipPULslkKF9Kg-ODsZzKmq8wfms71w9HbXi89FIrpHji5vBILxYzbplrkcrZQ24CPXb3XOtvRx3tFtvWSi7FEQALnQtcvc76xL95xbHxaaIB-eKqTAKrX9rYYonusDSGDTQeN9j_IhCPidTsr07PqvzSF0IR-4U6rD0OUFMDirbYBQgapTGEbxZ6MoKUx7bp5aP4sb6mX2oEUvahFHgUNgs1J2Dn5rVI1Ooo6bghN43dav2sf" />
+                        </div>
+                        <!-- Milestone 2024 -->
+                        <div class="flex-1 px-4 text-center group pt-16 md:pt-0 flex flex-col-reverse">
+                            <div
+                                class="mt-8 p-4 bg-white rounded-xl shadow-md transform group-hover:translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+                                <span class="text-primary font-black text-2xl">2024</span>
+                                <h5 class="text-sm font-bold text-on-surface mt-1 uppercase tracking-tight">Global
+                                    Expansion</h5>
+                                <p class="text-xs text-on-surface-variant mt-2">Opened regional nodes in Singapore,
+                                    Tokyo, and Sydney.</p>
+                            </div>
+                            <div
+                                class="w-12 h-12 bg-white rounded-full border-4 border-primary flex items-center justify-center mx-auto shadow-lg relative">
+                                <span class="material-symbols-outlined text-primary text-xl">public</span>
+                            </div>
+                            <img alt="Global Nodes"
+                                class="mb-8 rounded-lg mx-auto opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all shadow-sm"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjz3NVhl9_MGCyWoqtxxl0a7T__gH5SlJWJIC3pTTmyHs1y7Fzw56_g75_VUhcq6Vq_zFS5fAl4SFl_nCLSPqSUkngULH1kvlW5EzEViLY1BtBewqAobkgeDhoO8JSmg0hRh2S_GQeQEZzK2BnQNFCYvvGiTCr-aPX45e0dzLKdw3Ty6zj1PUeagzNSRRhcpuzWQy1h6t3iNZlcmGPsMrjhEKBtX3vts-_HNOBjHsEvC247A63W_GYDuoYH4h05zg1RrNxqeGp08k" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us (Bento Grid with Images) -->
+        <section class="py-24 bg-surface">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Large Card: Performance -->
+                    <div class="md:col-span-2 relative group overflow-hidden rounded-2xl shadow-lg h-[400px]">
+                        <img alt="Speed"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrkx6gkKPwxm1iQhY-J8HUNwjRgv1_9GzX8B1tV9m8Cl42isjLUseev2fbwB0i4pp-0b_nJ9rs121gJwEE4WHPO7H9vX16z3H9PUvp7N4UQNRTautbxL0Z9z_U7zpvp4AV8bmzXprKCcXl0YH8Xz9o6cuwElbUHk1Zzag3N1IGtmhjwQfkDlnKzID_5J3ZL5iAcmci_X4FLRC7FRjFweS_vALz-A_6obdxL9hG2wD54TFQyUeaJ_7tYrQ6Bi1OJGGkxOjDS4PMcHTh" />
+                        <div class="absolute inset-0 bg-primary/80 flex flex-col justify-end p-10 text-white">
+                            <span class="material-symbols-outlined text-5xl mb-6">speed</span>
+                            <h3 class="text-3xl font-bold mb-4">Insane Performance</h3>
+                            <p class="text-blue-100 leading-relaxed max-w-md">
+                                Equipped with pure NVMe Gen4 storage and AMD EPYC processors, delivering up to 10x the
+                                speed of standard providers.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Security -->
+                    <div class="bg-white p-10 rounded-2xl shadow-sm border border-outline-variant/10 flex flex-col">
+                        <div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-primary text-3xl">shield</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-4">Fortified Security</h3>
+                        <p class="text-on-surface-variant text-sm">
+                            Multi-layer DDoS protection, automatic backups, and hardware-level encryption are standard
+                            features.
+                        </p>
+                    </div>
+                    <!-- Support -->
+                    <div class="bg-primary p-10 rounded-2xl text-on-primary flex flex-col">
+                        <div class="bg-white/10 w-16 h-16 rounded-xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-white text-3xl">support_agent</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Expert Support</h3>
+                        <p class="text-on-primary-container text-sm">
+                            Real humans. Real engineers. 24/7/365 availability with a 15-minute response guarantee.
+                        </p>
+                    </div>
+                    <!-- Horizontal Infrastructure -->
+                    <div
+                        class="md:col-span-3 bg-slate-900 rounded-2xl overflow-hidden shadow-xl flex flex-col md:flex-row">
+                        <div class="p-10 md:w-1/2 flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-white mb-4">Tier III Certified Infrastructure</h3>
+                            <p class="text-slate-400">Our data centers meet the highest global standards for
+                                availability and power redundancy, featuring N+1 configurations.</p>
+                            <div class="mt-8 flex gap-4">
+                                <span
+                                    class="px-3 py-1 bg-white/10 rounded text-[10px] text-white font-bold uppercase tracking-widest">N+1
+                                    Redundancy</span>
+                                <span
+                                    class="px-3 py-1 bg-white/10 rounded text-[10px] text-white font-bold uppercase tracking-widest">Biometric
+                                    Security</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                            <img alt="Data Center" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPAWWFZSCE3NLTiaIdAdhMJc2z0Jf-BnJhl7xwro036ruZ2yN_z5qCqaWBxUByvOJtCMh-upgnVoP8_hpJovPGrHmY4G1OcGgphPhRemNfmUx2yj9VMiWplD3aTgI5K3Yuxwj-4MmH2TgGyHjGY7LyhZCb8I5QvD-r2WyA67jsDHolzqUumvHQaCG7VmJJ1gPASN-QM80YCxcsmy9teMTM66KJpk55Ab8QXoZJt-Q4y4FXa2O4i3EQk3U-xqKk3LgnJimwwsBlucT" />
+                        </div>
+                    </div>
+                    <!-- Elasticity/Green -->
+                    <div class="bg-surface-container p-10 rounded-2xl border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-6">eco</span>
+                        <h3 class="text-xl font-bold text-on-surface mb-4">Green Cloud</h3>
+                        <p class="text-on-surface-variant text-sm">
+                            Committed to carbon-neutral operations by 2030 through renewable energy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Visual Certifications Gallery -->
+        <section class="py-24 bg-surface-container-low border-y border-outline-variant/10">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-on-surface">Certified &amp; Recognized Excellence</h2>
+                    <p class="text-on-surface-variant mt-2">Meeting and exceeding global standards for security and
+                        reliability.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                    <!-- Cert 1 -->
+                    <div class="group text-center">
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 mb-6 transition-all group-hover:shadow-xl group-hover:-translate-y-2">
+                            <div class="aspect-square flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface">ISO 27001</span>
+                        <p class="text-[10px] text-on-surface-variant mt-1">Information Security</p>
+                    </div>
+                    <!-- Cert 2 -->
+                    <div class="group text-center">
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 mb-6 transition-all group-hover:shadow-xl group-hover:-translate-y-2">
+                            <div class="aspect-square flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">security</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface">SOC 2 TYPE II</span>
+                        <p class="text-[10px] text-on-surface-variant mt-1">Data Integrity</p>
+                    </div>
+                    <!-- Cert 3 -->
+                    <div class="group text-center">
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 mb-6 transition-all group-hover:shadow-xl group-hover:-translate-y-2">
+                            <div class="aspect-square flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">verified</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface">Tier III</span>
+                        <p class="text-[10px] text-on-surface-variant mt-1">Certified Facility</p>
+                    </div>
+                    <!-- Cert 4 -->
+                    <div class="group text-center">
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 mb-6 transition-all group-hover:shadow-xl group-hover:-translate-y-2">
+                            <div class="aspect-square flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">trophy</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface">IDC 2023</span>
+                        <p class="text-[10px] text-on-surface-variant mt-1">Innovation Winner</p>
+                    </div>
+                    <!-- Cert 5 -->
+                    <div class="group text-center">
+                        <div
+                            class="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 mb-6 transition-all group-hover:shadow-xl group-hover:-translate-y-2">
+                            <div class="aspect-square flex items-center justify-center">
+                                <span class="material-symbols-outlined text-6xl text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">eco</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-on-surface">Green Tech</span>
+                        <p class="text-[10px] text-on-surface-variant mt-1">Carbon Neutral</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Client Logo Swiper Section -->
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="container max-w-7xl mx-auto px-6">
+                <h2 class="text-center text-sm font-bold text-slate-500 uppercase tracking-widest mb-16">Powering the
+                    world's most innovative teams</h2>
+                <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-80">
+                    <img alt="Google" class="h-8 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJsyfWpdJfawPEpbUUKemwnoLWchKVOsqG8iZLkdiBDIA25XWYEAyvxWkbnTXQu0X8EmvKYWZ7lu68Ta2GfGJd015d0GHvmAGgRVGce8k9K81F3xymRFZRDTspyT8dOaAXQwauC0dulqh7GduUbgNX0b8VXAezMP-K0Uqsyajp8cBYdxoFIAQRE0zAUhNrFhHOymJ2JvwIQdrSyEh-d1v7tFU7jtIs1_ERH5cqotoRr5GjfKIKcbpHMkNB5Pbw2rE-MoXtwdeszWiD" />
+                    <img alt="IBM" class="h-8 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxNnzgOgcdoMZ3Sz5xWale8A7A9K4JNWsTp3RskBH7i-FiTNq7oyA9-UyoFLcBudwge1R4qJqTV8ndPJKD_HVJHenylG7sirUe_ntK7wWtz4ZQVjDao-uBj92BzXjqoPcsLqkmhcblf6SRA_qN3OpGacowgtY1ZDvcoevDIHdnuGiGV9YO4EZDgXcXCHJZxMxc8vvA96MZFwEScZiqNDjwW3BA2gQ2fys4qEp3HkDRC_8PDH-UNVBPRrtFG3DADkauuEUKE9Xcw7R3" />
+                    <img alt="Netflix" class="h-8 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmjcTziRo_qu199d40Ih_bh_LNxSU_R_-ky2RGKrdnMHfAKsRlFBt9R3fORsGXVV2KdWj0WGnBIXA6oDzdbAcjntjCUOmI4INbcSlHL4OAiV36AG-uBhzRPLqm16JzXqv3s3TJKEAkkY-lfuujc4gAdxQ3A9EhEt0TscEkhyjSm-I285iRO6cSgogz5NdlKtmdfUzYPis1jram8d9Dd5qVDcaMJ9Fl4h1JLGo1c1m-DrIiAiANvK7krd-Sy5KhIdBGkUh6CCVw8aDu" />
+                    <img alt="Microsoft" class="h-8 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZRAgFzKfcJMzCp36DJFFygwjik12oGZ09FM_lqqa0H9cC5QZ-NC0Xvo0kVrPWMeZZCC_9aTO3uvoucMuuowA3LnL7eZg08Qip0UWreuqPRqpDFJlj5qP7s3r9tnaxNJokr3NBpOMApGclOC3MNjlZ-BvtJbHscYCcCXPdOmE5Kl3JPa542sRWLmVFrYNMCmVbRxoETY0npQQ6VqZqoVHqPvrNV7gegIAT3rVxXftaQvebf1WTcyAupZuobDVKjvB_28kVHBs3mRTv" />
+                    <img alt="Slack" class="h-8 grayscale hover:grayscale-0 transition-all cursor-pointer"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA48bMDTucP6iA524JiTaIcNJF3lcVvwxfLWc-b08KmCuZ9PZMkVQkNZhbvcsgKcw76-8GZLLhmWEge8tlmtWkLYiZAWNmcwHF1wZmocEuucnlstL9hHoxU5D_eWikfvgPrn1lg_iygf2FweA0PdgSqHtcXAnn-rQDAj_Qa2vt4FQfJx7cNGA2H4tSFuEHarOs_tnpu-9wmZR9ZjOeGhKOUryZIDXG_ZjMaDhkeiS_YIfqz-WZtrjDTGnfOLfI-0DL6JSK1sJ0JXIs7" />
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-24">
+            <div class="container max-w-7xl mx-auto px-6">
+                <div
+                    class="bg-primary rounded-[2rem] p-12 text-center text-on-primary relative overflow-hidden shadow-2xl">
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+                    </div>
+                    <div class="relative z-10 max-w-2xl mx-auto">
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Ready to Experience
+                            <br />High-Performance?</h2>
+                        <p class="text-xl mb-12 text-blue-100">Join the thousands of developers and businesses who have
+                            migrated their critical infrastructure to Cloud Host.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button
+                                class="bg-white text-primary px-10 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-lg">Get
+                                Started Now</button>
+                            <button
+                                class="border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">Talk
+                                to an Architect</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-20 border-t border-outline-variant/20">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-12">
+            <div class="col-span-2 md:col-span-1">
+                <div class="text-2xl font-bold text-blue-800 mb-8 tracking-tighter">Cloud Host</div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-8">
+                    Enterprise-grade cloud hosting solutions powered by cutting-edge hardware and a global fiber-optic
+                    network.
+                </p>
+                <div class="flex space-x-6">
+                    <span
+                        class="material-symbols-outlined text-slate-400 hover:text-blue-700 cursor-pointer">public</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 hover:text-blue-700 cursor-pointer">mail</span>
+                    <span
+                        class="material-symbols-outlined text-slate-400 hover:text-blue-700 cursor-pointer">call</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-on-surface mb-8">Company</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">About Us</a>
+                    </li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Data
+                            Centers</a></li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Network</a>
+                    </li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-on-surface mb-8">Support</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Knowledge
+                            Base</a></li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Submit a
+                            Ticket</a></li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">API Docs</a>
+                    </li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Status Page</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-on-surface mb-8">Legal</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Privacy
+                            Policy</a></li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">Terms of
+                            Service</a></li>
+                    <li><a class="text-slate-500 text-sm hover:text-blue-700 transition-colors" href="#">SLA</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-center">
+            <p class="text-slate-400 text-xs">© 2024 Cloud Host Cloud Hosting. All rights reserved.</p>
+            <div class="mt-4 md:mt-0 flex gap-6">
+                <a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
+                <a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
+                <a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Facebook</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

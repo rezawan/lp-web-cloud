@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Herza Infrastructure</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#ffb597",
+                        "surface-tint": "#0050e3",
+                        "on-tertiary-container": "#fffcff",
+                        "inverse-primary": "#b5c4ff",
+                        "surface": "#faf8ff",
+                        "on-secondary-fixed-variant": "#153ea3",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#002a82",
+                        "secondary-fixed-dim": "#b5c4ff",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "surface-container": "#ededfa",
+                        "secondary-fixed": "#dce1ff",
+                        "primary-fixed": "#dce1ff",
+                        "outline-variant": "#c3c5d8",
+                        "on-tertiary-fixed-variant": "#7e2c00",
+                        "on-primary-fixed": "#00164e",
+                        "on-primary-container": "#fffcff",
+                        "secondary": "#3557bc",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3039",
+                        "surface-variant": "#e1e1ee",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#ca4c00",
+                        "surface-container-low": "#f3f2ff",
+                        "on-surface-variant": "#434655",
+                        "surface-dim": "#d9d9e5",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-background": "#191b24",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-secondary-fixed": "#00164e",
+                        "surface-container-highest": "#e1e1ee",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#7796fe",
+                        "on-surface": "#191b24",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e7f4",
+                        "tertiary": "#a13b00",
+                        "outline": "#737687",
+                        "inverse-on-surface": "#f0f0fc",
+                        "primary-container": "#2d68ff",
+                        "surface-bright": "#faf8ff",
+                        "on-primary-fixed-variant": "#003cae",
+                        "primary": "#004ede"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #004ede 0%, #2d68ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-blue-800 tracking-tighter">Herza</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-inter text-sm font-medium tracking-tight text-slate-600 hover:text-blue-600 transition-all" href="#">Hosting</a>
+<a class="font-inter text-sm font-medium tracking-tight text-slate-600 hover:text-blue-600 transition-all" href="#">Servers</a>
+<a class="font-inter text-sm font-medium tracking-tight text-slate-600 hover:text-blue-600 transition-all" href="#">Colocation</a>
+<a class="font-inter text-sm font-medium tracking-tight text-blue-700 border-b-2 border-blue-600 pb-1" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block font-inter text-sm font-medium text-slate-600 hover:text-blue-600 transition-all px-4 py-2">Client Portal</button>
+<button class="hero-gradient text-white px-6 py-2.5 rounded-xl font-medium text-sm transition-transform scale-95 active:scale-100">Get Started</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-low -z-10"></div>
+<div class="max-w-7xl mx-auto px-6 text-center">
+<span class="text-on-primary-fixed-variant font-bold tracking-widest text-xs uppercase mb-4 block">GET IN TOUCH</span>
+<h1 class="text-5xl md:text-7xl font-black text-on-surface tracking-tighter mb-6">How can we help?</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
+                    Experience the ethereal infrastructure. Whether you're scaling a startup or managing global enterprise workloads, our team is ready to assist.
+                </p>
+</div>
+</section>
+<!-- Support Cards Grid -->
+<section class="py-12 -mt-16 relative z-10">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Live Chat Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_24px_48px_rgba(25,27,36,0.06)] group hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">chat_bubble</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Live Chat</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Chat with our technical experts in real-time for immediate troubleshooting.</p>
+<button class="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                        Start Chatting <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Email Support Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_24px_48px_rgba(25,27,36,0.06)] group hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Email Support</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Preferred for detailed technical inquiries and architectural consulting.</p>
+<button class="text-primary font-semibold text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+                        support@herza.com <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- 24x7 Helpdesk Card -->
+<div class="bg-primary text-on-primary p-8 rounded-xl shadow-[0px_24px_48px_rgba(0,78,222,0.15)] group hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center mb-6 text-white">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+</div>
+<h3 class="text-xl font-bold mb-2">24/7 Helpdesk</h3>
+<p class="text-blue-100 text-sm mb-6 leading-relaxed">Our global command center is always active. Get help anytime, anywhere.</p>
+<button class="bg-white text-primary px-4 py-2 rounded-lg font-bold text-sm transition-opacity hover:opacity-90">
+                        Open a Ticket
+                    </button>
+</div>
+</div>
+</section>
+<!-- Contact Form & Asymmetric Info Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+<div class="space-y-8">
+<h2 class="text-4xl font-extrabold tracking-tight">Tell us about your infrastructure goals.</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                        Our experts are available to discuss colocation, managed cloud services, or dedicated high-performance server deployments.
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Global Headquarters</h4>
+<p class="text-on-surface-variant text-sm">100 Tech Plaza, Palo Alto, CA 94301</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Priority Support Line</h4>
+<p class="text-on-surface-variant text-sm">+1 (800) HERZA-OPS</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-sm h-64 grayscale opacity-80 hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Modern data center control room with blue accent lighting and high-tech monitoring screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC222oEnFlgmXURqlkWZd8JFoPOpVPrJmGm2JdUyRPBhqjG-xnK3Z6oyCcEjzYyaz7nnnA6rUlgWs6tNbjfOoe1WDUeHTNV29eK8bzv96-MsHAV-e10ouxGqQcAGMTsQVqz5pPIeewnq9GP0hNDpXy9rSwYKPACAeD4cfYS5AHKi3eo3yNomx3Uw2wvbAew4EyQy2DuoonwJedCc57ezpDVWp_A_zg8sBMb8HX9zljqggckn9L3ALd0xrvKRC_dp0-Zz8XRR0Fu4GAi"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-tighter">Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-surface-tint focus:ring-opacity-30 transition-all text-sm outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-tighter">Email</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-surface-tint focus:ring-opacity-30 transition-all text-sm outline-none" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-tighter">Phone</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-surface-tint focus:ring-opacity-30 transition-all text-sm outline-none" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-tighter">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl p-4 focus:ring-2 focus:ring-surface-tint focus:ring-opacity-30 transition-all text-sm outline-none resize-none" placeholder="How can we assist with your infrastructure?" rows="4"></textarea>
+</div>
+<button class="hero-gradient text-white w-full py-4 rounded-xl font-bold tracking-tight shadow-lg shadow-primary/20 transition-transform active:scale-95" type="submit">
+                            Send Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Meet Partners Logo Grid -->
+<section class="py-20 bg-surface-container-low border-t border-slate-200/50">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-12">
+<h3 class="text-xl font-bold text-on-surface">Trusted by Industry Leaders</h3>
+<p class="text-sm text-on-surface-variant mt-2">Powering the next generation of global infrastructure</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-40 grayscale">
+<div class="flex justify-center">
+<img class="h-10 object-contain" data-alt="minimalist monochrome corporate logo for tech partner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Im7G0Ox6WNJZVpvHtXMu317W0btWpPQ6R-WPc5fmOx70NjI6k7FNB7N3YS2Wfm4Zi2LWlM4WZKjHgZ3T8LWGxc_V7LqXMLD_TWdpIzr-Ca9zWeReJVN5LLa1An8Xmkt5311WdznbLPLyVHjTGWO7m9O-nnC62pQD6SXQrst_w6qkdlrsmQzdlg7kv78jtDWknBU_ImaKCsW_V56nu22FZAPa3HWELYHMjn3hmy_aZl-IJAt6mRneawcamdNY-QmjLkLDhLwuyoCI"/>
+</div>
+<div class="flex justify-center">
+<img class="h-8 object-contain" data-alt="abstract tech company logo black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDObQWUp8KdJ0A4niE0qYHGIRPA3hSNhr6RVsxRboo3sTIq82xfFmHCgYjcbQedh2mhQzAJR4I4Fz46i6hRywS04qttCnihO9CN__fstWXjRxDYFUo5mUfNY1j1J_DUoAJotZ9CgRpXwUGspAhLO0W3eAYlQBvQxF4_gyHhjtDq6_be1K4ZRDAJaL_aCPPvT2BnLDdTM3pVnxZx11ZL3DIXyZq6BYPlJ7_rbzy4Y5HuZfDVxScDbROwvGVHyjk8LoLNoz_kTaRLI5UV"/>
+</div>
+<div class="flex justify-center">
+<img class="h-10 object-contain" data-alt="minimalist web service logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM6u1e2t08aHqLLLOZIBQabb6VWtceJ88DZuknSIp5U4IebAMvL3PWHqyHolseIrzRzI2e02RcS5qs2jYgrspnXN_513HZUlqAetLYtWHxqZSNW6wDAV8XWTJW25RCe-mehzTEWJtgnpcxLcG-3dX8GIL0UO-3nKzLdbJRRS9ec0CL_lTr5CDTIBG90D55e6orT84pRGCA1OCySzymR3okdkfk5pkzVP4ws_QQeogqOztoAETMQnWIEpw3Ve--68sYkN9G_JwyMc_E"/>
+</div>
+<div class="flex justify-center">
+<img class="h-9 object-contain" data-alt="digital infrastructure partner logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASxtQT5OZBdit_yVF5xxazwJKrPrsF6goOXYyyio5tcyucnk6eFAn82rJIrm3JMjf7tzhvojsq2GTMjpVS_kB790aVefezuG1reZwbOZAlBCDv5SxjBGvInDr8zaUiZmihadmi40npnsbtNprwMIxloBdP8ypjH77BY9n9r4j98sc9I8uphctSJTudLEY1pmaHYBfWdIs6Wzj-SiavtNfdGV00PgAZvbIPU3av1NbRE_1kXlHsTJaWgYYU0yVopsIksBoEaoQ7WuYL"/>
+</div>
+<div class="flex justify-center">
+<img class="h-10 object-contain" data-alt="enterprise technology partner logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHnPwv2HoQfU9xlH5YyvHThwJyntIVvsmi1T6qwl2fkk8wWqoepOOyzfBLczHCQhv5fX5_KECi0LUzJDf--7UsBEQbySUM7iWDS08yjyC00WVG7Khp-0lzwawG8AQVoiRcsVPibjDCdMp2wf5DvieVuVbK6XmHsVwvS0TojKgb7uAExR-DpJMk6_UD-AWMgPrz0MefhHdgahHaj--X4by56_nMypVCbvKfpwaGa4Q6E9AaYBP9t0SM543ujFfDplHVqnOliSdih0Jz"/>
+</div>
+<div class="flex justify-center">
+<img class="h-8 object-contain" data-alt="cloud services provider logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKUs9Vopm370lFx9x5DmGtpYgJ-AeQSJBjFT_usa-GraU_cCYIiSigOgIBiVzrEJbL77Ic8T58_DQfRjathRBD8vgnPzC6MY3Ilmac3cVkixULcmKEPyD64-ZtQCwN1ihjuuBLm6A6eMsXhYpcvqsBJAJSv1yKC-TqQhIjvJQ1gzGav4xdb3Rl8FPgWMh6Y0UeZ0QEOO3RQrpLKjFLunqGNl2YL9qTANL31ju7t3pOhOG-HTVvGpCQX6d4YZyhTnbjVXgD_dx4bbvU"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-6 bg-slate-50 border-t border-slate-200/50">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-6">
+<div class="text-xl font-bold text-slate-900">Herza</div>
+<div class="flex gap-8">
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 transition-opacity hover:underline" href="#">Privacy Policy</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 transition-opacity hover:underline" href="#">Terms of Service</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 transition-opacity hover:underline" href="#">SLA</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 transition-opacity hover:underline" href="#">Status</a>
+</div>
+<div class="font-inter text-xs text-slate-500">© 2024 Herza Infrastructure. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

@@ -1,15 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-plus-jakarta);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-plus-jakarta);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -81,6 +104,54 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+
+  /* Material Design 3 Colors */
+  --on-primary: #ffffff;
+  --secondary-container: #b6c8fe;
+  --tertiary-container: #a33500;
+  --surface: #f7f9fb;
+  --surface-tint: #0c56d0;
+  --outline-variant: #c3c6d6;
+  --primary-fixed: #dae2ff;
+  --on-secondary-container: #415382;
+  --surface-variant: #e0e3e5;
+  --tertiary: #7b2600;
+  --secondary: #4c5d8d;
+  --on-background: #191c1e;
+  --on-tertiary-fixed-variant: #812800;
+  --primary-fixed-dim: #b2c5ff;
+  --inverse-surface: #2d3133;
+  --surface-container-lowest: #ffffff;
+  --on-surface-variant: #434654;
+  --error: #ba1a1a;
+  --on-secondary-fixed: #021945;
+  --tertiary-fixed-dim: #ffb59b;
+  --on-error: #ffffff;
+  --primary: #003d9b;
+  --inverse-primary: #b2c5ff;
+  --surface-container-low: #f2f4f6;
+  --on-primary-fixed: #001848;
+  --surface-container-highest: #e0e3e5;
+  --on-secondary: #ffffff;
+  --primary-container: #0052cc;
+  --surface-container-high: #e6e8ea;
+  --on-tertiary-fixed: #380d00;
+  --error-container: #ffdad6;
+  --tertiary-fixed: #ffdbcf;
+  --outline: #737685;
+  --inverse-on-surface: #eff1f3;
+  --secondary-fixed: #dae2ff;
+  --on-surface: #191c1e;
+  --on-tertiary: #ffffff;
+  --on-primary-container: #c4d2ff;
+  --surface-container: #eceef0;
+  --on-error-container: #93000a;
+  --surface-dim: #d8dadc;
+  --surface-bright: #f7f9fb;
+  --on-secondary-fixed-variant: #344573;
+  --on-tertiary-container: #ffc6b2;
+  --on-primary-fixed-variant: #0040a2;
+  --secondary-fixed-dim: #b4c5fb;
 }
 
 .dark {

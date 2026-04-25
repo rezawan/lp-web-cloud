@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cloud Host | High-Performance Cloud Hosting</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#b6c8fe",
+                    "tertiary-container": "#a33500",
+                    "background": "#f7f9fb",
+                    "surface-tint": "#0c56d0",
+                    "outline-variant": "#c3c6d6",
+                    "primary-fixed": "#dae2ff",
+                    "on-secondary-container": "#415382",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary": "#7b2600",
+                    "secondary": "#4c5d8d",
+                    "on-background": "#191c1e",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#434654",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#021945",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "on-error": "#ffffff",
+                    "primary": "#003d9b",
+                    "inverse-primary": "#b2c5ff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-fixed": "#001848",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#0052cc",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed": "#380d00",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffdbcf",
+                    "outline": "#737685",
+                    "inverse-on-surface": "#eff1f3",
+                    "secondary-fixed": "#dae2ff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#c4d2ff",
+                    "surface-container": "#eceef0",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d8dadc",
+                    "surface-bright": "#f7f9fb",
+                    "on-secondary-fixed-variant": "#344573",
+                    "on-tertiary-container": "#ffc6b2",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "secondary-fixed-dim": "#b4c5fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-blue-900/5">
+<div class="flex justify-between items-center h-16 px-6 lg:px-12 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-blue-900 dark:text-white flex items-center gap-2">
+<span class="w-8 h-8 hero-gradient rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-base">cloud</span>
+</span>
+                Cloud Host
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight">
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700 py-1" href="#">Cloud Hosting</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors py-1" href="#">VPS</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors py-1" href="#">Dedicated Server</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors py-1" href="#">Domains</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors py-1" href="#">Solutions</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-slate-600 font-medium text-sm px-4 py-2 hover:bg-blue-50/50 rounded-lg transition-all">Login</button>
+<button class="bg-primary text-white font-semibold text-sm px-6 py-2.5 rounded-lg shadow-lg shadow-primary/20 scale-95 active:opacity-80 duration-200 transition-all">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-20 lg:py-32">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-fixed blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary-fixed-dim blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3"></div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant text-xs font-bold tracking-wider uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            Next-Gen Infrastructure
+                        </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                            Infinite <span class="text-primary italic">Scalability</span> for the Modern Web
+                        </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                            Cloud Host provides high-performance cloud solutions engineered for mission-critical applications. Experience 99.99% uptime with global edge connectivity.
+                        </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 hero-gradient text-white rounded-lg font-bold shadow-xl shadow-primary/25 hover:scale-[1.02] transition-transform">Deploy Your Server Now</button>
+<button class="px-8 py-4 bg-surface-container-high text-on-surface font-bold rounded-lg hover:bg-surface-container-highest transition-colors">View Pricing</button>
+</div>
+<div class="flex items-center gap-6 pt-6 grayscale opacity-60">
+<img class="h-6" data-alt="minimalist logo of a major technology corporation in dark navy grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-F9BvUcXJkpdqHaNXzdK2T-PeX5lMkF6p3HY9PAuJtJ_gcRkbg_QDYHuC2QUATdFm-Fz1yHWNqH87zqpzEU_ldIHXXCglw6ioh7w8lJ-ZprijS5Sx3D9OvyZLlHIHd9Ls5ydzIapP39fgus31UN24ilWYVoTnOy0WqfvB1I5u8TVM5tvxZGJZEJfApnfNIja88Pp3y78v03NUnl6akLz370b4HE7L___xICPBcEVQ4CX05E4lDbPME34mYPZ3DE_RyKTxyweX2a9I"/>
+<img class="h-6" data-alt="modern software company logo in clean geometric typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz6vhXbouHTOwMLaBkK2NtP7tutFIeQwY36lDo9rE5LXSRyU6VIPk9CHfypi3Lxd5fim8ye55-DtmRpBUVgR8N2a9flrBl8i59g33NeCRcTz1ptx8Go7RosPlPx3heYXhr2up6WFjR8yPLCmUgivT2ew1k1TbHhYcj1OOceELkjIJ9vFDlKoDRng3nwFVw_uIzN0FFLfHT0U4cx6m0-uHS-nmF10BFpp_AktW-XPAUGnNTYPoFhtgpeJynnF_K05Xc8gmu52NZP9Pf"/>
+<img class="h-6" data-alt="fintech startup brand identity mark in professional slate color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNwfRJy_ILWiDTC8bRQilZHttdUSvUXvbwZPUnE9Ey9cTG3EWXbaklI3HaKMTTGLOvYRUGRlGe7nTwVfZSMIx___bL9A-TDWQgK1gvnYPvUevtSWFirMRJoBNNcqncn_636nhtxQmwfl6pNsZKfdnDV7HjALMZPF1Xx1TJHD_ceanYNMs6JZiAHlcRgDtiwJ_5F5IIEZGKzBquJ4Gf6ixUU5AY59xv9mm9xYCU5LYAY3GuAGt3LIU4hQPAlNbKKG5KeOg9OWRA5pfR"/>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative z-10 rounded-xl bg-surface-container-lowest shadow-2xl shadow-blue-900/10 p-2 transform lg:rotate-3">
+<img class="rounded-lg w-full" data-alt="clean user interface dashboard showing cloud server performance metrics with blue data visualizations and charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY-COxZesDOZeGr6Q9IYRrggFeXken1w55d9G9JsF8ypp4fqbk7rxUkJ8H-4UY6_dpHzIhnEvucRTJyXibhMymuQqpAlRKP4mQyBjDLdlWdIHaGT7YTFp1YGOzgmkQQ1MicQm2ooPtyzcYJ0EUr9T7mABOfeliJbTweXNBd9SpecLq8pCkBxcHhYvAcTZsX3_g1NKiQLPNMB2MXMcHTV3N29_dhehxzO_MZQfDHnOQtr6VS1u0cChnIdosDrk_oRFdTmB4UKx3MvYO"/>
+<div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl flex items-center gap-4 animate-pulse">
+<div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<div class="text-xs font-bold text-slate-400 uppercase">Latency</div>
+<div class="text-lg font-bold text-on-surface">12ms Global Avg</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Section - Bento Grid -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<h2 class="text-3xl lg:text-4xl font-extrabold tracking-tight text-on-surface">Precision Engineered Solutions</h2>
+<p class="text-on-surface-variant">We offer a range of products designed to handle everything from light blog traffic to massive enterprise-scale data processing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Cloud Hosting -->
+<div class="md:col-span-2 group bg-surface-container-lowest rounded-xl p-8 transition-all hover:translate-y-[-4px]">
+<div class="flex flex-col lg:flex-row gap-8 items-center">
+<div class="flex-1 space-y-4 text-left">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">cloud_queue</span>
+<h3 class="text-2xl font-bold">Cloud Hosting</h3>
+<p class="text-on-surface-variant">Optimized for CMS like WordPress and custom React/Next.js applications. Scalable resources with automated backups and NVMe SSD storage.</p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Unlimited Bandwidth
+                                    </li>
+<li class="flex items-center gap-2 text-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-sm">check</span> Free SSL Certificates
+                                    </li>
+</ul>
+<button class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Explore Plans <span class="material-symbols-outlined text-base">arrow_forward</span></button>
+</div>
+<div class="flex-1">
+<img class="rounded-lg w-full" data-alt="minimalist 3d illustration of floating clouds and server racks in a clean blue and white aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWTGvAuVc-j5W7yY2sFHIZ5UntRPpRiZFTEiO0QUvrPa2z6KkkyV2mKrUkadjYwsH2NamRtxzYUAPvddJSk7WPvm7a0fC8Gsab55t4zUAvFThtfRDGUwSjBVsbWPGkxhhe36z0m_nXkj5I4rwMLBJOUHO8a0oDnMSp2Wvynxsnarcp7DSD-7fudBVpm-JqUSDBYEeXXfj6NhJ0nsdZgyhQ0AKZ8noGHf-BPZ5KDNtIb4F0omuve3FogvnjTrned6hJGHajCbbeEHYO"/>
+</div>
+</div>
+</div>
+<!-- VPS Elite -->
+<div class="bg-primary p-8 rounded-xl text-white flex flex-col justify-between group">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-4xl text-primary-fixed" style="font-variation-settings: 'FILL' 1;">developer_board</span>
+<h3 class="text-2xl font-bold">VPS Elite</h3>
+<p class="text-primary-container text-sm leading-relaxed">Dedicated resources with full root access. Choose your OS and scale instantly as your user base grows.</p>
+</div>
+<div class="mt-8">
+<div class="text-3xl font-bold mb-4">$12.99<span class="text-sm font-normal opacity-70">/mo</span></div>
+<button class="w-full py-3 bg-white text-primary rounded-lg font-bold group-hover:bg-primary-fixed transition-colors">Configure Server</button>
+</div>
+</div>
+<!-- Bare Metal -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-tertiary group transition-all hover:bg-surface">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-6" style="font-variation-settings: 'FILL' 1;">dns</span>
+<h3 class="text-2xl font-bold mb-4">Bare Metal</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Maximum performance with raw hardware access. No virtualization layer overhead for compute-intensive workloads.</p>
+<button class="text-tertiary font-bold text-sm flex items-center gap-1">Custom Quote <span class="material-symbols-outlined text-base">arrow_forward</span></button>
+</div>
+<!-- Global Presence -->
+<div class="md:col-span-2 relative overflow-hidden bg-on-primary-fixed rounded-xl p-8 text-white min-h-[300px] flex items-end">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="abstract stylized world map with glowing data connection lines and node points across continents" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCItULWMYVBva-AiYpkJt_gFheiJfF6-pJ-Kd-44xJ8wnA6RGdAj8QY-btYUKfycSBizr7fhcDUnZDZIgFJfTR95FpL0APyFKniOVqD3cd8geCyohJ9tGimPjCNJA3H2WImbz9ndDkOR_Vlzom3xqDmPHfQR0xFHCva-CxsQh4Hu3Gw21YOT7G5YNCp_wW4ojnhqp9THZQ2xCSdpmsd3galjCnLbRTohEN_eM-5TsljPGTkWXShG4g4GqG8G7wjSKTAvgIk8Q-hbdKP"/>
+</div>
+<div class="relative z-10 max-w-md">
+<h3 class="text-2xl font-bold mb-2">Global Infrastructure</h3>
+<p class="text-secondary-container text-sm">24 data centers strategically located across 5 continents to ensure your content is always close to your users.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10">
+<img class="w-full h-full object-cover" data-alt="close-up of glowing blue fiber optic cables and digital security shield icons representing high-speed encrypted data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2kIBgI4KCSmCpQbGylKsEppTuOp-rRk9JpWZWq_mDCF9xsVU50FWiulUxV_KTlh1xIpc_9jkDHSCE3rMNhjYc5NPmvOpk_9QDTvzIS2fZHd3mH5pZf2SJDobuEx5lfh9NUNGanLvRLEsemaXZIlDbGHemr1Dv2Or7vNt1FwGWeKx9m6VYgYfyy597oH4uk6R1TbB16xoAxXGyNb_U78bILOR71dG02WKkwSYavjsEt6r-yBLnaBGWNp-sF44fDeI_xBprOWN7zUxC"/>
+</div>
+<div class="absolute top-8 right-8 bg-white/90 backdrop-blur p-6 rounded-xl shadow-xl border border-white/50">
+<div class="flex items-center gap-4 mb-4">
+<span class="w-3 h-3 bg-green-500 rounded-full"></span>
+<span class="font-bold text-on-surface">DDoS Shield Active</span>
+</div>
+<div class="space-y-2">
+<div class="h-2 w-32 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full w-4/5 bg-primary rounded-full"></div>
+</div>
+<div class="h-2 w-24 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-4xl font-extrabold tracking-tight">Enterprise Grade Security</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed">Your data is your most valuable asset. We protect it with multi-layered security protocols and 24/7 monitoring.</p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Real-time Threat Detection</h4>
+<p class="text-on-surface-variant text-sm">AI-powered systems analyze traffic patterns to mitigate attacks before they reach your server.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Encrypted Storage</h4>
+<p class="text-on-surface-variant text-sm">All data at rest is encrypted using AES-256 standards, ensuring privacy and compliance.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Compliance Ready</h4>
+<p class="text-on-surface-variant text-sm">Certified for ISO 27001, SOC2 Type II, and GDPR readiness for global operations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24">
+<div class="max-w-5xl mx-auto px-6">
+<div class="hero-gradient rounded-3xl p-12 lg:p-20 text-center text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-8">
+<h2 class="text-4xl lg:text-5xl font-extrabold tracking-tighter">Ready to Scale?</h2>
+<p class="text-primary-container text-xl max-w-2xl mx-auto">Join over 10,000 developers and businesses who trust Herza for their infrastructure needs.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-primary px-10 py-4 rounded-xl font-bold shadow-2xl hover:scale-105 transition-transform">Create Free Account</button>
+<button class="bg-primary-container/20 border border-white/20 px-10 py-4 rounded-xl font-bold hover:bg-primary-container/40 transition-colors">Contact Sales</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 py-12 lg:px-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-bold text-blue-900 dark:text-white">Cloud Host</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs leading-relaxed text-slate-500">Premium cloud hosting solutions with a focus on speed, security, and world-class support.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">hub</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">share</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-bold text-on-surface uppercase tracking-widest">Products</h4>
+<ul class="space-y-2 font-['Plus_Jakarta_Sans'] text-xs">
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Cloud Hosting</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Elite VPS</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Dedicated Servers</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Domain Names</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-bold text-on-surface uppercase tracking-widest">Company</h4>
+<ul class="space-y-2 font-['Plus_Jakarta_Sans'] text-xs">
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Affiliate Program</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-bold text-on-surface uppercase tracking-widest">Support</h4>
+<ul class="space-y-2 font-['Plus_Jakarta_Sans'] text-xs">
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Contact Support</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Knowledge Base</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">Status Page</a></li>
+<li><a class="text-slate-500 hover:text-blue-600 transition-all duration-300" href="#">SLA Guarantee</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 border-t border-slate-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Plus_Jakarta_Sans'] text-xs leading-relaxed text-slate-500">© 2024 Cloud Host Cloud Hosting. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 text-xs hover:underline underline-offset-4" href="#">Legal</a>
+<a class="text-slate-500 text-xs hover:underline underline-offset-4" href="#">Cookies</a>
+<a class="text-slate-500 text-xs hover:underline underline-offset-4" href="#">Security</a>
+</div>
+</div>
+</footer>
+</body></html>
