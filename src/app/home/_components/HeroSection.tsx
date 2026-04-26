@@ -4,7 +4,36 @@ import { Button } from "@/components/ui/button";
 import { Zap } from "lucide-react";
 import Image from "next/image";
 
-export function HeroSection() {
+interface HeroSectionContent {
+  badge: string;
+  headline: string;
+  highlight?: string;
+  description: string;
+  ctas: Array<{ label: string }>;
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+
+interface HeroSectionProps {
+  content?: HeroSectionContent;
+}
+
+const DEFAULT_CONTENT: HeroSectionContent = {
+  badge: 'Next-Gen Infrastructure',
+  headline: 'Infinite Scalability for the Modern Web',
+  highlight: 'Scalability',
+  description:
+    'Cloud Host provides high-performance cloud solutions engineered for mission-critical applications. Experience 99.99% uptime with global edge connectivity.',
+  ctas: [{ label: 'Deploy Your Server Now' }, { label: 'View Pricing' }],
+  image: {
+    src: '/assets/images/home-hero.png',
+    alt: 'Modern server room with glowing blue LED lights on racks, symmetrical perspective, clean high-tech architectural datacenter environment',
+  },
+};
+
+export function HeroSection({ content = DEFAULT_CONTENT }: HeroSectionProps) {
  
   return (
     <section className="relative overflow-hidden bg-surface py-20 lg:py-32">
@@ -21,20 +50,17 @@ export function HeroSection() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold tracking-wider uppercase">
               <Zap className="w-4 h-4" />
-              Next-Gen Infrastructure
+              {content.badge}
             </div>
 
             {/* Headline */}
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tighter text-slate-900 dark:text-white leading-[1.1]">
-              Infinite <span className="text-blue-600 italic">Scalability</span>{" "}
-              for the Modern Web
+              {content.headline}
             </h1>
 
             {/* Description */}
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
-              Cloud Host provides high-performance cloud solutions engineered
-              for mission-critical applications. Experience 99.99% uptime with
-              global edge connectivity.
+              {content.description}
             </p>
 
             {/* CTA Buttons */}
@@ -43,14 +69,14 @@ export function HeroSection() {
                 size="lg"
                 className="bg-linear-to-r from-blue-600 to-blue-800 text-white shadow-xl shadow-blue-600/25 hover:shadow-blue-600/40 hover:scale-[1.02] transition-transform"
               >
-                Deploy Your Server Now
+                {content.ctas[0]?.label ?? 'Deploy Your Server Now'}
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800"
               >
-                View Pricing
+                {content.ctas[1]?.label ?? 'View Pricing'}
               </Button>
             </div>
 
@@ -89,8 +115,8 @@ export function HeroSection() {
             <div className="aspect-square rounded-2xl overflow-hidden kinetic-shadow">
               <Image
                 className="w-full h-full object-cover rounded-2xl"
-                alt="Modern server room with glowing blue LED lights on racks, symmetrical perspective, clean high-tech architectural datacenter environment"
-                src="/assets/images/home-hero.png"
+                alt={content.image.alt}
+                src={content.image.src}
                 fill
               />
             </div>

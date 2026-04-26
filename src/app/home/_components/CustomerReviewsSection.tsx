@@ -72,18 +72,40 @@ const reviews = [
   },
 ];
 
-export function CustomerReviewsSection() {
+interface CustomerReviewsContent {
+  summary: {
+    stat: string;
+    heading: string;
+    description: string;
+    cta: string;
+  };
+  items: typeof reviews;
+}
+
+interface CustomerReviewsSectionProps {
+  content?: CustomerReviewsContent;
+}
+
+export function CustomerReviewsSection({ content }: CustomerReviewsSectionProps) {
+  const summary = content?.summary ?? {
+    stat: '5000+',
+    heading: 'Clients believe in us',
+    description: 'Trusted by startups, agencies, and enterprises running websites and mission-critical apps.',
+    cta: 'Get Started',
+  };
+  const reviewItems = content?.items ?? reviews;
+
   return (
     <section className="py-20 bg-surface-container-low border-y border-outline-variant/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-4">
-          <p className="text-5xl md:text-6xl font-black tracking-tight text-blue-600 mb-3">5000+</p>
-          <h2 className="text-3xl font-extrabold tracking-tight text-on-surface mb-4">Clients believe in us</h2>
+          <p className="text-5xl md:text-6xl font-black tracking-tight text-blue-600 mb-3">{summary.stat}</p>
+          <h2 className="text-3xl font-extrabold tracking-tight text-on-surface mb-4">{summary.heading}</h2>
           <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
-            Trusted by startups, agencies, and enterprises running websites and mission-critical apps.
+            {summary.description}
           </p>
           <Button className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-7 py-6">
-            Get Started
+            {summary.cta}
           </Button>
         </div>
 
@@ -111,7 +133,7 @@ export function CustomerReviewsSection() {
             }}
             className="h-136"
           >
-            {reviews.map((review) => (
+            {reviewItems.map((review) => (
               <SwiperSlide key={review.id}>
                 <article className="h-full bg-surface-container-lowest rounded-2xl p-7 md:p-8 shadow-sm border border-outline-variant/20">
                   <div className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-secondary-container/60 mb-5">

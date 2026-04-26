@@ -1,0 +1,233 @@
+{
+  "page": "products",
+  "route": "/products",
+  "meta": {
+    "title": "Cloud Hosting Plans | Cloud Host",
+    "description": "Choose the perfect hosting plan with NVMe storage, enterprise-grade security, and 24/7 support. From basic web hosting to advanced enterprise solutions."
+  },
+  "header": {
+    "brand": {
+      "name": "Cloud Host",
+      "href": "/"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      { "label": "Web Hosting", "href": "/products" },
+      { "label": "Servers", "href": "#" },
+      { "label": "Domains", "href": "/domains" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "actions": {
+      "login": { "label": "Login" },
+      "primary": { "label": "Get Started" }
+    }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "products-hero",
+      "headline": "High-Performance Cloud Infrastructure",
+      "highlight": "Cloud Infrastructure",
+      "description": "Experience lightning-fast hosting with NVMe storage, enterprise-grade security, and 24/7 expert support designed for the next generation of web applications.",
+      "tabs": ["Web Hosting", "Turbo", "VPS", "Enterprise"],
+      "image": { "src": "/assets/images/products1.png", "alt": "Cloud server infrastructure" },
+      "floatingBadge": {
+        "label": "NVMe Speed",
+        "value": "10x Faster Performance"
+      }
+    },
+    {
+      "type": "pricing-plans",
+      "id": "products-pricing",
+      "plans": [
+        {
+          "name": "GO",
+          "tier": "Basic",
+          "price": "9.36",
+          "period": "/year",
+          "featured": false,
+          "features": [
+            { "name": "1 GB NVMe Storage", "included": true },
+            { "name": "100 GB Bandwidth", "included": true },
+            { "name": "1 Website", "included": true },
+            { "name": "Free Domain", "included": false }
+          ],
+          "cta": "Get Started"
+        },
+        {
+          "name": "STARTER",
+          "tier": "Standard",
+          "price": "24.99",
+          "period": "/year",
+          "featured": true,
+          "badge": "Most Popular",
+          "features": [
+            { "name": "5 GB NVMe Storage", "included": true },
+            { "name": "Unlimited Bandwidth", "included": true },
+            { "name": "5 Websites", "included": true },
+            { "name": "Free Domain (.com)", "included": true }
+          ],
+          "cta": "Get Started"
+        },
+        {
+          "name": "MEDIUM",
+          "tier": "Business",
+          "price": "49.50",
+          "period": "/year",
+          "featured": false,
+          "features": [
+            { "name": "20 GB NVMe Storage", "included": true },
+            { "name": "Unlimited Bandwidth", "included": true },
+            { "name": "Unlimited Websites", "included": true },
+            { "name": "Daily Backups", "included": true }
+          ],
+          "cta": "Get Started"
+        },
+        {
+          "name": "ADVANCED",
+          "tier": "Enterprise",
+          "price": "89.99",
+          "period": "/year",
+          "featured": false,
+          "features": [
+            { "name": "50 GB NVMe Storage", "included": true },
+            { "name": "Dedicated Support", "included": true },
+            { "name": "Advanced Security Shield", "included": true },
+            { "name": "Free Domain & SSL", "included": true }
+          ],
+          "cta": "Get Started"
+        }
+      ]
+    },
+    {
+      "type": "comparison-table",
+      "id": "products-comparison",
+      "heading": "Detailed Plan Comparison",
+      "columns": ["Features", "GO", "STARTER", "MEDIUM", "ADVANCED"],
+      "rows": [
+        { "feature": "CPU Cores", "go": "1 Core", "starter": "2 Cores", "medium": "4 Cores", "advanced": "8 Cores" },
+        { "feature": "Physical Memory", "go": "1 GB", "starter": "2 GB", "medium": "4 GB", "advanced": "8 GB" },
+        { "feature": "Disk I/O", "go": "10 MB/s", "starter": "25 MB/s", "medium": "50 MB/s", "advanced": "100 MB/s" },
+        { "feature": "Entry Processes", "go": "20", "starter": "50", "medium": "100", "advanced": "Unlimited" },
+        { "feature": "Inodes", "go": "100,000", "starter": "250,000", "medium": "500,000", "advanced": "1,000,000" }
+      ]
+    },
+    {
+      "type": "features-grid",
+      "id": "products-features",
+      "heading": "Engineered for Performance",
+      "items": [
+        {
+          "title": "30 Day Guarantee",
+          "description": "Risk-free trial. If you aren't satisfied, we refund your payment within 30 days."
+        },
+        {
+          "title": "99.9% Uptime",
+          "description": "Enterprise-grade SLAs ensuring your business is always online for your customers."
+        },
+        {
+          "title": "Softaculous",
+          "description": "Install 400+ applications including WordPress and Joomla with a single click."
+        }
+      ]
+    },
+    {
+      "type": "advantages",
+      "id": "products-advantages",
+      "label": "All Plans Included",
+      "heading": "The Cloud Advantage",
+      "items": [
+        {
+          "title": "Flexible Control",
+          "description": "Full cPanel or DirectAdmin access giving you complete control over your hosting environment."
+        },
+        {
+          "title": "Filtered Bandwidth",
+          "description": "DDoS protection and traffic filtering included by default to keep malicious actors at bay."
+        },
+        {
+          "title": "Improve Site Speed",
+          "description": "Litespeed Web Server technology ensures your static and dynamic content loads instantly."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "products-faq",
+      "heading": "Explore FAQ's",
+      "items": [
+        {
+          "question": "How do I migrate my existing website to Cloud Host?",
+          "answer": "We provide free migration assistance. Simply contact our support team with your current hosting details, and we'll handle the transfer for you within 24 hours."
+        },
+        {
+          "question": "What type of storage do you use?",
+          "answer": "We exclusively use enterprise-grade NVMe (Non-Volatile Memory Express) SSDs which are up to 10x faster than traditional SSDs and 50x faster than HDDs."
+        },
+        {
+          "question": "Is there a limit on bandwidth?",
+          "answer": "No limits on bandwidth! Our plans include unlimited bandwidth (except the basic GO plan which comes with 100 GB). This means you can scale your business without worrying about data transfer costs."
+        }
+      ]
+    },
+    {
+      "type": "contact-cta",
+      "id": "products-contact-cta",
+      "heading": "Do you have any questions?",
+      "description": "Our expert team is available 24/7/365 to assist you with any technical hurdles or billing inquiries.",
+      "ctas": [
+        { "label": "Live Chat" },
+        { "label": "Email Support" }
+      ],
+      "helpdeskCard": {
+        "title": "24/7 Helpdesk",
+        "subtitle": "Average response: 15min",
+        "quote": "The support team helped me migrate 50+ sites in less than 24 hours. Incredible service!"
+      }
+    }
+  ],
+  "footer": {
+    "brand": {
+      "name": "Cloud Host",
+      "description": "Premium cloud hosting solutions with a focus on speed, security, and world-class support."
+    },
+    "sections": [
+      {
+        "title": "Products",
+        "links": [
+          { "label": "Cloud Hosting", "href": "#" },
+          { "label": "Elite VPS", "href": "#" },
+          { "label": "Dedicated Servers", "href": "#" },
+          { "label": "Domain Names", "href": "/domains" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "#" },
+          { "label": "Affiliate Program", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Contact Support", "href": "#" },
+          { "label": "Knowledge Base", "href": "#" },
+          { "label": "Status Page", "href": "#" },
+          { "label": "SLA Guarantee", "href": "#" }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2024 Cloud Host Cloud Hosting. All rights reserved.",
+      "links": [
+        { "label": "Legal", "href": "#" },
+        { "label": "Cookies", "href": "#" },
+        { "label": "Security", "href": "#" }
+      ]
+    }
+  }
+}

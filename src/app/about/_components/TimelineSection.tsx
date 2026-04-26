@@ -14,8 +14,24 @@ interface Milestone {
   reverse?: boolean;
 }
 
-export function TimelineSection() {
-  const milestones: Milestone[] = [
+interface TimelineSectionContent {
+  heading: string;
+  description: string;
+  milestones: Array<{
+    year: string;
+    title: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+  }>;
+}
+
+interface TimelineSectionProps {
+  content?: TimelineSectionContent;
+}
+
+export function TimelineSection({ content }: TimelineSectionProps) {
+  const milestones: Milestone[] = (content?.milestones ?? [
     {
       year: '2014',
       title: 'The Beginning',
@@ -53,15 +69,22 @@ export function TimelineSection() {
       imageAlt: 'Global Nodes',
       reverse: true,
     },
-  ];
+  ]).map((milestone, index) => ({
+    ...milestone,
+    icon: [Rocket, Briefcase, Cloud, Globe][index] ?? Rocket,
+    reverse: index % 2 === 1,
+  }));
+
+  const heading = content?.heading ?? 'Our Journey';
+  const description = content?.description ?? 'A decade of pioneering cloud infrastructure';
 
   return (
     <SectionContainer bgColor="lighter" className="py-24 overflow-hidden border-y border-slate-200 dark:border-slate-800">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-          Our Journey
+          {heading}
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mt-4">A decade of pioneering cloud infrastructure</p>
+        <p className="text-slate-600 dark:text-slate-400 mt-4">{description}</p>
       </div>
 
       <div className="space-y-12 relative">

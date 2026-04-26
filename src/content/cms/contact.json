@@ -1,0 +1,140 @@
+{
+  "page": "contact",
+  "route": "/contact",
+  "meta": {
+    "title": "Contact Us | Cloud Host",
+    "description": "Get in touch with Cloud Host for hosting, server, and infrastructure support. Reach our team via live chat, email, or priority helpdesk."
+  },
+  "header": {
+    "brand": {
+      "name": "Cloud Host",
+      "href": "/"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      { "label": "Web Hosting", "href": "/products" },
+      { "label": "Servers", "href": "#" },
+      { "label": "Domains", "href": "/domains" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "actions": {
+      "login": { "label": "Login" },
+      "primary": { "label": "Get Started" }
+    }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "contact-hero",
+      "badge": "Get In Touch",
+      "headline": "How can we help?",
+      "description": "Whether you're scaling a startup or managing enterprise workloads, our team is ready to assist with hosting, servers, and infrastructure."
+    },
+    {
+      "type": "support-channels",
+      "id": "contact-support",
+      "items": [
+        {
+          "title": "Live Chat",
+          "description": "Chat with our technical experts in real-time for immediate troubleshooting.",
+          "action": "Start Chatting",
+          "featured": false
+        },
+        {
+          "title": "Email Support",
+          "description": "Preferred for detailed technical inquiries and architectural consulting.",
+          "action": "support@cloudhost.com",
+          "featured": false
+        },
+        {
+          "title": "24/7 Helpdesk",
+          "description": "Our global command center is always active. Get help anytime, anywhere.",
+          "action": "Open a Ticket",
+          "featured": true
+        }
+      ]
+    },
+    {
+      "type": "inquiry",
+      "id": "contact-inquiry",
+      "heading": "Tell us about your infrastructure goals.",
+      "description": "Our experts are available to discuss colocation, managed cloud services, or dedicated high-performance server deployments.",
+      "contactInfo": [
+        {
+          "title": "Global Headquarters",
+          "value": "100 Tech Plaza, Palo Alto, CA 94301"
+        },
+        {
+          "title": "Priority Support Line",
+          "value": "+1 (800) Cloud Host-OPS"
+        }
+      ],
+      "opsCenterNote": "Global operations center with around-the-clock monitoring and infrastructure specialists on standby.",
+      "form": {
+        "fields": [
+          { "name": "name", "label": "Name", "type": "text", "placeholder": "John Doe" },
+          { "name": "email", "label": "Email", "type": "email", "placeholder": "john@company.com" },
+          { "name": "phone", "label": "Phone", "type": "tel", "placeholder": "+1 (555) 000-0000" },
+          {
+            "name": "message",
+            "label": "Message",
+            "type": "textarea",
+            "placeholder": "How can we assist with your infrastructure?"
+          }
+        ],
+        "submitLabel": "Send Inquiry"
+      }
+    },
+    {
+      "type": "trusted-by",
+      "id": "contact-trusted-by",
+      "heading": "Trusted by Industry Leaders",
+      "description": "Powering the next generation of global infrastructure",
+      "items": ["Nexa Systems", "CoreScale", "ByteGrid", "InfraNova", "SkyCompute", "DataSphere"]
+    }
+  ],
+  "footer": {
+    "brand": {
+      "name": "Cloud Host",
+      "description": "Premium cloud hosting solutions with a focus on speed, security, and world-class support."
+    },
+    "sections": [
+      {
+        "title": "Products",
+        "links": [
+          { "label": "Cloud Hosting", "href": "#" },
+          { "label": "Elite VPS", "href": "#" },
+          { "label": "Dedicated Servers", "href": "#" },
+          { "label": "Domain Names", "href": "/domains" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "#" },
+          { "label": "Affiliate Program", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Contact Support", "href": "#" },
+          { "label": "Knowledge Base", "href": "#" },
+          { "label": "Status Page", "href": "#" },
+          { "label": "SLA Guarantee", "href": "#" }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2024 Cloud Host Cloud Hosting. All rights reserved.",
+      "links": [
+        { "label": "Legal", "href": "#" },
+        { "label": "Cookies", "href": "#" },
+        { "label": "Security", "href": "#" }
+      ]
+    }
+  }
+}

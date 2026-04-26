@@ -2,7 +2,33 @@ import { Button } from '@/components/ui/button';
 import { MessageCircle, Mail, HeadsetIcon } from 'lucide-react';
 import Image from 'next/image';
 
-export function ProductsContactCTA() {
+interface ProductsContactCTAContent {
+  heading: string;
+  description: string;
+  ctas: Array<{ label: string }>;
+  helpdeskCard: {
+    title: string;
+    subtitle: string;
+    quote: string;
+  };
+}
+
+interface ProductsContactCTAProps {
+  content?: ProductsContactCTAContent;
+}
+
+export function ProductsContactCTA({ content }: ProductsContactCTAProps) {
+  const heading = content?.heading ?? 'Do you have any questions?';
+  const description =
+    content?.description ??
+    'Our expert team is available 24/7/365 to assist you with any technical hurdles or billing inquiries.';
+  const ctas = content?.ctas ?? [{ label: 'Live Chat' }, { label: 'Email Support' }];
+  const helpdeskCard = content?.helpdeskCard ?? {
+    title: '24/7 Helpdesk',
+    subtitle: 'Average response: 15min',
+    quote: 'The support team helped me migrate 50+ sites in less than 24 hours. Incredible service!',
+  };
+
   return (
     <section className="py-20 bg-blue-600 dark:bg-blue-900 overflow-hidden relative">
       {/* Background Image */}
@@ -18,9 +44,9 @@ export function ProductsContactCTA() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left Content */}
         <div className="max-w-xl text-center md:text-left">
-          <h2 className="text-4xl font-extrabold text-white mb-6">Do you have any questions?</h2>
+          <h2 className="text-4xl font-extrabold text-white mb-6">{heading}</h2>
           <p className="text-blue-100 text-lg mb-8">
-            Our expert team is available 24/7/365 to assist you with any technical hurdles or billing inquiries.
+            {description}
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
@@ -28,14 +54,14 @@ export function ProductsContactCTA() {
               className="bg-white text-blue-600 hover:bg-blue-50 flex items-center gap-2 font-bold px-8 py-4"
             >
               <MessageCircle className="w-5 h-5" />
-              Live Chat
+              {ctas[0]?.label ?? 'Live Chat'}
             </Button>
             <Button
               variant="outline"
               className="border-2 border-white text-white hover:bg-white/10 flex items-center gap-2 font-bold px-8 py-4"
             >
               <Mail className="w-5 h-5" />
-              Email Support
+              {ctas[1]?.label ?? 'Email Support'}
             </Button>
           </div>
         </div>
@@ -47,12 +73,12 @@ export function ProductsContactCTA() {
               <HeadsetIcon className="w-6 h-6 text-blue-600" />
             </div>
             <div>
-              <p className="font-bold">24/7 Helpdesk</p>
-              <p className="text-xs opacity-70">Average response: 15min</p>
+              <p className="font-bold">{helpdeskCard.title}</p>
+              <p className="text-xs opacity-70">{helpdeskCard.subtitle}</p>
             </div>
           </div>
           <p className="text-sm italic">
-            &quot;The support team helped me migrate 50+ sites in less than 24 hours. Incredible service!&quot;
+            &quot;{helpdeskCard.quote}&quot;
           </p>
         </div>
       </div>

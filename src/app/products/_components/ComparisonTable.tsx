@@ -8,8 +8,17 @@ interface ComparisonRow {
   advanced: string;
 }
 
-export function ComparisonTable() {
-  const comparisonData: ComparisonRow[] = [
+interface ComparisonTableContent {
+  heading: string;
+  rows: ComparisonRow[];
+}
+
+interface ComparisonTableProps {
+  content?: ComparisonTableContent;
+}
+
+export function ComparisonTable({ content }: ComparisonTableProps) {
+  const comparisonData: ComparisonRow[] = content?.rows ?? [
     {
       feature: 'CPU Cores',
       go: '1 Core',
@@ -47,10 +56,12 @@ export function ComparisonTable() {
     },
   ];
 
+  const heading = content?.heading ?? 'Detailed Plan Comparison';
+
   return (
     <SectionContainer bgColor="light">
       <div className="mb-16 text-center">
-        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">Detailed Plan Comparison</h2>
+        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">{heading}</h2>
         <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
       </div>
 

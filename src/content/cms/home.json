@@ -1,0 +1,265 @@
+{
+  "page": "home",
+  "route": "/home",
+  "meta": {
+    "title": "Cloud Host | High-Performance Cloud Hosting",
+    "description": "Enterprise-grade cloud hosting solutions powered by cutting-edge hardware and a global fiber-optic network."
+  },
+  "header": {
+    "brand": {
+      "name": "Cloud Host",
+      "href": "/"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      {
+        "label": "Web Hosting",
+        "href": "/products",
+        "children": [
+          { "label": "Web Hosting", "href": "/products", "description": "Advanced NVMe SSD" },
+          { "label": "Turbo Hosting", "href": "/products", "description": "Enhanced Performance" },
+          { "label": "Hosting", "href": "/products", "description": "Fast, Local Performance" },
+          { "label": "Reseller Hosting", "href": "/products", "description": "Start Hosting Business" }
+        ],
+        "additionalLinks": [
+          { "label": "WordPress Hosting", "href": "/products" },
+          { "label": "Windows Hosting", "href": "/products" },
+          { "label": "Reseller Hosting", "href": "/products" }
+        ]
+      },
+      { "label": "Servers", "href": "#" },
+      { "label": "Domains", "href": "/domains" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "actions": {
+      "login": { "label": "Login" },
+      "primary": { "label": "Get Started" }
+    }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "home-hero",
+      "badge": "Next-Gen Infrastructure",
+      "headline": "Infinite Scalability for the Modern Web",
+      "highlight": "Scalability",
+      "description": "Cloud Host provides high-performance cloud solutions engineered for mission-critical applications. Experience 99.99% uptime with global edge connectivity.",
+      "ctas": [
+        { "label": "Deploy Your Server Now" },
+        { "label": "View Pricing" }
+      ],
+      "image": {
+        "src": "/assets/images/home-hero.png",
+        "alt": "Modern server room with glowing blue LED lights on racks, symmetrical perspective, clean high-tech architectural datacenter environment"
+      }
+    },
+    {
+      "type": "solutions-grid",
+      "id": "home-solutions",
+      "heading": "Precision Engineered Solutions",
+      "description": "We offer a range of products designed to handle everything from light blog traffic to massive enterprise-scale data processing.",
+      "cards": [
+        {
+          "variant": "featured",
+          "title": "Cloud Hosting",
+          "description": "Optimized for CMS like WordPress and custom React/Next.js applications. Scalable resources with automated backups and NVMe SSD storage.",
+          "features": ["Unlimited Bandwidth", "Free SSL Certificates"],
+          "cta": { "text": "Explore Plans", "href": "/products" }
+        },
+        {
+          "variant": "primary",
+          "title": "VPS Elite",
+          "description": "Dedicated resources with full root access. Choose your OS and scale instantly as your user base grows.",
+          "cta": { "text": "$12.99/mo • Configure Server", "href": "/products" }
+        },
+        {
+          "variant": "default",
+          "title": "Bare Metal",
+          "description": "Maximum performance with raw hardware access. No virtualization layer overhead for compute-intensive workloads.",
+          "cta": { "text": "Custom Quote" }
+        },
+        {
+          "variant": "image-wide",
+          "title": "Global Infrastructure",
+          "description": "24 data centers strategically located across 5 continents to ensure your content is always close to your users.",
+          "image": { "src": "/assets/images/home2.png", "alt": "World map with data connection nodes" }
+        },
+        {
+          "variant": "default",
+          "title": "Fortified Security",
+          "description": "Multi-layer DDoS protection, automatic backups, and hardware-level encryption are standard features."
+        },
+        {
+          "variant": "default",
+          "title": "Expert Support",
+          "description": "Real humans. Real engineers. 24/7/365 availability with a 15-minute response guarantee."
+        },
+        {
+          "variant": "dark",
+          "title": "Tier III Certified Infrastructure",
+          "description": "Our data centers meet the highest global standards for availability and power redundancy, featuring N+1 configurations."
+        },
+        {
+          "variant": "default",
+          "title": "Green Cloud",
+          "description": "Committed to carbon-neutral operations by 2030 through renewable energy."
+        }
+      ]
+    },
+    {
+      "type": "security",
+      "id": "home-security",
+      "heading": "Enterprise Grade Security",
+      "description": "Your data is your most valuable asset. We protect it with multi-layered security protocols and 24/7 monitoring.",
+      "image": {
+        "src": "/assets/images/home3.png",
+        "alt": "Fiber optic cables with security icons"
+      },
+      "statusCard": {
+        "title": "DDoS Shield Active"
+      },
+      "features": [
+        {
+          "title": "Real-time Threat Detection",
+          "description": "AI-powered systems analyze traffic patterns to mitigate attacks before they reach your server."
+        },
+        {
+          "title": "Encrypted Storage",
+          "description": "All data at rest is encrypted using AES-256 standards, ensuring privacy and compliance."
+        },
+        {
+          "title": "Compliance Ready",
+          "description": "Certified for ISO 27001, SOC2 Type II, and GDPR readiness for global operations."
+        }
+      ]
+    },
+    {
+      "type": "reviews",
+      "id": "home-reviews",
+      "summary": {
+        "stat": "5000+",
+        "heading": "Clients believe in us",
+        "description": "Trusted by startups, agencies, and enterprises running websites and mission-critical apps.",
+        "cta": "Get Started"
+      },
+      "items": [
+        {
+          "name": "Rafi Hasan",
+          "role": "Founder, Nova Commerce",
+          "message": "Migration was smooth and uptime has been excellent. Their support team responds quickly and explains technical issues clearly.",
+          "rating": 5
+        },
+        {
+          "name": "Mira Dutta",
+          "role": "CTO, BrightStack",
+          "message": "We moved our APIs to Cloud Host and saw immediate performance gains. The dashboard and deployment flow are straightforward.",
+          "rating": 5
+        },
+        {
+          "name": "Andra Wijaya",
+          "role": "Product Manager, PixelRise",
+          "message": "Provisioning new environments takes minutes, and monitoring gives us clear visibility into every service in production.",
+          "rating": 5
+        },
+        {
+          "name": "Kevin Santoso",
+          "role": "Lead Engineer, Orbit Labs",
+          "message": "The managed database offering has been reliable and fast. Backups and restore workflows are simple and dependable.",
+          "rating": 5
+        },
+        {
+          "name": "Nadia Putri",
+          "role": "Operations Head, Aruna Digital",
+          "message": "Support quality stands out. We always get actionable recommendations, not generic replies, when something needs attention.",
+          "rating": 5
+        },
+        {
+          "name": "Rizki Mahendra",
+          "role": "CTO, Synapse Studio",
+          "message": "Traffic spikes are no longer stressful. Auto-scaling and performance remained stable during our biggest product launch week.",
+          "rating": 5
+        },
+        {
+          "name": "Felicia Tan",
+          "role": "Founder, Bloom Cart",
+          "message": "Our storefront latency dropped significantly after migration. Customers notice faster checkout and smoother browsing.",
+          "rating": 5
+        },
+        {
+          "name": "Bagas Pratama",
+          "role": "DevOps Engineer, Meridian AI",
+          "message": "Deployment pipelines integrate cleanly with our stack. The platform feels built for teams shipping continuously.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "type": "partners",
+      "id": "home-partners",
+      "heading": "Our Partners",
+      "description": "We collaborate with trusted technology and infrastructure brands.",
+      "items": [
+        { "name": "Nexa Systems", "logoText": "NX" },
+        { "name": "DataPulse", "logoText": "DP" },
+        { "name": "OrbitWare", "logoText": "OW" },
+        { "name": "Skyline Apps", "logoText": "SA" },
+        { "name": "CoreBit Labs", "logoText": "CB" },
+        { "name": "Vertex Cloud", "logoText": "VC" }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "shared-cta",
+      "heading": "Ready to Scale?",
+      "description": "Join over 10,000 developers and businesses who trust Cloud Host for their infrastructure needs.",
+      "ctas": [
+        { "label": "Create Free Account" },
+        { "label": "Contact Sales" }
+      ]
+    }
+  ],
+  "footer": {
+    "brand": {
+      "name": "Cloud Host",
+      "description": "Premium cloud hosting solutions with a focus on speed, security, and world-class support."
+    },
+    "sections": [
+      {
+        "title": "Products",
+        "links": [
+          { "label": "Cloud Hosting", "href": "#" },
+          { "label": "Elite VPS", "href": "#" },
+          { "label": "Dedicated Servers", "href": "#" },
+          { "label": "Domain Names", "href": "/domains" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "#" },
+          { "label": "Affiliate Program", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Contact Support", "href": "#" },
+          { "label": "Knowledge Base", "href": "#" },
+          { "label": "Status Page", "href": "#" },
+          { "label": "SLA Guarantee", "href": "#" }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2024 Cloud Host Cloud Hosting. All rights reserved.",
+      "links": [
+        { "label": "Legal", "href": "#" },
+        { "label": "Cookies", "href": "#" },
+        { "label": "Security", "href": "#" }
+      ]
+    }
+  }
+}

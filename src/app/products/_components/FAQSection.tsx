@@ -8,8 +8,17 @@ interface FAQItem {
   answer: string;
 }
 
-export function FAQSection() {
-  const faqItems: FAQItem[] = [
+interface FAQSectionContent {
+  heading: string;
+  items: FAQItem[];
+}
+
+interface FAQSectionProps {
+  content?: FAQSectionContent;
+}
+
+export function FAQSection({ content }: FAQSectionProps) {
+  const faqItems: FAQItem[] = content?.items ?? [
     {
       question: 'How do I migrate my existing website to Cloud Host?',
       answer:
@@ -27,9 +36,11 @@ export function FAQSection() {
     },
   ];
 
+  const heading = content?.heading ?? "Explore FAQ's";
+
   return (
     <SectionContainer bgColor="lighter" className="py-20">
-      <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">Explore FAQ&apos;s</h2>
+      <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">{heading}</h2>
 
       <Accordion type="single" collapsible defaultValue="faq-1" className="mx-auto max-w-3xl space-y-4">
         {faqItems.map((item, index) => (

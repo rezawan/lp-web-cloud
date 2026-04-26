@@ -9,8 +9,18 @@ interface Advantage {
   description: string;
 }
 
-export function AdvantageSection() {
-  const advantages: Advantage[] = [
+interface AdvantageSectionContent {
+  label: string;
+  heading: string;
+  items: Array<{ title: string; description: string }>;
+}
+
+interface AdvantageSectionProps {
+  content?: AdvantageSectionContent;
+}
+
+export function AdvantageSection({ content }: AdvantageSectionProps) {
+  const advantages: Advantage[] = (content?.items ?? [
     {
       icon: Settings,
       title: 'Flexible Control',
@@ -29,15 +39,21 @@ export function AdvantageSection() {
       description:
         'Litespeed Web Server technology ensures your static and dynamic content loads instantly.',
     },
-  ];
+  ]).map((item, index) => ({
+    ...item,
+    icon: [Settings, Lock, Zap][index] ?? Settings,
+  }));
+
+  const label = content?.label ?? 'All Plans Included';
+  const heading = content?.heading ?? 'The Herza Advantage';
 
   return (
     <SectionContainer bgColor="light">
       <div className="text-center mb-16">
         <span className="text-blue-600 dark:text-blue-400 font-bold tracking-widest text-xs uppercase">
-          All Plans Included
+          {label}
         </span>
-        <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">The Herza Advantage</h2>
+        <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mt-4">{heading}</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

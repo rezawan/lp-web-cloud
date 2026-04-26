@@ -3,6 +3,7 @@
 import { Card } from '@/components/ui/card';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { isValidElement, JSX, ReactNode } from 'react';
 
 interface BaseSolutionCardProps {
@@ -18,6 +19,7 @@ interface StandardSolutionCardProps extends BaseSolutionCardProps {
   cta?: {
     text: string;
     variant?: 'default' | 'secondary';
+    href?: string;
   };
 }
 
@@ -161,10 +163,10 @@ export function SolutionCard(
 
       {/* CTA */}
       {cta && (
-        <button className={`flex items-center gap-1 font-bold text-sm group-hover:gap-2 transition-all ${styles.ctaColor}`}>
+        <Link href={cta.href || '#'} className={`flex items-center gap-1 font-bold text-sm group-hover:gap-2 transition-all ${styles.ctaColor}`}>
           {cta.text}
           <ArrowRight className="w-4 h-4" />
-        </button>
+        </Link>
       )}
     </Card>
   );

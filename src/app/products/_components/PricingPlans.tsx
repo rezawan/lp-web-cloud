@@ -52,12 +52,20 @@ const PRICING_PLANS = [
   },
 ];
 
-export function PricingPlans() {
+interface PricingPlansProps {
+  content?: {
+    plans: typeof PRICING_PLANS;
+  };
+}
+
+export function PricingPlans({ content }: PricingPlansProps) {
+  const plans = content?.plans ?? PRICING_PLANS;
+
   return (
     <section className="py-20 bg-slate-100 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {PRICING_PLANS.map((plan) => (
+          {plans.map((plan) => (
             <PricingCard key={plan.name} plan={plan} />
           ))}
         </div>

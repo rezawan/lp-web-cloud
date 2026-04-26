@@ -1,8 +1,16 @@
 import Image from 'next/image';
-import { SectionContainer } from '@/components/SectionContainer';
 
-export function ClientLogosSection() {
-  const clients = [
+interface ClientLogosSectionContent {
+  heading: string;
+  items: Array<{ name: string; logo: string }>;
+}
+
+interface ClientLogosSectionProps {
+  content?: ClientLogosSectionContent;
+}
+
+export function ClientLogosSection({ content }: ClientLogosSectionProps) {
+  const clients = content?.items ?? [
     {
       name: 'Google',
       logo: '/assets/images/unamed (4).png',
@@ -29,11 +37,13 @@ export function ClientLogosSection() {
     },
   ];
 
+  const heading = content?.heading ?? "Powering the world's most innovative teams";
+
   return (
     <section className="py-24 bg-white dark:bg-slate-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <h2 className="text-center text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-16">
-          Powering the world&apos;s most innovative teams
+          {heading}
         </h2>
 
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-80 hover:opacity-100 transition-opacity">

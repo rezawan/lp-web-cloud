@@ -1,39 +1,34 @@
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Mail, Headset } from 'lucide-react';
 
-const supportChannels = [
-  {
-    title: 'Live Chat',
-    description:
-      'Chat with our technical experts in real-time for immediate troubleshooting.',
-    action: 'Start Chatting',
-    icon: MessageCircle,
-    featured: false,
-  },
-  {
-    title: 'Email Support',
-    description:
-      'Preferred for detailed technical inquiries and architectural consulting.',
-    action: 'support@cloudhost.com',
-    icon: Mail,
-    featured: false,
-  },
-  {
-    title: '24/7 Helpdesk',
-    description:
-      'Our global command center is always active. Get help anytime, anywhere.',
-    action: 'Open a Ticket',
-    icon: Headset,
-    featured: true,
-  },
-];
+interface SupportChannel {
+  title: string;
+  description: string;
+  action: string;
+  featured: boolean;
+}
 
-export function SupportChannelsSection() {
+interface SupportChannelsSectionProps {
+  items: SupportChannel[];
+}
+
+const getChannelIcon = (title: string) => {
+  const normalizedTitle = title.toLowerCase();
+  if (normalizedTitle.includes('email')) {
+    return Mail;
+  }
+  if (normalizedTitle.includes('helpdesk') || normalizedTitle.includes('support')) {
+    return Headset;
+  }
+  return MessageCircle;
+};
+
+export function SupportChannelsSection({ items }: SupportChannelsSectionProps) {
   return (
     <section className="py-12 -mt-10 lg:-mt-12 relative z-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {supportChannels.map((channel) => {
-          const Icon = channel.icon;
+        {items.map((channel) => {
+          const Icon = getChannelIcon(channel.title);
 
           return (
             <article

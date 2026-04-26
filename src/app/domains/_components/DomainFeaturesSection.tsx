@@ -1,7 +1,32 @@
 import { ArrowRight, ChevronRight, Globe2, ServerCog, ShieldCheck, Sparkles, Users } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
-export function DomainFeaturesSection() {
+interface DomainFeaturesContent {
+	cards: Array<{
+		variant: string;
+		label?: string;
+		heading: string;
+		description: string;
+		link?: string;
+		tags?: string[];
+		highlights?: Array<{ title: string; description: string }>;
+		points?: string[];
+		button?: string;
+		steps?: string[];
+	}>;
+}
+
+interface DomainFeaturesSectionProps {
+	content?: DomainFeaturesContent;
+}
+
+export function DomainFeaturesSection({ content }: DomainFeaturesSectionProps) {
+	const cards = content?.cards;
+	const popularDomains = cards?.find((card) => card.variant === 'popular-domains');
+	const support = cards?.find((card) => card.variant === 'support');
+	const privacy = cards?.find((card) => card.variant === 'privacy');
+	const simpleSetup = cards?.find((card) => card.variant === 'simple-setup');
+
 	return (
 		<section className="bg-surface-container-low py-24">
 			<div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -10,19 +35,19 @@ export function DomainFeaturesSection() {
 						<div className="grid gap-0 md:grid-cols-2">
 							<div className="flex flex-col justify-center p-10">
 								<div className="mb-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary">
-									Selection
+									{popularDomains?.label ?? 'Selection'}
 								</div>
-								<h3 className="mb-4 text-3xl font-bold tracking-tight text-on-surface">Popular domains</h3>
+								<h3 className="mb-4 text-3xl font-bold tracking-tight text-on-surface">{popularDomains?.heading ?? 'Popular domains'}</h3>
 								<p className="mb-6 leading-relaxed text-on-surface-variant">
-									Choose from over 500+ domain extensions. From classic .com to industry-specific .tech, we have everything you need to stand out.
+									{popularDomains?.description ?? 'Choose from over 500+ domain extensions. From classic .com to industry-specific .tech, we have everything you need to stand out.'}
 								</p>
 
 								<a href="#" className="inline-flex items-center gap-2 font-bold text-primary transition-all hover:gap-3">
-									Explore TLDs <ArrowRight className="size-4" />
+									{popularDomains?.link ?? 'Explore TLDs'} <ArrowRight className="size-4" />
 								</a>
 
 								<div className="mt-8 flex flex-wrap gap-2">
-									{['.com', '.id', '.net', '.cloud', '.io'].map((tld) => (
+									{(popularDomains?.tags ?? ['.com', '.id', '.net', '.cloud', '.io']).map((tld) => (
 										<span key={tld} className="rounded-full bg-primary/5 px-3 py-1 text-sm font-semibold text-primary ring-1 ring-primary/10">
 											{tld}
 										</span>
@@ -40,19 +65,19 @@ export function DomainFeaturesSection() {
 													<Globe2 className="size-6" />
 												</div>
 												<div>
-													<div className="text-sm font-semibold text-on-surface">Global DNS reach</div>
-													<div className="text-xs text-on-surface-variant">Fast propagation and secure name servers</div>
+													<div className="text-sm font-semibold text-on-surface">{popularDomains?.highlights?.[0]?.title ?? 'Global DNS reach'}</div>
+													<div className="text-xs text-on-surface-variant">{popularDomains?.highlights?.[0]?.description ?? 'Fast propagation and secure name servers'}</div>
 												</div>
 											</div>
 										</div>
 										<div className="rounded-2xl bg-white/75 p-4 shadow-xl backdrop-blur-sm translate-x-10">
 											<div className="flex items-center gap-3">
-												<div className="rounded-xl bg-secondary/10 p-3 text-secondary">
+												<div className="rounded-xl bg-primary/10 p-3 text-primary">
 													<ShieldCheck className="size-6" />
 												</div>
 												<div>
-													<div className="text-sm font-semibold text-on-surface">Privacy protection</div>
-													<div className="text-xs text-on-surface-variant">WHOIS guard included free</div>
+													<div className="text-sm font-semibold text-on-surface">{popularDomains?.highlights?.[1]?.title ?? 'Privacy protection'}</div>
+													<div className="text-xs text-on-surface-variant">{popularDomains?.highlights?.[1]?.description ?? 'WHOIS guard included free'}</div>
 												</div>
 											</div>
 										</div>
@@ -65,16 +90,16 @@ export function DomainFeaturesSection() {
 					<Card className="gap-0 justify-between border-0 bg-primary-container p-10 text-on-primary shadow-[0_12px_32px_rgba(0,24,72,0.06)]">
 						<div>
 							<Sparkles className="mb-6 size-10 text-on-primary-container" />
-							<h3 className="mb-4 text-2xl font-bold tracking-tight">24/7 Support</h3>
+							<h3 className="mb-4 text-2xl font-bold tracking-tight">{support?.heading ?? '24/7 Support'}</h3>
 							<p className="leading-relaxed text-on-primary-container">
-								Our experts are available around the clock to assist you with migration and setup.
+								{support?.description ?? 'Our experts are available around the clock to assist you with migration and setup.'}
 							</p>
 						</div>
 
 						<div className="mt-8 space-y-4">
 							<div className="flex items-center gap-3">
 								<Users className="size-5 text-on-primary-container" />
-								<span className="text-sm font-semibold opacity-90">Instant live chat available</span>
+								<span className="text-sm font-semibold opacity-90">{support?.points?.[0] ?? 'Instant live chat available'}</span>
 							</div>
 							<div className="flex -space-x-2">
 								{['A', 'B', 'C'].map((initial) => (
@@ -91,9 +116,9 @@ export function DomainFeaturesSection() {
 
 					<Card className="gap-0 border-0 bg-surface-container-lowest p-10 shadow-[0_12px_32px_rgba(0,24,72,0.06)]">
 						<ShieldCheck className="mb-6 size-10 text-primary" />
-						<h3 className="mb-4 text-2xl font-bold tracking-tight text-on-surface">Free DNS &amp; privacy</h3>
+						<h3 className="mb-4 text-2xl font-bold tracking-tight text-on-surface">{privacy?.heading ?? 'Free DNS & privacy'}</h3>
 						<p className="leading-relaxed text-on-surface-variant">
-							WHOIS privacy protection and advanced DNS management included with every domain.
+							{privacy?.description ?? 'WHOIS privacy protection and advanced DNS management included with every domain.'}
 						</p>
 					</Card>
 
@@ -101,14 +126,14 @@ export function DomainFeaturesSection() {
 						<div className="grid gap-0 md:grid-cols-2 md:grid-flow-col-dense">
 							<div className="order-2 flex flex-col justify-center p-10 md:order-1 md:items-start">
 								<div className="mb-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-tertiary">
-									Velocity
+									{simpleSetup?.label ?? 'Velocity'}
 								</div>
-								<h3 className="mb-4 text-3xl font-bold tracking-tight text-on-surface">Simple setup</h3>
+								<h3 className="mb-4 text-3xl font-bold tracking-tight text-on-surface">{simpleSetup?.heading ?? 'Simple setup'}</h3>
 								<p className="mb-6 leading-relaxed text-on-surface-variant">
-									Connect your domain to your hosting, email, or website builder in seconds with our automated one-click installers.
+									{simpleSetup?.description ?? 'Connect your domain to your hosting, email, or website builder in seconds with our automated one-click installers.'}
 								</p>
 								<button className="rounded-xl bg-primary/5 px-6 py-3 font-bold text-primary transition-colors hover:bg-primary/10">
-									Learn Setup Process
+									{simpleSetup?.button ?? 'Learn Setup Process'}
 								</button>
 							</div>
 
@@ -124,7 +149,7 @@ export function DomainFeaturesSection() {
 										</div>
 
 										<div className="space-y-4">
-											{['Register domain', 'Update nameservers', 'Point to hosting'].map((step, index) => (
+											{(simpleSetup?.steps ?? ['Register domain', 'Update nameservers', 'Point to hosting']).map((step, index) => (
 												<div key={step} className="flex items-center gap-3">
 													<div className="flex size-8 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
 														{index + 1}

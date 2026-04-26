@@ -7,8 +7,18 @@ interface Certification {
   description: string;
 }
 
-export function CertificationsSection() {
-  const certifications: Certification[] = [
+interface CertificationsSectionContent {
+  heading: string;
+  description: string;
+  items: Array<{ title: string; description: string }>;
+}
+
+interface CertificationsSectionProps {
+  content?: CertificationsSectionContent;
+}
+
+export function CertificationsSection({ content }: CertificationsSectionProps) {
+  const certifications: Certification[] = (content?.items ?? [
     {
       icon: Award,
       title: 'ISO 27001',
@@ -34,14 +44,20 @@ export function CertificationsSection() {
       title: 'Green Tech',
       description: 'Carbon Neutral',
     },
-  ];
+  ]).map((item, index) => ({
+    ...item,
+    icon: [Award, Lock, CheckCircle, Trophy, Leaf][index] ?? Award,
+  }));
+
+  const heading = content?.heading ?? 'Certified & Recognized Excellence';
+  const description = content?.description ?? 'Meeting and exceeding global standards for security and reliability.';
 
   return (
     <SectionContainer bgColor="lighter" className="py-24 border-y border-slate-200 dark:border-slate-800">
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Certified & Recognized Excellence</h2>
+        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">{heading}</h2>
         <p className="text-slate-600 dark:text-slate-400 mt-2">
-          Meeting and exceeding global standards for security and reliability.
+          {description}
         </p>
       </div>
 

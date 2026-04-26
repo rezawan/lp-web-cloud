@@ -7,8 +7,17 @@ interface Feature {
   description: string;
 }
 
-export function FeaturesGrid() {
-  const features: Feature[] = [
+interface FeaturesGridContent {
+  heading: string;
+  items: Array<{ title: string; description: string }>;
+}
+
+interface FeaturesGridProps {
+  content?: FeaturesGridContent;
+}
+
+export function FeaturesGrid({ content }: FeaturesGridProps) {
+  const features: Feature[] = (content?.items ?? [
     {
       icon: ShieldCheck,
       title: '30 Day Guarantee',
@@ -27,12 +36,17 @@ export function FeaturesGrid() {
       description:
         'Install 400+ applications including WordPress and Joomla with a single click.',
     },
-  ];
+  ]).map((item, index) => ({
+    ...item,
+    icon: [ShieldCheck, Zap, Code][index] ?? ShieldCheck,
+  }));
+
+  const heading = content?.heading ?? 'Engineered for Performance';
 
   return (
     <SectionContainer bgColor="lighter" className="py-20">
       <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">
-        Engineered for Performance
+        {heading}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

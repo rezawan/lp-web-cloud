@@ -1,0 +1,174 @@
+{
+  "page": "domains",
+  "route": "/domains",
+  "meta": {
+    "title": "Domains | Cloud Host",
+    "description": "Search, register, transfer, and manage domains with transparent pricing and free DNS privacy protection."
+  },
+  "header": {
+    "brand": {
+      "name": "Cloud Host",
+      "href": "/"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      { "label": "Web Hosting", "href": "/products" },
+      { "label": "Servers", "href": "#" },
+      { "label": "Domains", "href": "/domains" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "actions": {
+      "login": { "label": "Login" },
+      "primary": { "label": "Get Started" }
+    }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "domains-hero",
+      "badge": "World-Class Registration",
+      "headline": "Find the perfect domain name",
+      "highlight": "domain name",
+      "description": "Search from hundreds of extensions, compare pricing instantly, and launch your next brand with free DNS management.",
+      "search": {
+        "placeholder": "Enter your domain name here...",
+        "buttonLabel": "Search"
+      },
+      "popularTlds": [
+        { "label": ".com", "price": "$12.99" },
+        { "label": ".id", "price": "$9.99" },
+        { "label": ".net", "price": "$14.50" },
+        { "label": ".cloud", "price": "$4.99" }
+      ]
+    },
+    {
+      "type": "pricing-table",
+      "id": "domains-pricing",
+      "heading": "Domain Pricing",
+      "description": "Transparent pricing with no hidden fees. All registrations include basic DNS management and domain theft protection.",
+      "filters": ["Popular", "International", "New TLDs"],
+      "columns": ["TLD", "Duration", "Registration", "Renewal", "Transfer"],
+      "rows": [
+        { "tld": ".com", "duration": "1 Year", "registration": "$12.99", "renewal": "$14.99", "transfer": "$12.99" },
+        { "tld": ".net", "duration": "1 Year", "registration": "$14.50", "renewal": "$16.50", "transfer": "$14.50" },
+        { "tld": ".id", "duration": "1 Year", "registration": "$9.99", "renewal": "$12.99", "transfer": "$9.99" },
+        { "tld": ".io", "duration": "1 Year", "registration": "$39.99", "renewal": "$44.99", "transfer": "$39.99" },
+        { "tld": ".cloud", "duration": "1 Year", "registration": "$4.99", "renewal": "$19.99", "transfer": "$4.99" }
+      ]
+    },  
+    {
+      "type": "features-showcase",
+      "id": "domains-features",
+      "cards": [
+        {
+          "variant": "popular-domains",
+          "label": "Selection",
+          "heading": "Popular domains",
+          "description": "Choose from over 500+ domain extensions. From classic .com to industry-specific .tech, we have everything you need to stand out.",
+          "link": "Explore TLDs",
+          "tags": [".com", ".id", ".net", ".cloud", ".io"],
+          "highlights": [
+            { "title": "Global DNS reach", "description": "Fast propagation and secure name servers" },
+            { "title": "Privacy protection", "description": "WHOIS guard included free" }
+          ]
+        },
+        {
+          "variant": "support",
+          "heading": "24/7 Support",
+          "description": "Our experts are available around the clock to assist you with migration and setup.",
+          "points": ["Instant live chat available"]
+        },
+        {
+          "variant": "privacy",
+          "heading": "Free DNS & privacy",
+          "description": "WHOIS privacy protection and advanced DNS management included with every domain."
+        },
+        {
+          "variant": "simple-setup",
+          "label": "Velocity",
+          "heading": "Simple setup",
+          "description": "Connect your domain to your hosting, email, or website builder in seconds with our automated one-click installers.",
+          "button": "Learn Setup Process",
+          "steps": ["Register domain", "Update nameservers", "Point to hosting"]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "domains-faq",
+      "heading": "Frequently Asked Questions",
+      "description": "Everything you need to know about domain registration at Cloud Host.",
+      "items": [
+        {
+          "question": "How long does it take for a domain to become active?",
+          "answer": "Most domain registrations are instant. However, global propagation of DNS settings can take anywhere from a few minutes to 24-48 hours."
+        },
+        {
+          "question": "Can I transfer my existing domain to Cloud Host?",
+          "answer": "Yes. Our automated transfer tool makes it simple. Unlock your domain at your current registrar and get an EPP authorization code."
+        },
+        {
+          "question": "Is WHOIS privacy protection really free?",
+          "answer": "Absolutely. We believe your privacy shouldn't be a paid feature. We hide your personal information from the public WHOIS database at no extra cost."
+        },
+        {
+          "question": "Do you offer discounts for bulk registration?",
+          "answer": "Yes, we have a specialized reseller and bulk program for users managing more than 50 domains. Contact our sales team for custom pricing."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "domains-cta",
+      "heading": "Ready to secure your digital territory?",
+      "ctas": [
+        { "label": "Get Started Now" },
+        { "label": "Speak to an Expert" }
+      ]
+    }
+  ],
+  "footer": {
+    "brand": {
+      "name": "Cloud Host",
+      "description": "Premium cloud hosting solutions with a focus on speed, security, and world-class support."
+    },
+    "sections": [
+      {
+        "title": "Products",
+        "links": [
+          { "label": "Cloud Hosting", "href": "#" },
+          { "label": "Elite VPS", "href": "#" },
+          { "label": "Dedicated Servers", "href": "#" },
+          { "label": "Domain Names", "href": "/domains" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "#" },
+          { "label": "Affiliate Program", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Contact Support", "href": "#" },
+          { "label": "Knowledge Base", "href": "#" },
+          { "label": "Status Page", "href": "#" },
+          { "label": "SLA Guarantee", "href": "#" }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "© 2024 Cloud Host Cloud Hosting. All rights reserved.",
+      "links": [
+        { "label": "Legal", "href": "#" },
+        { "label": "Cookies", "href": "#" },
+        { "label": "Security", "href": "#" }
+      ]
+    }
+  }
+}

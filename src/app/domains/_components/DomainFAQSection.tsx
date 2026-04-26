@@ -25,17 +25,31 @@ const FAQ_ITEMS = [
   },
 ];
 
-export function DomainFAQSection() {
+interface DomainFAQContent {
+  heading: string;
+  description: string;
+  items: typeof FAQ_ITEMS;
+}
+
+interface DomainFAQSectionProps {
+  content?: DomainFAQContent;
+}
+
+export function DomainFAQSection({ content }: DomainFAQSectionProps) {
+  const heading = content?.heading ?? 'Frequently Asked Questions';
+  const description = content?.description ?? 'Everything you need to know about domain registration at Herza.';
+  const items = content?.items ?? FAQ_ITEMS;
+
   return (
     <section className="bg-surface py-24">
       <div className="mx-auto max-w-3xl px-6 lg:px-12">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold tracking-tighter text-on-surface">Frequently Asked Questions</h2>
-          <p className="mt-4 text-on-surface-variant">Everything you need to know about domain registration at Herza.</p>
+          <h2 className="text-4xl font-bold tracking-tighter text-on-surface">{heading}</h2>
+          <p className="mt-4 text-on-surface-variant">{description}</p>
         </div>
 
         <Accordion type="single" collapsible defaultValue="faq-0" className="space-y-4">
-          {FAQ_ITEMS.map((item, index) => (
+          {items.map((item, index) => (
             <AccordionItem key={item.question} value={`faq-${index}`} className="rounded-2xl bg-surface-container-low px-6 border-none">
               <AccordionTrigger className="gap-4 py-6 text-left text-lg font-bold text-on-surface hover:no-underline **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:shrink-0 **:data-[slot=accordion-trigger-icon]:text-primary">
                 {item.question}
