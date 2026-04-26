@@ -39,8 +39,8 @@ export function HeroSection({ content = DEFAULT_CONTENT }: HeroSectionProps) {
     <section className="relative overflow-hidden bg-surface py-20 lg:py-32">
       {/* Background Gradient Blobs */}
       <div className="absolute inset-0 z-0 opacity-40">
-        <div className="absolute top-0 right-0 w-200 h-200 bg-blue-200 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-150 h-150 bg-purple-200 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-0 right-0 w-200 h-200 bg-blue-200 dark:bg-cyan-500/35 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-150 h-150 bg-purple-200 dark:bg-violet-500/35 blur-[100px] rounded-full -translate-x-1/3 translate-y-1/3"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
