@@ -1,4 +1,12 @@
-const PRICING_ROWS = [
+type DomainPricingRow = {
+  tld: string;
+  registration: string;
+  renewal: string;
+  transfer: string;
+  duration?: string;
+};
+
+const PRICING_ROWS: DomainPricingRow[] = [
   { tld: '.com', registration: '$12.99', renewal: '$14.99', transfer: '$12.99' },
   { tld: '.net', registration: '$14.50', renewal: '$16.50', transfer: '$14.50' },
   { tld: '.id', registration: '$9.99', renewal: '$12.99', transfer: '$9.99' },
@@ -10,7 +18,7 @@ interface DomainPricingContent {
   heading: string;
   description: string;
   filters: string[];
-  rows: Array<{ tld: string; registration: string; renewal: string; transfer: string; duration?: string }>;
+  rows: DomainPricingRow[];
 }
 
 interface DomainPricingSectionProps {
@@ -23,7 +31,7 @@ export function DomainPricingSection({ content }: DomainPricingSectionProps) {
     content?.description ??
     'Transparent pricing with no hidden fees. All registrations include basic DNS management and domain theft protection.';
   const filters = content?.filters ?? ['Popular', 'International', 'New TLDs'];
-  const rows = content?.rows ?? PRICING_ROWS;
+  const rows: DomainPricingRow[] = content?.rows ?? PRICING_ROWS;
 
   return (
     <section className="bg-surface py-24">
