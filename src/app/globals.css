@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "swiper/css";
 
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';

@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
 import { SectionContainer } from '@/components/SectionContainer';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface FAQItem {
   question: string;
@@ -10,8 +9,6 @@ interface FAQItem {
 }
 
 export function FAQSection() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(1);
-
   const faqItems: FAQItem[] = [
     {
       question: 'How do I migrate my existing website to Cloud Host?',
@@ -30,40 +27,27 @@ export function FAQSection() {
     },
   ];
 
-  const toggleExpand = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
-
   return (
     <SectionContainer bgColor="lighter" className="py-20">
       <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">Explore FAQ&apos;s</h2>
 
-      <div className="max-w-4xl mx-auto space-y-4">
+      <Accordion type="single" collapsible defaultValue="faq-1" className="mx-auto max-w-3xl space-y-4">
         {faqItems.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow"
+          <AccordionItem
+            key={item.question}
+            value={`faq-${index}`}
+            className="rounded-2xl border-none bg-surface-container-low px-6"
           >
-            <button
-              onClick={() => toggleExpand(index)}
-              className="w-full flex justify-between items-center text-left p-6 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-            >
-              <span className="font-bold text-slate-900 dark:text-white">{item.question}</span>
-              {expandedIndex === index ? (
-                <Minus className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
-              ) : (
-                <Plus className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
-              )}
-            </button>
+            <AccordionTrigger className="gap-4 py-6 text-left text-lg font-bold text-on-surface hover:no-underline **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:shrink-0 **:data-[slot=accordion-trigger-icon]:text-primary">
+              {item.question}
+            </AccordionTrigger>
 
-            {expandedIndex === index && (
-              <div className="border-t border-slate-200 dark:border-slate-800 px-6 py-4 bg-slate-50 dark:bg-slate-900/50">
-                <p className="text-slate-600 dark:text-slate-400 text-sm">{item.answer}</p>
-              </div>
-            )}
-          </div>
+            <AccordionContent className="mt-0 pb-6 text-base leading-relaxed text-on-surface-variant">
+              {item.answer}
+            </AccordionContent>
+          </AccordionItem>
         ))}
-      </div>
+      </Accordion>
     </SectionContainer>
   );
 }

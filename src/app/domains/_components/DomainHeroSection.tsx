@@ -1,5 +1,7 @@
 import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 const POPULAR_TLDS = [
   { label: '.com', price: '$12.99' },
@@ -36,14 +38,14 @@ export function DomainHeroSection() {
           <div className="mx-auto mt-10 max-w-3xl">
             <div className="flex flex-col gap-3 rounded-2xl bg-white p-3 shadow-2xl shadow-black/10 md:flex-row md:items-center">
               <div className="flex-1">
-                <label htmlFor="domain-search" className="sr-only">
+                <Label htmlFor="domain-search" className="sr-only">
                   Search domain name
-                </label>
-                <input
+                </Label>
+                <Input
                   id="domain-search"
                   type="text"
                   placeholder="Enter your dream domain name here..."
-                  className="h-14 w-full border-0 bg-transparent px-4 text-base text-slate-900 outline-none placeholder:text-slate-400 focus:ring-0"
+                  className="h-14 w-full border-0 bg-transparent px-4 text-base text-slate-900 outline-none shadow-none placeholder:text-slate-400 focus-visible:ring-0"
                 />
               </div>
 

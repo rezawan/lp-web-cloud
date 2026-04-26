@@ -1,5 +1,9 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const reviews = [
   {
@@ -16,6 +20,54 @@ const reviews = [
     role: 'CTO, BrightStack',
     message:
       'We moved our APIs to Cloud Host and saw immediate performance gains. The dashboard and deployment flow are straightforward.',
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: 'Andra Wijaya',
+    role: 'Product Manager, PixelRise',
+    message:
+      'Provisioning new environments takes minutes, and monitoring gives us clear visibility into every service in production.',
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: 'Kevin Santoso',
+    role: 'Lead Engineer, Orbit Labs',
+    message:
+      'The managed database offering has been reliable and fast. Backups and restore workflows are simple and dependable.',
+    rating: 5,
+  },
+  {
+    id: 5,
+    name: 'Nadia Putri',
+    role: 'Operations Head, Aruna Digital',
+    message:
+      'Support quality stands out. We always get actionable recommendations, not generic replies, when something needs attention.',
+    rating: 5,
+  },
+  {
+    id: 6,
+    name: 'Rizki Mahendra',
+    role: 'CTO, Synapse Studio',
+    message:
+      'Traffic spikes are no longer stressful. Auto-scaling and performance remained stable during our biggest product launch week.',
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: 'Felicia Tan',
+    role: 'Founder, Bloom Cart',
+    message:
+      'Our storefront latency dropped significantly after migration. Customers notice faster checkout and smoother browsing.',
+    rating: 5,
+  },
+  {
+    id: 8,
+    name: 'Bagas Pratama',
+    role: 'DevOps Engineer, Meridian AI',
+    message:
+      'Deployment pipelines integrate cleanly with our stack. The platform feels built for teams shipping continuously.',
     rating: 5,
   },
 ];
@@ -35,26 +87,49 @@ export function CustomerReviewsSection() {
           </Button>
         </div>
 
-        <div className="lg:col-span-8 space-y-6">
-          {reviews.map((review) => (
-            <article
-              key={review.id}
-              className="bg-surface-container-lowest rounded-2xl p-7 md:p-8 shadow-sm border border-outline-variant/20"
-            >
-              <div className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-secondary-container/60 mb-5">
-                {Array.from({ length: review.rating }).map((_, index) => (
-                  <Star key={index} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
+        <div className="lg:col-span-8">
+          <Swiper
+            direction="vertical"
+            modules={[Autoplay]}
+            loop
+            autoplay={{
+              delay: 1,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={5000}
+            allowTouchMove={false}
+            spaceBetween={24}
+            slidesPerView={1.2}
+            breakpoints={{
+              768: {
+                slidesPerView: 1.5,
+              },
+              1024: {
+                slidesPerView: 2.2,
+              },
+            }}
+            className="h-136"
+          >
+            {reviews.map((review) => (
+              <SwiperSlide key={review.id}>
+                <article className="h-full bg-surface-container-lowest rounded-2xl p-7 md:p-8 shadow-sm border border-outline-variant/20">
+                  <div className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-secondary-container/60 mb-5">
+                    {Array.from({ length: review.rating }).map((_, index) => (
+                      <Star key={index} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
 
-              <p className="text-on-surface text-lg leading-relaxed mb-6">“{review.message}”</p>
+                  <p className="text-on-surface text-lg leading-relaxed mb-6">“{review.message}”</p>
 
-              <div>
-                <p className="font-bold text-on-surface">{review.name}</p>
-                <p className="text-sm text-on-surface-variant">{review.role}</p>
-              </div>
-            </article>
-          ))}
+                  <div>
+                    <p className="font-bold text-on-surface">{review.name}</p>
+                    <p className="text-sm text-on-surface-variant">{review.role}</p>
+                  </div>
+                </article>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

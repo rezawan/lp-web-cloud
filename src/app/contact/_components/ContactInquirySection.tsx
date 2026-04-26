@@ -1,4 +1,7 @@
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone } from 'lucide-react';
 
 export function ContactInquirySection() {
@@ -46,51 +49,51 @@ export function ContactInquirySection() {
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
+                <Label htmlFor="name" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
                   Name
-                </label>
-                <input
+                </Label>
+                <Input
                   id="name"
                   type="text"
                   placeholder="John Doe"
-                  className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus:border-primary/40"
+                  className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0"
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
+                <Label htmlFor="email" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
                   Email
-                </label>
-                <input
+                </Label>
+                <Input
                   id="email"
                   type="email"
                   placeholder="john@company.com"
-                  className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus:border-primary/40"
+                  className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="phone" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
+              <Label htmlFor="phone" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
                 Phone
-              </label>
-              <input
+              </Label>
+              <Input
                 id="phone"
                 type="tel"
                 placeholder="+1 (555) 000-0000"
-                className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus:border-primary/40"
+                className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
+              <Label htmlFor="message" className="text-xs font-bold text-on-primary-fixed-variant uppercase tracking-wider">
                 Message
-              </label>
-              <textarea
+              </Label>
+              <Textarea
                 id="message"
                 rows={4}
                 placeholder="How can we assist with your infrastructure?"
-                className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus:border-primary/40 resize-none"
+                className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0 resize-none"
               />
             </div>
 

@@ -1,7 +1,6 @@
 'use client';
 
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { useState } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const FAQ_ITEMS = [
   {
@@ -27,8 +26,6 @@ const FAQ_ITEMS = [
 ];
 
 export function DomainFAQSection() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
-
   return (
     <section className="bg-surface py-24">
       <div className="mx-auto max-w-3xl px-6 lg:px-12">
@@ -37,31 +34,18 @@ export function DomainFAQSection() {
           <p className="mt-4 text-on-surface-variant">Everything you need to know about domain registration at Herza.</p>
         </div>
 
-        <div className="space-y-4">
-          {FAQ_ITEMS.map((item, index) => {
-            const open = expandedIndex === index;
-
-            return (
-              <div key={item.question} className="rounded-2xl bg-surface-container-low p-6">
-                <button
-                  type="button"
-                  onClick={() => setExpandedIndex(open ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 text-left"
-                  aria-expanded={open}
-                >
-                  <span className="text-lg font-bold text-on-surface">{item.question}</span>
-                  {open ? (
-                    <ChevronUp className="size-5 shrink-0 text-primary transition-transform" />
-                  ) : (
-                    <ChevronDown className="size-5 shrink-0 text-primary transition-transform" />
-                  )}
-                </button>
-
-                {open && <p className="mt-4 leading-relaxed text-on-surface-variant">{item.answer}</p>}
-              </div>
-            );
-          })}
-        </div>
+        <Accordion type="single" collapsible defaultValue="faq-0" className="space-y-4">
+          {FAQ_ITEMS.map((item, index) => (
+            <AccordionItem key={item.question} value={`faq-${index}`} className="rounded-2xl bg-surface-container-low px-6 border-none">
+              <AccordionTrigger className="gap-4 py-6 text-left text-lg font-bold text-on-surface hover:no-underline **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:shrink-0 **:data-[slot=accordion-trigger-icon]:text-primary">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="mt-0 pb-6 text-base leading-relaxed text-on-surface-variant">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
