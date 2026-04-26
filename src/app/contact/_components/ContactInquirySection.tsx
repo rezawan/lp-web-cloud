@@ -29,7 +29,7 @@ export function ContactInquirySection() {
               <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-bold text-sm text-on-surface">Priority Support Line</h4>
-                <p className="text-on-surface-variant text-sm">+1 (800) HERZA-OPS</p>
+                <p className="text-on-surface-variant text-sm">+1 (800) Cloud Host-OPS</p>
               </div>
             </div>
           </div>

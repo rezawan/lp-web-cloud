@@ -8,7 +8,7 @@ export function AboutHeroSection() {
     <section className="relative h-150 flex items-center overflow-hidden bg-blue-950">
       <div className="absolute inset-0 z-0 opacity-40">
         <Image
-          src="/assets/images/unamed (4).png"
+          src="/assets/images/about1.png"
           alt="Cloud Infrastructure"
           fill
           className="object-cover"

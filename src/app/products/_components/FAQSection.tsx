@@ -14,7 +14,7 @@ export function FAQSection() {
 
   const faqItems: FAQItem[] = [
     {
-      question: 'How do I migrate my existing website to Herza?',
+      question: 'How do I migrate my existing website to Cloud Host?',
       answer:
         'We provide free migration assistance. Simply contact our support team with your current hosting details, and we\'ll handle the transfer for you within 24 hours.',
     },

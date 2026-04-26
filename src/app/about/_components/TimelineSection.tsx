@@ -37,7 +37,7 @@ export function TimelineSection() {
     {
       year: '2020',
       title: 'Cloud Revolution',
-      description: 'Launched Herza Cloud Platform with NVMe-only storage.',
+      description: 'Launched Cloud Host Platform with NVMe-only storage.',
       icon: Cloud,
          image:'/assets/images/unamed (4).png',
 

@@ -43,7 +43,7 @@ export function ProductsHeroSection() {
             <div className="absolute -inset-4 bg-blue-600/5 rounded-full blur-3xl"></div>
             <div className="relative rounded-2xl shadow-2xl border border-white/20 overflow-hidden">
               <Image
-                src="/assets/images/unamed (4).png"
+                src="/assets/images/products1.png"
                 alt="Cloud server infrastructure"
                 width={600}
                 height={400}

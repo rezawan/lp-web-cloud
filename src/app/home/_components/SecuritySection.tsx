@@ -36,10 +36,10 @@ export function SecuritySection() {
         <div className="relative">
           <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10">
             <Image
-              src={"/assets/images/unamed (3).png"}
+              src={"/assets/images/home3.png"}
               alt="Fiber optic cables with security icons"
               fill
-              className="object-cover"
+              className="object-cover rounded-2xl"
             />
           </div>
 

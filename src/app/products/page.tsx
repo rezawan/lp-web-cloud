@@ -2,7 +2,7 @@ import { ProductsHeroSection } from './_components/ProductsHeroSection';
 import { PricingPlans } from './_components/PricingPlans';
 import { ComparisonTable } from './_components/ComparisonTable';
 import { FeaturesGrid } from './_components/FeaturesGrid';
-import { HerzaAdvantageSection } from './_components/HerzaAdvantageSection';
+import { AdvantageSection } from './_components/AdvantageSection';
 import { FAQSection } from './_components/FAQSection';
 import { ProductsContactCTA } from './_components/ProductsContactCTA';
 
@@ -13,7 +13,7 @@ export default function ProductsPage() {
       <PricingPlans />
       <ComparisonTable />
       <FeaturesGrid />
-      <HerzaAdvantageSection />
+      <AdvantageSection />
       <FAQSection />
       <ProductsContactCTA />
     </main>

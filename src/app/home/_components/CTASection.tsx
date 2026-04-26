@@ -17,7 +17,7 @@ export function CTASection() {
               Ready to Scale?
             </h2>
             <p className="text-blue-100 text-xl max-w-2xl mx-auto">
-              Join over 10,000 developers and businesses who trust Herza for their infrastructure needs.
+              Join over 10,000 developers and businesses who trust Cloud Host for their infrastructure needs.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">

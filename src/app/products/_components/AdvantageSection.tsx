@@ -9,7 +9,7 @@ interface Advantage {
   description: string;
 }
 
-export function HerzaAdvantageSection() {
+export function AdvantageSection() {
   const advantages: Advantage[] = [
     {
       icon: Settings,

@@ -11,7 +11,7 @@ export function Footer() {
         { label: 'Cloud Hosting', href: '#' },
         { label: 'Elite VPS', href: '#' },
         { label: 'Dedicated Servers', href: '#' },
-        { label: 'Domain Names', href: '#' },
+        { label: 'Domain Names', href: '/domains' },
       ],
     },
     {

@@ -9,9 +9,10 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu';
-import { Cloud, Menu, X, ChevronDown, Globe, Zap, Server, Network, ShoppingCart } from 'lucide-react';
+import { Cloud, Menu, X, ChevronDown, Globe, Zap, Server, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface SubMenuItem {
   label: string;
@@ -33,37 +34,32 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const navItems: MenuItem[] = [
+    { label: 'Home', href: '/' },
     {
       label: 'Web Hosting',
-      href: '#',
+      href: '/products',
       children: [
         {
           label: 'Web Hosting',
-          href: '#',
+          href: '/products',
           description: 'Advanced NVMe SSD',
           icon: <Globe className="w-5 h-5" />,
         },
         {
           label: 'Turbo Hosting',
-          href: '#',
+          href: '/products',
           description: 'Enhanced Performance',
           icon: <Zap className="w-5 h-5" />,
         },
         {
-          label: 'BDIX Hosting',
-          href: '#',
+          label: 'Hosting',
+          href: '/products',
           description: 'Fast, Local Performance',
           icon: <Server className="w-5 h-5" />,
         },
         {
-          label: 'BDIX Turbo Hosting',
-          href: '#',
-          description: 'Speedy, Local Resources',
-          icon: <Network className="w-5 h-5" />,
-        },
-        {
           label: 'Reseller Hosting',
-          href: '#',
+          href: '/products',
           description: 'Start Hosting Business',
           icon: <ShoppingCart className="w-5 h-5" />,
         },
@@ -71,22 +67,23 @@ export function Header() {
       additionalLinks: [
         {
           label: 'WordPress Hosting',
-          href: '#',
+          href: '/products',
         },
         {
-          label: 'BDIX Windows Hosting',
-          href: '#',
+          label: 'Windows Hosting',
+          href: '/products',
         },
         {
-          label: 'BDIX Reseller Hosting',
-          href: '#',
+          label: 'Reseller Hosting',
+          href: '/products',
         },
       ],
     },
     { label: 'Servers', href: '#' },
-    { label: 'Domains', href: '#' },
-    { label: 'Addons', href: '#' },
-    { label: 'Support', href: '/contact' },
+    { label: 'Domains', href: '/domains' },
+    // { label: 'Addons', href: '#' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -132,13 +129,17 @@ export function Header() {
                   >
                     {item.label}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="w-[90vw] max-w-[1100px] bg-white dark:bg-slate-900">
+                  <NavigationMenuContent className="w-[90vw] max-w-275 bg-white dark:bg-slate-900">
                     <div className="flex gap-4 p-2 w-full">
                       {/* Main Menu Items - Left Side */}
                       <div className="flex-1 min-w-[320px]  space-y-1">
                         {item.children.map((child) => (
-                          <Link key={child.label} href={child.href}>
-                            <NavigationMenuLink className="flex items-start gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+                          <NavigationMenuLink
+                            key={child.label}
+                            asChild
+                            className="flex items-start gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer group"
+                          >
+                            <Link href={child.href}>
                               {child.icon && (
                                 <div className="shrink-0 w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 group-hover:text-blue-600 transition-colors">
                                   {child.icon}
@@ -154,8 +155,8 @@ export function Header() {
                                   </div>
                                 )}
                               </div>
-                            </NavigationMenuLink>
-                          </Link>
+                            </Link>
+                          </NavigationMenuLink>
                         ))}
                       </div>
 
@@ -167,11 +168,15 @@ export function Header() {
                           </div>
                           <div className="space-y-0.5">
                             {item.additionalLinks.map((link) => (
-                              <Link key={link.label} href={link.href}>
-                                <NavigationMenuLink className="block px-2 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer">
+                              <NavigationMenuLink
+                                key={link.label}
+                                asChild
+                                className="block px-2 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                              >
+                                <Link href={link.href}>
                                   {link.label}
-                                </NavigationMenuLink>
-                              </Link>
+                                </Link>
+                              </NavigationMenuLink>
                             ))}
                           </div>
                         </div>
@@ -186,6 +191,7 @@ export function Header() {
 
         {/* CTA Buttons */}
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <button className="hidden lg:block text-slate-600 font-medium text-sm px-4 py-2 hover:bg-blue-50/50 rounded-lg transition-all">
             Login
           </button>

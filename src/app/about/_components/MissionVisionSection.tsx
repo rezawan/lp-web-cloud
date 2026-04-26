@@ -9,7 +9,7 @@ export function MissionVisionSection() {
         {/* Mission */}
         <div className="relative group h-125 rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/assets/images/unamed (4).png"
+            src="/assets/images/mission.png"
             alt="Innovation"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -28,7 +28,7 @@ export function MissionVisionSection() {
         {/* Vision */}
         <div className="relative group h-125 rounded-3xl overflow-hidden shadow-xl">
           <Image
-            src="/assets/images/unamed (4).png"
+            src="/assets/images/vision.png"
             alt="Future Technology"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-110"

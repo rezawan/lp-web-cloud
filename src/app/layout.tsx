@@ -23,8 +23,29 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn("h-full", "antialiased", "scroll-smooth", plusJakartaSans.variable)}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+  const storageKey = 'theme';
+  const root = document.documentElement;
+
+  try {
+    const storedTheme = localStorage.getItem(storageKey);
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldUseDark = storedTheme ? storedTheme === 'dark' : systemPrefersDark;
+
+    root.classList.toggle('dark', shouldUseDark);
+  } catch {
+    root.classList.toggle('dark', false);
+  }
+})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col antialiased">
         <Header />
         <div className="pt-16 flex-1">{children}</div>

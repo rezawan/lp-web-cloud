@@ -47,7 +47,7 @@ export function AboutSection() {
         <div className="relative">
           <div className="relative rounded-2xl shadow-2xl overflow-hidden z-10">
             <Image
-              src={"/assets/images/unamed (4).png"}
+              src={"/assets/images/about1.png"}
               alt="Data Center"
               width={600}
               height={400}

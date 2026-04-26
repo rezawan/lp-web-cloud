@@ -1,17 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Zap, CheckCircle } from "lucide-react";
+import { Zap } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 export function HeroSection() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+ 
   return (
     <section className="relative overflow-hidden bg-surface py-20 lg:py-32">
       {/* Background Gradient Blobs */}
@@ -94,7 +88,7 @@ export function HeroSection() {
           <div className="lg:col-span-5 relative">
             <div className="aspect-square rounded-2xl overflow-hidden kinetic-shadow">
               <Image
-                className="w-full h-full object-cover rounded-sm"
+                className="w-full h-full object-cover rounded-2xl"
                 alt="Modern server room with glowing blue LED lights on racks, symmetrical perspective, clean high-tech architectural datacenter environment"
                 src="/assets/images/home-hero.png"
                 fill
