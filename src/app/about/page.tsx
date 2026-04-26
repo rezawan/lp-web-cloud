@@ -1,10 +1,10 @@
-import { AboutHeroSection } from './_components/AboutHeroSection';
-import { AboutSection } from './_components/AboutSection';
-import { MissionVisionSection } from './_components/MissionVisionSection';
-import { TimelineSection } from './_components/TimelineSection';
-import { CertificationsSection } from './_components/CertificationsSection';
-import { ClientLogosSection } from './_components/ClientLogosSection';
-import { CTASection } from '../home/_components/CTASection';
+import { AboutHeroSection } from '@/app/about/_components/AboutHeroSection';
+import { AboutSection } from '@/app/about/_components/AboutSection';
+import { MissionVisionSection } from '@/app/about/_components/MissionVisionSection';
+import { TimelineSection } from '@/app/about/_components/TimelineSection';
+import { CertificationsSection } from '@/app/about/_components/CertificationsSection';
+import { ClientLogosSection } from '@/app/about/_components/ClientLogosSection';
+import { CTASection } from '@/app/home/_components/CTASection';
 import aboutPageContent from '@/content/cms/about.json';
 
 type AboutSections = (typeof aboutPageContent.sections)[number];

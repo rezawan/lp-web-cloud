@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { DomainHeroSection } from './_components/DomainHeroSection';
-import { DomainPricingSection } from './_components/DomainPricingSection';
-import { DomainFeaturesSection } from './_components/DomainFeaturesSection';
-import { DomainFAQSection } from './_components/DomainFAQSection';
-import { DomainCTASection } from './_components/DomainCTASection';
+import { DomainHeroSection } from '@/app/domains/_components/DomainHeroSection';
+import { DomainPricingSection } from '@/app/domains/_components/DomainPricingSection';
+import { DomainFeaturesSection } from '@/app/domains/_components/DomainFeaturesSection';
+import { DomainFAQSection } from '@/app/domains/_components/DomainFAQSection';
+import { DomainCTASection } from '@/app/domains/_components/DomainCTASection';
 import domainsPageContent from '@/content/cms/domains.json';
 
 export const metadata: Metadata = {

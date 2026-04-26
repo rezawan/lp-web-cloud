@@ -9,7 +9,9 @@ interface SupportChannel {
 }
 
 interface SupportChannelsSectionProps {
-  items: SupportChannel[];
+  content: {
+    items: SupportChannel[];
+  };
 }
 
 const getChannelIcon = (title: string) => {
@@ -23,11 +25,11 @@ const getChannelIcon = (title: string) => {
   return MessageCircle;
 };
 
-export function SupportChannelsSection({ items }: SupportChannelsSectionProps) {
+export function SupportChannelsSection({ content }: SupportChannelsSectionProps) {
   return (
     <section className="py-12 -mt-10 lg:-mt-12 relative z-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {items.map((channel) => {
+        {content.items.map((channel) => {
           const Icon = getChannelIcon(channel.title);
 
           return (

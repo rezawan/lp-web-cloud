@@ -1,10 +1,10 @@
-import { ProductsHeroSection } from './_components/ProductsHeroSection';
-import { PricingPlans } from './_components/PricingPlans';
-import { ComparisonTable } from './_components/ComparisonTable';
-import { FeaturesGrid } from './_components/FeaturesGrid';
-import { AdvantageSection } from './_components/AdvantageSection';
-import { FAQSection } from './_components/FAQSection';
-import { ProductsContactCTA } from './_components/ProductsContactCTA';
+import { ProductsHeroSection } from '@/app/products/_components/ProductsHeroSection';
+import { PricingPlans } from '@/app/products/_components/PricingPlans';
+import { ComparisonTable } from '@/app/products/_components/ComparisonTable';
+import { FeaturesGrid } from '@/app/products/_components/FeaturesGrid';
+import { AdvantageSection } from '@/app/products/_components/AdvantageSection';
+import { FAQSection } from '@/app/products/_components/FAQSection';
+import { ProductsContactCTA } from '@/app/products/_components/ProductsContactCTA';
 import productsPageContent from '@/content/cms/products.json';
 
 type ProductSections = (typeof productsPageContent.sections)[number];

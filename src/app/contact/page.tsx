@@ -1,7 +1,7 @@
-import { ContactHeroSection } from './_components/ContactHeroSection';
-import { SupportChannelsSection } from './_components/SupportChannelsSection';
-import { ContactInquirySection } from './_components/ContactInquirySection';
-import { TrustedBySection } from './_components/TrustedBySection';
+import { ContactHeroSection } from '@/app/contact/_components/ContactHeroSection';
+import { SupportChannelsSection } from '@/app/contact/_components/SupportChannelsSection';
+import { ContactInquirySection } from '@/app/contact/_components/ContactInquirySection';
+import { TrustedBySection } from '@/app/contact/_components/TrustedBySection';
 import contactPageContent from '@/content/cms/contact.json';
 
 type ContactSections = (typeof contactPageContent.sections)[number];
@@ -23,7 +23,7 @@ export default function ContactPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <ContactHeroSection content={hero} />
-      <SupportChannelsSection items={supportChannels.items} />
+      <SupportChannelsSection content={supportChannels} />
       <ContactInquirySection content={inquiry} />
       <TrustedBySection content={trustedBy} />
     </main>
