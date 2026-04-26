@@ -67,14 +67,14 @@ export function HeroSection({ content = DEFAULT_CONTENT }: HeroSectionProps) {
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-linear-to-r from-blue-600 to-blue-800 text-white shadow-xl shadow-blue-600/25 hover:shadow-blue-600/40 hover:scale-[1.02] transition-transform"
+                className="h-12 lg:h-14 px-6 lg:px-8 text-base lg:text-lg font-semibold rounded-xl bg-linear-to-r from-blue-600 to-blue-800 text-white shadow-xl shadow-blue-600/25 hover:shadow-blue-600/40 hover:scale-[1.02] transition-transform"
               >
                 {content.ctas[0]?.label ?? 'Deploy Your Server Now'}
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800"
+                className="h-12 lg:h-14 px-6 lg:px-8 text-base lg:text-lg font-semibold rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800"
               >
                 {content.ctas[1]?.label ?? 'View Pricing'}
               </Button>

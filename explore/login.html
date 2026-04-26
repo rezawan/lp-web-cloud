@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | CloudArch Herza.id</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ffc6b2",
+                        "on-surface-variant": "#434654",
+                        "surface-tint": "#0c56d0",
+                        "primary-fixed": "#dae2ff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#7b2600",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "surface-container": "#eceef0",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9fb",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#a33500",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-container": "#c4d2ff",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#021945",
+                        "primary": "#003d9b",
+                        "on-surface": "#191c1e",
+                        "surface-dim": "#d8dadc",
+                        "primary-container": "#0052cc",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#4c5d8d",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "on-background": "#191c1e",
+                        "inverse-primary": "#b2c5ff",
+                        "secondary-container": "#b6c8fe",
+                        "on-secondary-container": "#415382",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c3c6d6",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#380d00",
+                        "on-secondary-fixed-variant": "#344573",
+                        "outline": "#737685",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-fixed-dim": "#b4c5fb",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "on-primary-fixed": "#001848",
+                        "error-container": "#ffdad6",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Left Sidebar: Promotional Kinetic Section -->
+<section class="hidden md:flex w-2/5 kinetic-gradient relative flex-col justify-between p-16 text-white overflow-hidden">
+<!-- Background Decorative Element -->
+<div class="absolute top-[-10%] right-[-10%] w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-64 h-64 rounded-full bg-primary-container/20 blur-2xl"></div>
+<!-- Brand Logo -->
+<div class="relative z-10">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary font-bold">cloud</span>
+</div>
+<span class="text-2xl font-extrabold tracking-tighter">CloudArch</span>
+</div>
+</div>
+<!-- What's New Promotion -->
+<div class="relative z-10 max-w-sm">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold tracking-widest uppercase mb-6 border border-white/20">
+                    What's New
+                </div>
+<h1 class="text-5xl font-extrabold leading-[1.1] tracking-tight mb-6">
+                    Exclusive 35% <br/>
+<span class="text-primary-fixed">Hosting Discount</span>
+</h1>
+<p class="text-primary-fixed/80 text-lg font-medium leading-relaxed mb-8">
+                    Elevate your infrastructure with our enterprise-grade NVMe solutions. Valid for new deployments this quarter.
+                </p>
+<button class="px-8 py-4 bg-white text-primary font-bold rounded-lg shadow-xl hover:scale-105 transition-transform">
+                    Deploy Now
+                </button>
+</div>
+<!-- Footer Quote/Microcopy -->
+<div class="relative z-10 flex items-center gap-4 text-primary-fixed/60">
+<div class="h-[1px] w-12 bg-primary-fixed/30"></div>
+<span class="text-xs uppercase tracking-widest font-semibold">High-Performance Computing Defined</span>
+</div>
+</section>
+<!-- Right Side: Clean White Login Canvas -->
+<section class="flex-1 flex items-center justify-center p-6 md:p-12 bg-surface">
+<div class="w-full max-w-[480px]">
+<!-- Mobile Logo -->
+<div class="md:hidden flex items-center gap-2 mb-12">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">cloud</span>
+<span class="text-2xl font-extrabold tracking-tighter text-primary">CloudArch</span>
+</div>
+<!-- Login Header -->
+<header class="mb-10">
+<h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-2">Secure Client Login</h2>
+<h3 class="text-4xl font-extrabold text-on-surface tracking-tight">Welcome Back</h3>
+</header>
+<!-- Login Form -->
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-wider ml-1">Email Address</label>
+<div class="relative">
+<input class="w-full px-5 py-4 bg-surface-container-high rounded-lg text-on-surface placeholder:text-outline border-none focus:ring-0 focus:bg-surface-container-highest transition-all group" placeholder="name@company.com" type="email"/>
+<div class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-focus-within:w-full"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Password</label>
+<a class="text-xs font-bold text-primary hover:underline underline-offset-4" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<input class="w-full px-5 py-4 bg-surface-container-high rounded-lg text-on-surface placeholder:text-outline border-none focus:ring-0 focus:bg-surface-container-highest transition-all group" placeholder="••••••••" type="password"/>
+<div class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-focus-within:w-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-3 px-1">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" id="remember" type="checkbox"/>
+<label class="text-sm font-medium text-on-surface-variant" for="remember">Keep me logged in for 30 days</label>
+</div>
+<button class="w-full py-4 kinetic-gradient text-white font-bold rounded-lg shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all text-lg" type="submit">
+                        Login to Dashboard
+                    </button>
+</form>
+<!-- Divider -->
+<div class="relative my-10 flex items-center">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink mx-4 text-xs font-bold text-outline uppercase tracking-widest">Or continue with</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<!-- Social Logins -->
+<div class="grid grid-cols-3 gap-4">
+<button class="flex items-center justify-center py-3 px-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors">
+<svg class="w-6 h-6" fill="#1877F2" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</button>
+<button class="flex items-center justify-center py-3 px-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors">
+<svg class="w-6 h-6" viewbox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+</button>
+<button class="flex items-center justify-center py-3 px-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors">
+<svg class="w-6 h-6" fill="#1DA1F2" viewbox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+</button>
+</div>
+<!-- Registration Prompt -->
+<p class="mt-12 text-center text-sm font-medium text-on-surface-variant">
+                    New to CloudArch? <a class="text-primary font-bold hover:underline underline-offset-4" href="#">Create an account</a>
+</p>
+</div>
+</section>
+</main>
+<!-- Simple Footer (Global Visual Token applied) -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/10 py-6 px-12 md:px-24">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-xs font-medium uppercase tracking-[0.05em] text-on-surface-variant">
+                © 2024 CloudArch Infrastructure. High-performance computing defined.
+            </span>
+<div class="flex gap-8">
+<a class="text-xs font-medium uppercase tracking-[0.05em] text-outline hover:text-primary transition-colors" href="#">Security</a>
+<a class="text-xs font-medium uppercase tracking-[0.05em] text-outline hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-xs font-medium uppercase tracking-[0.05em] text-outline hover:text-primary transition-colors" href="#">API Status</a>
+</div>
+</div>
+</footer>
+</body></html>

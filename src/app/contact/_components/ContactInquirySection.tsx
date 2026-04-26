@@ -73,6 +73,9 @@ export function ContactInquirySection({ content }: ContactInquirySectionProps) {
         </div>
 
         <div className="bg-surface-container-low p-8 lg:p-10 rounded-xl">
+          <h3 className="text-2xl font-extrabold tracking-tight text-on-surface mb-6">
+            Send us a message
+          </h3>
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {topFields.map((field) => (
@@ -84,7 +87,7 @@ export function ContactInquirySection({ content }: ContactInquirySectionProps) {
                     id={field.name}
                     type={field.type}
                     placeholder={field.placeholder}
-                    className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0"
+                    className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-outline-variant/50 focus-visible:border-primary/40 focus-visible:ring-0"
                   />
                 </div>
               ))}
@@ -99,7 +102,7 @@ export function ContactInquirySection({ content }: ContactInquirySectionProps) {
                   id={phoneField.name}
                   type={phoneField.type}
                   placeholder={phoneField.placeholder}
-                  className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0"
+                  className="h-auto w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-outline-variant/50 focus-visible:border-primary/40 focus-visible:ring-0"
                 />
               </div>
             )}
@@ -111,9 +114,9 @@ export function ContactInquirySection({ content }: ContactInquirySectionProps) {
                 </Label>
                 <Textarea
                   id={messageField.name}
-                  rows={4}
+                  rows={5}
                   placeholder={messageField.placeholder}
-                  className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-transparent focus-visible:border-primary/40 focus-visible:ring-0 resize-none"
+                  className="w-full bg-surface-container-lowest rounded-xl p-4 text-sm outline-none border border-outline-variant/50 focus-visible:border-primary/40 focus-visible:ring-0 resize-none"
                 />
               </div>
             )}

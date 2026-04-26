@@ -32,7 +32,7 @@ export default function AboutPage() {
       <AboutSection content={aboutOverview} />
       <MissionVisionSection content={missionVision} />
       <TimelineSection content={timeline} />
-      <CertificationsSection content={certifications} />
+      <CertificationsSection content={certifications} sectionId="about-certifications" />
       <ClientLogosSection content={clients} />
       <CTASection content={cta} />
     </main>

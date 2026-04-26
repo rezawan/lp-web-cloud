@@ -55,13 +55,17 @@ export function AboutHeroSection({ content = DEFAULT_CONTENT }: AboutHeroSection
           <p className="text-lg text-slate-300 leading-relaxed font-medium mb-10">
             {content.description}
           </p>
-          <div className="flex gap-4">
-            <Button className="bg-white text-blue-900 hover:bg-slate-100 px-8 py-4 text-lg font-bold">
+          <div className="flex flex-wrap gap-4">
+            <Button
+              size="lg"
+              className="h-12 rounded-xl bg-white px-7 text-base font-semibold text-blue-900 shadow-lg shadow-black/20 hover:bg-slate-100"
+            >
               {content.ctas[0]?.label ?? 'Our Story'}
             </Button>
             <Button
               variant="outline"
-              className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg font-bold"
+              size="lg"
+              className="h-12 rounded-xl border-white/25 bg-white/5 px-7 text-base font-semibold text-white backdrop-blur-xs hover:bg-white/15"
             >
               {content.ctas[1]?.label ?? 'Global Network'}
             </Button>

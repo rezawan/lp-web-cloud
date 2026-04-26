@@ -1,0 +1,85 @@
+{
+  "page": "register",
+  "route": "/register",
+  "meta": {
+    "title": "Register | CloudArch High-Performance Infrastructure",
+    "description": "Create your CloudArch account and start building on enterprise-grade cloud infrastructure."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Join the CloudArch Ecosystem",
+      "description": "High-performance computing defined. Build your infrastructure with the velocity of light."
+    },
+    {
+      "type": "register-form",
+      "socialTitle": "Quick Register with Social Identity",
+      "socialProviders": [
+        { "label": "Facebook", "initial": "F" },
+        { "label": "Google", "initial": "G" },
+        { "label": "Twitter", "initial": "X" }
+      ],
+      "dividerLabel": "Or use your email",
+      "groups": [
+        {
+          "title": "Personal Information",
+          "fields": [
+            { "name": "firstName", "label": "First Name", "type": "text", "placeholder": "John" },
+            { "name": "lastName", "label": "Last Name", "type": "text", "placeholder": "Doe" },
+            { "name": "email", "label": "Email Address", "type": "email", "placeholder": "john.doe@enterprise.com" },
+            { "name": "phone", "label": "Phone Number", "type": "tel", "placeholder": "+1 (555) 000-0000" }
+          ]
+        },
+        {
+          "title": "Billing Address",
+          "fields": [
+            { "name": "street", "label": "Street Address", "type": "text", "placeholder": "123 Infrastructure Way, Suite 100", "span": 2 },
+            { "name": "city", "label": "City", "type": "text", "placeholder": "Palo Alto" },
+            { "name": "postal", "label": "Postal Code", "type": "text", "placeholder": "94301" },
+            {
+              "name": "country",
+              "label": "Country",
+              "type": "select",
+              "options": ["United States", "United Kingdom", "Singapore", "Germany"]
+            }
+          ]
+        },
+        {
+          "title": "Account Security",
+          "fields": [
+            { "name": "password", "label": "Password", "type": "password", "placeholder": "••••••••" },
+            { "name": "confirmPassword", "label": "Confirm Password", "type": "password", "placeholder": "••••••••" }
+          ]
+        }
+      ],
+      "newsletter": {
+        "label": "Join our technical mailing list",
+        "description": "Receive exclusive updates on global infrastructure expansion and high-performance computing whitepapers."
+      },
+      "submitLabel": "Register Account",
+      "terms": {
+        "prefix": "By registering, you agree to our",
+        "links": [
+          { "label": "Terms of Service", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" }
+        ]
+      },
+      "signInPrompt": {
+        "text": "Already have an enterprise account?",
+        "label": "Sign in here",
+        "href": "/login"
+      }
+    },
+    {
+      "type": "auth-footer",
+      "copyright": "© 2024 CloudArch Infrastructure. High-performance computing defined.",
+      "links": [
+        { "label": "Security", "href": "#" },
+        { "label": "Privacy", "href": "#" },
+        { "label": "Terms", "href": "#" },
+        { "label": "API Status", "href": "#" },
+        { "label": "Global Network", "href": "#" }
+      ]
+    }
+  ]
+}

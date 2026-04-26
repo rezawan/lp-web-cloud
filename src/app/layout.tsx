@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { SiteShell } from "@/components/SiteShell";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -47,9 +46,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col antialiased">
-        <Header />
-        <div className="pt-16 flex-1">{children}</div>
-        <Footer />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   );

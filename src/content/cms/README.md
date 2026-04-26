@@ -9,6 +9,8 @@ This folder stores page-level static JSON content so you can render each page fr
 - `products.json`
 - `domains.json`
 - `contact.json`
+- `login.json`
+- `register.json`
 
 ## Shared Structure
 

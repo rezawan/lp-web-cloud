@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register | CloudArch High-Performance Infrastructure</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#ffc6b2",
+                      "on-surface-variant": "#434654",
+                      "surface-tint": "#0c56d0",
+                      "primary-fixed": "#dae2ff",
+                      "inverse-surface": "#2d3133",
+                      "tertiary": "#7b2600",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb59b",
+                      "surface-container": "#eceef0",
+                      "error": "#ba1a1a",
+                      "background": "#f7f9fb",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#a33500",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-container": "#c4d2ff",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#021945",
+                      "primary": "#003d9b",
+                      "on-surface": "#191c1e",
+                      "surface-dim": "#d8dadc",
+                      "primary-container": "#0052cc",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#4c5d8d",
+                      "on-tertiary-fixed-variant": "#812800",
+                      "on-background": "#191c1e",
+                      "inverse-primary": "#b2c5ff",
+                      "secondary-container": "#b6c8fe",
+                      "on-secondary-container": "#415382",
+                      "tertiary-fixed": "#ffdbcf",
+                      "surface-container-low": "#f2f4f6",
+                      "outline-variant": "#c3c6d6",
+                      "surface-variant": "#e0e3e5",
+                      "secondary-fixed": "#dae2ff",
+                      "on-tertiary-fixed": "#380d00",
+                      "on-secondary-fixed-variant": "#344573",
+                      "outline": "#737685",
+                      "surface-bright": "#f7f9fb",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary-fixed-dim": "#b4c5fb",
+                      "on-primary-fixed-variant": "#0040a2",
+                      "on-primary-fixed": "#001848",
+                      "error-container": "#ffdad6",
+                      "surface": "#f7f9fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "display": ["Plus Jakarta Sans"],
+                      "body": ["Plus Jakarta Sans"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { background: rgba(247, 249, 251, 0.8); backdrop-filter: blur(20px); }
+        .kinetic-gradient { background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7f9fb]/80 dark:bg-[#191c1e]/80 backdrop-blur-md shadow-[0_12px_32px_rgba(0,24,72,0.04)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-[#003d9b] dark:text-white">
+                CloudArch
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#434654] dark:text-[#c3c6d6] hover:text-[#003d9b] font-medium transition-colors" href="#">Solutions</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] hover:text-[#003d9b] font-medium transition-colors" href="#">Infrastructure</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] hover:text-[#003d9b] font-medium transition-colors" href="#">Network</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] hover:text-[#003d9b] font-medium transition-colors" href="#">Pricing</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="text-[#003d9b] dark:text-[#0052cc] font-semibold hover:bg-[#f2f4f6] px-4 py-2 rounded-lg transition-all" href="#">Sign In</a>
+<button class="kinetic-gradient text-white px-6 py-2 rounded-lg font-bold shadow-lg scale-95 active:scale-90 transition-transform">
+                    Deploy Now
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Registration Section -->
+<main class="flex-grow pt-32 pb-20 relative overflow-hidden flex items-center justify-center">
+<!-- Background Kinetic Element -->
+<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] kinetic-gradient opacity-5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-primary opacity-5 rounded-full blur-[100px]"></div>
+<div class="container max-w-4xl px-6 relative z-10">
+<div class="text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-4">Join the CloudArch Ecosystem</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">High-performance computing defined. Build your infrastructure with the velocity of light.</p>
+</div>
+<!-- Registration Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_48px_rgba(0,24,72,0.08)] overflow-hidden">
+<div class="p-8 md:p-12">
+<!-- Social Registration -->
+<div class="mb-12">
+<p class="text-center text-xs font-bold uppercase tracking-[0.1em] text-outline mb-6">Quick Register with Social Identity</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<button class="flex items-center justify-center gap-3 px-6 py-3 bg-surface-container-low text-on-surface-variant font-semibold rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[#1877F2]">social_leaderboard</span>
+<span>Facebook</span>
+</button>
+<button class="flex items-center justify-center gap-3 px-6 py-3 bg-surface-container-low text-on-surface-variant font-semibold rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[#EA4335]">google</span>
+<span>Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 px-6 py-3 bg-surface-container-low text-on-surface-variant font-semibold rounded-lg hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[#1DA1F2]">expand_more</span>
+<span>Twitter</span>
+</button>
+</div>
+</div>
+<div class="relative flex items-center py-5 mb-8">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink mx-4 text-xs text-outline uppercase tracking-widest font-bold">Or use your email</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<!-- Registration Form -->
+<form class="space-y-12">
+<!-- Personal Information -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-6 kinetic-gradient rounded-full"></div>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Personal Information</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">First Name</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="John" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Last Name</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="john.doe@enterprise.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Phone Number</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+</section>
+<!-- Billing Address -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-6 kinetic-gradient rounded-full"></div>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Billing Address</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2 space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Street Address</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="123 Infrastructure Way, Suite 100" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">City</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="Palo Alto" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Postal Code</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="94301" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Country</label>
+<select class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all">
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Singapore</option>
+<option>Germany</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Account Security -->
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-6 kinetic-gradient rounded-full"></div>
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Account Security</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Password</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Confirm Password</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-0 focus:border-primary border-b-2 border-transparent focus:border-b-primary px-4 py-3 rounded-t-lg transition-all" placeholder="••••••••" type="password"/>
+</div>
+</div>
+</section>
+<!-- Options & Submission -->
+<div class="pt-6 space-y-8">
+<label class="flex items-start gap-4 cursor-pointer group">
+<div class="relative flex items-center h-5">
+<input class="h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary/20 bg-surface-container-low transition-all" type="checkbox"/>
+</div>
+<div class="text-sm">
+<p class="font-semibold text-on-surface">Join our technical mailing list</p>
+<p class="text-on-surface-variant">Receive exclusive updates on global infrastructure expansion and high-performance computing whitepapers.</p>
+</div>
+</label>
+<div class="flex flex-col md:flex-row items-center gap-6">
+<button class="w-full md:w-auto kinetic-gradient text-white px-12 py-4 rounded-lg font-extrabold text-lg shadow-[0_8px_24px_rgba(0,61,155,0.25)] hover:shadow-[0_12px_32px_rgba(0,61,155,0.35)] transition-all transform hover:-translate-y-0.5 active:scale-95" type="submit">
+                                    Register Account
+                                </button>
+<p class="text-sm text-on-surface-variant">
+                                    By registering, you agree to our <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4" href="#">Terms of Service</a> and <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4" href="#">Privacy Policy</a>.
+                                </p>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- Support / Bottom Note -->
+<div class="mt-8 text-center">
+<p class="text-on-surface-variant font-medium">Already have an enterprise account? <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1" href="#">Sign in here</a></p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-[#f2f4f6] dark:bg-[#191c1e] border-t border-[#c3c6d6]/20">
+<div class="grid grid-cols-1 md:flex md:justify-between items-center gap-6 px-12 py-8 max-w-[1440px] mx-auto">
+<p class="text-[#434654] dark:text-[#c3c6d6] text-xs font-medium uppercase tracking-[0.05em] font-['Plus_Jakarta_Sans']">
+                © 2024 CloudArch Infrastructure. High-performance computing defined.
+            </p>
+<div class="flex flex-wrap gap-6">
+<a class="text-[#434654] dark:text-[#c3c6d6] text-xs font-medium uppercase tracking-[0.05em] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Security</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] text-xs font-medium uppercase tracking-[0.05em] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] text-xs font-medium uppercase tracking-[0.05em] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] text-xs font-medium uppercase tracking-[0.05em] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">API Status</a>
+<a class="text-[#434654] dark:text-[#c3c6d6] text-xs font-medium uppercase tracking-[0.05em] hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Global Network</a>
+</div>
+</div>
+</footer>
+</body></html>

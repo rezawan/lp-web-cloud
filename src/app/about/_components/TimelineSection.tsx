@@ -21,6 +21,7 @@ interface TimelineSectionContent {
     year: string;
     title: string;
     description: string;
+    icon?: 'rocket' | 'briefcase' | 'cloud' | 'globe';
     image: string;
     imageAlt: string;
   }>;
@@ -31,22 +32,28 @@ interface TimelineSectionProps {
 }
 
 export function TimelineSection({ content }: TimelineSectionProps) {
+  const iconMap = {
+    rocket: Rocket,
+    briefcase: Briefcase,
+    cloud: Cloud,
+    globe: Globe,
+  } as const;
+
   const milestones: Milestone[] = (content?.milestones ?? [
     {
       year: '2014',
       title: 'The Beginning',
       description: 'First boutique VPS hosting service launched in Jakarta.',
-      icon: Rocket,
-      image:'/assets/images/unamed (4).png',
+      icon: 'rocket',
+      image: '/assets/images/unamed (4).png',
       imageAlt: 'Jakarta Office',
     },
     {
       year: '2017',
       title: 'Enterprise Pivot',
       description: 'Introduced Tier III Data Center services for corporate clients.',
-      icon: Briefcase,
-            image:'/assets/images/unamed (4).png',
-
+      icon: 'briefcase',
+      image: '/assets/images/unamed (4).png',
       imageAlt: 'Enterprise DC',
       reverse: true,
     },
@@ -54,24 +61,22 @@ export function TimelineSection({ content }: TimelineSectionProps) {
       year: '2020',
       title: 'Cloud Revolution',
       description: 'Launched Cloud Host Platform with NVMe-only storage.',
-      icon: Cloud,
-         image:'/assets/images/unamed (4).png',
-
+      icon: 'cloud',
+      image: '/assets/images/unamed (4).png',
       imageAlt: 'NVMe Cloud',
     },
     {
       year: '2024',
       title: 'Global Expansion',
       description: 'Opened regional nodes in Singapore, Tokyo, and Sydney.',
-      icon: Globe,
-            image:'/assets/images/unamed (4).png',
-
+      icon: 'globe',
+      image: '/assets/images/unamed (4).png',
       imageAlt: 'Global Nodes',
       reverse: true,
     },
   ]).map((milestone, index) => ({
     ...milestone,
-    icon: [Rocket, Briefcase, Cloud, Globe][index] ?? Rocket,
+    icon: iconMap[milestone.icon ?? 'rocket'] ?? Rocket,
     reverse: index % 2 === 1,
   }));
 

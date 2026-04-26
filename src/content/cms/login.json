@@ -1,0 +1,61 @@
+{
+  "page": "login",
+  "route": "/login",
+  "meta": {
+    "title": "Login | CloudArch Herza.id",
+    "description": "Sign in to your CloudArch dashboard and manage your high-performance infrastructure securely."
+  },
+  "sections": [
+    {
+      "type": "promo-panel",
+      "badge": "What's New",
+      "headline": "Exclusive 35% Hosting Discount",
+      "highlight": "Hosting Discount",
+      "description": "Elevate your infrastructure with our enterprise-grade NVMe solutions. Valid for new deployments this quarter.",
+      "cta": {
+        "label": "Deploy Now",
+        "href": "/products"
+      },
+      "microcopy": "High-Performance Computing Defined"
+    },
+    {
+      "type": "login-form",
+      "overline": "Secure Client Login",
+      "headline": "Welcome Back",
+      "email": {
+        "label": "Email Address",
+        "placeholder": "name@company.com"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "••••••••"
+      },
+      "forgotPassword": {
+        "label": "Forgot?",
+        "href": "#"
+      },
+      "rememberMeLabel": "Keep me logged in for 30 days",
+      "submitLabel": "Login to Dashboard",
+      "dividerLabel": "Or continue with",
+      "socialProviders": [
+        { "label": "Facebook", "initial": "F" },
+        { "label": "Google", "initial": "G" },
+        { "label": "Twitter", "initial": "X" }
+      ],
+      "registerPrompt": {
+        "text": "New to CloudArch?",
+        "label": "Create an account",
+        "href": "/register"
+      }
+    },
+    {
+      "type": "auth-footer",
+      "copyright": "© 2024 CloudArch Infrastructure. High-performance computing defined.",
+      "links": [
+        { "label": "Security", "href": "#" },
+        { "label": "Privacy", "href": "#" },
+        { "label": "API Status", "href": "#" }
+      ]
+    }
+  ]
+}
