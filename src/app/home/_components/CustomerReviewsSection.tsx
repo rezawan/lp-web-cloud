@@ -120,7 +120,8 @@ export function CustomerReviewsSection({ content }: CustomerReviewsSectionProps)
               pauseOnMouseEnter: true,
             }}
             speed={5000}
-            allowTouchMove={false}
+            allowTouchMove
+            grabCursor
             spaceBetween={24}
             slidesPerView={1.2}
             breakpoints={{

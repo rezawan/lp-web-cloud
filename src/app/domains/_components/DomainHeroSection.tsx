@@ -38,14 +38,15 @@ export function DomainHeroSection({ content }: DomainHeroSectionProps) {
   };
 
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-primary via-[#0048b8] to-[#0c56d0] py-24 md:py-32">
+    <section className="relative overflow-hidden bg-linear-to-br from-[#021431] via-[#053170] to-[#0a4a9f] py-24 md:py-32">
       <div
-        className="pointer-events-none absolute inset-0 opacity-10"
+        className="pointer-events-none absolute inset-0 opacity-45"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35) 0, transparent 20%), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.25) 0, transparent 18%), radial-gradient(circle at 50% 70%, rgba(255,255,255,0.2) 0, transparent 22%)",
+            "radial-gradient(circle at 18% 20%, rgba(125,211,252,0.45) 0%, transparent 35%), radial-gradient(circle at 82% 28%, rgba(59,130,246,0.45) 0%, transparent 33%), radial-gradient(circle at 52% 75%, rgba(147,197,253,0.35) 0%, transparent 38%)",
         }}
       />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#010918]/35 via-transparent to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mx-auto max-w-4xl text-center">
