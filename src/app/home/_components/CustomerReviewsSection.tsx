@@ -137,7 +137,7 @@ export function CustomerReviewsSection({ content }: CustomerReviewsSectionProps)
             {reviewItems.map((review) => (
               <SwiperSlide key={review.id}>
                 <article className="h-full bg-surface-container-lowest rounded-2xl p-7 md:p-8 shadow-sm border border-outline-variant/20">
-                  <div className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-secondary-container/60 mb-5">
+                  <div className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-blue-50/80 text-blue-700 ring-1 ring-blue-100/80 mb-5 dark:bg-slate-900/70 dark:text-blue-200 dark:ring-slate-800">
                     {Array.from({ length: review.rating }).map((_, index) => (
                       <Star key={index} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
