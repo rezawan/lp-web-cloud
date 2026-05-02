@@ -83,8 +83,24 @@ export function Header() {
     { label: 'Domains', href: '/domains' },
     // { label: 'Addons', href: '#' },
     { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Support', href: '/contact' ,
+      children: [
+        {
+          'label': 'Contact Us',
+          'href': '/contact',
+          'description': 'Get in touch with our support team',
+          'icon': <Globe className="w-5 h-5" />,
+        },
+        {
+          'label': 'Articles',
+          'href': '/articles',
+          'description': 'Find answers in our help center',
+          'icon': <Zap className="w-5 h-5" />,
+        },
+      ]
+    },
   ];
+
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm shadow-blue-900/5">
@@ -98,7 +114,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:flex">
+        <NavigationMenu className="hidden md:flex" viewport={false}>
           <NavigationMenuList className="gap-1">
             {navItems.map((item) => {
               if (!item.children) {

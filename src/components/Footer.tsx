@@ -8,6 +8,7 @@ import aboutPageContent from '@/content/cms/about.json';
 import contactPageContent from '@/content/cms/contact.json';
 import domainsPageContent from '@/content/cms/domains.json';
 import productsPageContent from '@/content/cms/products.json';
+import articlesPageContent from '@/content/cms/articles.json';
 
 export function Footer() {
   const pathname = usePathname();
@@ -19,6 +20,7 @@ export function Footer() {
     '/contact': contactPageContent.footer,
     '/domains': domainsPageContent.footer,
     '/products': productsPageContent.footer,
+    '/articles': articlesPageContent.footer,
   } as const;
 
   const rootPath = `/${pathname?.split('/')[1] ?? ''}`;

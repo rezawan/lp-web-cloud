@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteShell } from "@/components/SiteShell";
+import { ThemeInit } from "../components/ThemeInit";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -25,27 +26,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("h-full", "antialiased", "scroll-smooth", plusJakartaSans.variable)}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(() => {
-  const storageKey = 'theme';
-  const root = document.documentElement;
-
-  try {
-    const storedTheme = localStorage.getItem(storageKey);
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldUseDark = storedTheme ? storedTheme === 'dark' : systemPrefersDark;
-
-    root.classList.toggle('dark', shouldUseDark);
-  } catch {
-    root.classList.toggle('dark', false);
-  }
-})();`,
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col antialiased">
+        <ThemeInit />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

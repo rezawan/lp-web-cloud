@@ -11,6 +11,8 @@ This folder stores page-level static JSON content so you can render each page fr
 - `contact.json`
 - `login.json`
 - `register.json`
+- `articles.json`
+- `article-detail.json`
 
 ## Shared Structure
 

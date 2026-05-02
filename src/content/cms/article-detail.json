@@ -1,0 +1,384 @@
+{
+  "page": "article-detail",
+  "route": "/articles/[slug]",
+  "meta": {
+    "title": "Herza.id Insights | Article",
+    "description": "Read the latest infrastructure insights and engineering strategies from the Herza.id team."
+  },
+  "continueReading": {
+    "label": "Continue Reading",
+    "ctaLabel": "View all articles",
+    "ctaHref": "/articles"
+  },
+  "articles": [
+    {
+      "slug": "kinetic-networking",
+      "category": "Infrastructure",
+      "readTime": "8 min read",
+      "title": "Scaling Global Infrastructure: The Architecture of Kinetic Networking",
+      "date": "Oct 24, 2024",
+      "author": {
+        "name": "Marcus Thorne",
+        "role": "Senior Infrastructure Lead",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuD4jbA6UT7Cgie__I1a0ShPHRJHC6QMJ2nEJ9gTSCnFj-2dlcL0iZ0TPHQr7fD0MTXiWnfWXk1y1XnTCuQ6RSc77EAY65zWvD7l5xf09mTXl0QB0_1htIOk2DnIE3g9kUrx5vZAlRORJfc8ugHqBPWZvSeUdf0VUyNZM5VLtEfGjDBEmziLIfO0tzRIFxFHaKSEMgf7CgNNMa1u0eLC4kJqmL2kf7nwCIAXvdDBt1gl1RdHz-hzZm85cV5aUjlHFp1sPM3-BUDW7uX-"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC_ifBcEU-nsb57da9PQeuEc1gRIokhLs7rCKKAxUKDcy_d27Sk9_LhEOtstc5-q0WC6cY6SYQywHoV0SUq0EmBl80goQ6on8P2lFwFxh_wyixT9NOVk4_r1z7CqzVK4EFYIglwCkXtHbs5f_64aPtKfTAwyNDQwcTwYxrocx1RUl1_zixcX6uLBPJApPBSo5EqZ142MO9IUiFh3cVeEz4yw2DmUovtZNGUdbqqfBETcw62jM6flCK1UvFxZJVrKbmGvNBzLl8pkqJo",
+        "alt": "High-end server racks in a modern data center with glowing blue lights."
+      },
+      "intro": "As enterprises move toward real-time data processing, the underlying network architecture must evolve from static routing to a more fluid, kinetic model that anticipates demand.",
+      "toc": [
+        { "id": "section-1", "label": "The Paradigm Shift" },
+        { "id": "section-2", "label": "Edge Optimization" },
+        { "id": "section-3", "label": "Security Performance" },
+        { "id": "section-4", "label": "Sovereign Clouds" }
+      ],
+      "body": [
+        {
+          "type": "heading",
+          "id": "section-1",
+          "text": "The Paradigm Shift in Connectivity"
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern infrastructure is no longer just about raw capacity. It is about the intelligence with which that capacity is deployed. As latency becomes the primary bottleneck for AI and real-time analytics, we are seeing a shift toward decentralized processing hubs."
+        },
+        {
+          "type": "image",
+          "src": "https://lh3.googleusercontent.com/aida/ADBb0uinb_4_7uJ4ytyvpvcNFaJtDQqHMJAnFANNmsFv6FWJ600R8Oisr4SO_yA2JSrte6loCwv1T5UCf0k2Cqid88Eik3CgMFCk5oqLrlclIYV_KgYW4C1gVWoVghKxeAYWymbBi1gE8RK0GZmKpaFR9EhZiIHbs9U1h-PEJuZl1wh1RqSPskY0IIsI9BWtcf26TnOBBsOMPf12tRRCsr7CWE3sr3A8KKKDkR5aGbl1wjk6kKAuz3K84_MpujYpX_yYFjuPFvXCFmTnjrM",
+          "alt": "Visualization of a global neural network with interconnected nodes.",
+          "caption": "Fig 1.1: Kinetic node distribution across emerging technological hubs."
+        },
+        {
+          "type": "paragraph",
+          "text": "At Herza, we define kinetic networking as the ability for a network to reconfigure routing paths in milliseconds based on predictive traffic patterns. This is not just load balancing; it is an architectural movement toward a living digital nervous system."
+        },
+        {
+          "type": "heading",
+          "id": "section-2",
+          "text": "Edge Optimization Strategies"
+        },
+        {
+          "type": "paragraph",
+          "text": "The edge is the last millisecond of the journey. By placing compute resources within the same metro area as the end user, we remove the physical limitations of long-haul fiber."
+        },
+        {
+          "type": "image-grid",
+          "images": [
+            {
+              "src": "https://lh3.googleusercontent.com/aida/ADBb0uifq-k3V95jeiXYDXLb-_Sn-9qMfX5YJtU9gRRkqvuaXbmOhm_hiC-TP9_y5M03FKM3DoD-7w050fZVjgxSC0lwWKoz1RW7HDxOgF1JvODyOR2W_E8rNpcQLF6QUuibMyoNLArQu2_VlobKpRMA1FO_2rvCl-vbJegcfrwW2X3i2q1JZ5zyhV3z31JeadsEbQZHS3W7oy-90zfrDb_gRWgj28ZMSrmJsbvIGyNoVbF2KWIChcQD9AK9qDx7XjzOnKAdBKZR5jzmNQ",
+              "alt": "Close-up of high-end circuitry and fiber optic components in a data center."
+            },
+            {
+              "src": "https://lh3.googleusercontent.com/aida/ADBb0uhiATeaoDHvnQjSB4INzs9A9-egfDSB1Zw7YL1wSCkS9iaStNbc9n6G_aO-Dg5djEsLvXXcxgEiM1HP6T7FWHRGBumb91Lx_HyV81Y61ONSZx5iB7F73cMtY97nqID8wyq6hEOtDhi-Vcs3fPd7Y7upOfOj5OIzL5TPzPujIIQFX6Pumx2jvE-vfPR9MXEJgpLujBsgPtwrVE0pGT1uKJ88aDrKmVVDmJf7H-r9KgnJDFOvdyb5s8SYEET2IfnzQ2Hvxog97NQ4P-0",
+              "alt": "Abstract representation of data packets traveling through a tunnel of light."
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "id": "section-3",
+          "text": "Security as a Performance Metric"
+        },
+        {
+          "type": "paragraph",
+          "text": "Security used to be seen as a tax on performance. Our approach integrates security at the hardware level with dedicated ASIC chips that handle encryption without touching primary CPU cycles."
+        },
+        {
+          "type": "heading",
+          "id": "section-4",
+          "text": "The Future of Sovereign Clouds"
+        },
+        {
+          "type": "paragraph",
+          "text": "Data sovereignty is the next frontier for global infrastructure. Providers must offer solutions that keep data within specific jurisdictions while still benefiting from a global control plane."
+        },
+        {
+          "type": "paragraph",
+          "text": "The road ahead involves deeper integration between bare metal offerings and software defined networking layers so developers can build the next generation of kinetic applications."
+        }
+      ],
+      "callout": {
+        "title": "Need a custom solution?",
+        "description": "Our architects are ready to help you design your next-gen infrastructure.",
+        "ctaLabel": "Schedule a Call",
+        "ctaHref": "/contact"
+      }
+    },
+    {
+      "slug": "tier-iv-data-centers",
+      "category": "Infrastructure",
+      "readTime": "15 min read",
+      "title": "Navigating the complexities of Tier IV Data Centers",
+      "date": "Oct 20, 2024",
+      "author": {
+        "name": "Elias Janson",
+        "role": "Infrastructure Strategist",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDDm4_i8i5NU5qQ2ufYBsSzAkYIPUpWZnZphfZeLSb79MJfbohACmSgh91iqZte58_LB4VRf5oPVdEwhT0_ZZGjilj7t1cXcogF4xiQ-g2LoEhRwrdQ23S7VkZym0gIu_eU8rUYLCBlXvwu8PqeBEil_VSM3xlFOh8h2Hc3y-_wkJmXDNbpSuefc8MwCOHTNDY8NZrwk6ZmsynN00rFznP7nS8Iuw0Jc5p-oeH1yIcBPw21t5vsUTlczclJBAa7TsGwZHNlvdsYvAkF"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDDm4_i8i5NU5qQ2ufYBsSzAkYIPUpWZnZphfZeLSb79MJfbohACmSgh91iqZte58_LB4VRf5oPVdEwhT0_ZZGjilj7t1cXcogF4xiQ-g2LoEhRwrdQ23S7VkZym0gIu_eU8rUYLCBlXvwu8PqeBEil_VSM3xlFOh8h2Hc3y-_wkJmXDNbpSuefc8MwCOHTNDY8NZrwk6ZmsynN00rFznP7nS8Iuw0Jc5p-oeH1yIcBPw21t5vsUTlczclJBAa7TsGwZHNlvdsYvAkF",
+        "alt": "Minimalist workspace with network diagrams and data visualizations."
+      },
+      "intro": "Tier IV certification demands redundant paths, continuous monitoring, and rigorous operational controls to maintain 99.995% uptime.",
+      "toc": [
+        { "id": "section-1", "label": "Redundancy by Design" },
+        { "id": "section-2", "label": "Operational Discipline" },
+        { "id": "section-3", "label": "Failover Testing" }
+      ],
+      "body": [
+        { "type": "heading", "id": "section-1", "text": "Redundancy by Design" },
+        { "type": "paragraph", "text": "Tier IV facilities rely on fully fault tolerant topology, separating critical systems so any component can fail without impact." },
+        { "type": "heading", "id": "section-2", "text": "Operational Discipline" },
+        { "type": "paragraph", "text": "The operations model is as important as the engineering. Strict change controls and predictable maintenance windows keep risk low." },
+        { "type": "heading", "id": "section-3", "text": "Failover Testing" },
+        { "type": "paragraph", "text": "Routine failover drills validate redundancy and document recovery times across power, cooling, and network paths." }
+      ],
+      "callout": {
+        "title": "Need resilient infrastructure?",
+        "description": "Work with our team to design high availability environments.",
+        "ctaLabel": "Talk to an architect",
+        "ctaHref": "/contact"
+      }
+    },
+    {
+      "slug": "5g-colocation-strategies",
+      "category": "Connectivity",
+      "readTime": "8 min read",
+      "title": "The Impact of 5G on Global Colocation Strategies",
+      "date": "Oct 18, 2024",
+      "author": {
+        "name": "Sarah Kincaid",
+        "role": "Network Architect",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuD7SMRF40pw8_jcymh_9dNyeK_c_n6YY9VhVpIcS49FFXI8ub2o2OHSyRod5gKi_lvGsm0JiojtgcXd5R5nm77OvGvkQaHopRVidAdtt7xyXapHJq4YeUZtyB9uJUbSGQNaSJsIXVm-dQVgZWFFKvaebm-Uah0xqPdC0sgCAajOSkZS42-Qorn3DR421vvjgaNvax9cny21_ea8LcClRQnIcfX13lT8LEysSgIRip5uMTSUg_3ifzzEB-isX7S71SOQmktoIJwXV8Mp"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuD7SMRF40pw8_jcymh_9dNyeK_c_n6YY9VhVpIcS49FFXI8ub2o2OHSyRod5gKi_lvGsm0JiojtgcXd5R5nm77OvGvkQaHopRVidAdtt7xyXapHJq4YeUZtyB9uJUbSGQNaSJsIXVm-dQVgZWFFKvaebm-Uah0xqPdC0sgCAajOSkZS42-Qorn3DR421vvjgaNvax9cny21_ea8LcClRQnIcfX13lT8LEysSgIRip5uMTSUg_3ifzzEB-isX7S71SOQmktoIJwXV8Mp",
+        "alt": "Close-up of glowing fiber optic cables in a server environment."
+      },
+      "intro": "5G adoption shifts workloads to the edge and demands denser metro footprints with predictable latency.",
+      "toc": [
+        { "id": "section-1", "label": "Edge Density" },
+        { "id": "section-2", "label": "Carrier Neutrality" },
+        { "id": "section-3", "label": "Metro Interconnect" }
+      ],
+      "body": [
+        { "type": "heading", "id": "section-1", "text": "Edge Density" },
+        { "type": "paragraph", "text": "5G traffic increases demand for local compute capacity, pushing providers to deploy more micro data centers in urban zones." },
+        { "type": "heading", "id": "section-2", "text": "Carrier Neutrality" },
+        { "type": "paragraph", "text": "Multi carrier facilities reduce single carrier risk and enable flexible routing between mobile operators." },
+        { "type": "heading", "id": "section-3", "text": "Metro Interconnect" },
+        { "type": "paragraph", "text": "Low latency interconnect fabrics between metro sites keep application performance consistent across regions." }
+      ],
+      "callout": {
+        "title": "Planning an edge rollout?",
+        "description": "Our engineers can help map the right metro coverage for your workloads.",
+        "ctaLabel": "Start a discussion",
+        "ctaHref": "/contact"
+      }
+    },
+    {
+      "slug": "zero-trust-hosting",
+      "category": "Security",
+      "readTime": "12 min read",
+      "title": "Zero-Trust Architecture in Hosting Ecosystems",
+      "date": "Oct 15, 2024",
+      "author": {
+        "name": "Robert Vance",
+        "role": "Security Lead",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmnxYQyxmFK3fU2Wgd4_v6aV09z30d9_5WBGeFJmxw_O9tyXW5GTfJBLFiB_1wBWh7zoTkDPqPo73ucB2djI9XQ_IEjn4-dCR6I_3n0cilOqi_vFSIh8FD0kkOLIA7QIO2agTeNxi2BOR5I0WrGVz9jd4jS_YD8jRwbZBzft5eQ-59_gurALW7LUk9DAnNKuQx_nfdI7N-i_Qf7EacFzqwLOkeM6vO-QWHUk4_saGhWXmYnL8GLc5lP8sm5n6-0QzeKogJTV2vbJag"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBmnxYQyxmFK3fU2Wgd4_v6aV09z30d9_5WBGeFJmxw_O9tyXW5GTfJBLFiB_1wBWh7zoTkDPqPo73ucB2djI9XQ_IEjn4-dCR6I_3n0cilOqi_vFSIh8FD0kkOLIA7QIO2agTeNxi2BOR5I0WrGVz9jd4jS_YD8jRwbZBzft5eQ-59_gurALW7LUk9DAnNKuQx_nfdI7N-i_Qf7EacFzqwLOkeM6vO-QWHUk4_saGhWXmYnL8GLc5lP8sm5n6-0QzeKogJTV2vbJag",
+        "alt": "Abstract data shield representing advanced cloud security."
+      },
+      "intro": "Zero trust frameworks focus on continuous verification across identity, device, and workload layers.",
+      "toc": [
+        { "id": "section-1", "label": "Identity First" },
+        { "id": "section-2", "label": "Network Segmentation" },
+        { "id": "section-3", "label": "Policy Automation" }
+      ],
+      "body": [
+        { "type": "heading", "id": "section-1", "text": "Identity First" },
+        { "type": "paragraph", "text": "Every request is authenticated and authorized, using short-lived credentials and device posture checks." },
+        { "type": "heading", "id": "section-2", "text": "Network Segmentation" },
+        { "type": "paragraph", "text": "Micro segmentation reduces lateral movement by limiting access between services and environments." },
+        { "type": "heading", "id": "section-3", "text": "Policy Automation" },
+        { "type": "paragraph", "text": "Automated policy engines ensure consistent enforcement across hybrid and multi cloud deployments." }
+      ],
+      "callout": {
+        "title": "Secure your workloads",
+        "description": "Explore our managed security and compliance services.",
+        "ctaLabel": "View security options",
+        "ctaHref": "/contact"
+      }
+    },
+    {
+      "slug": "carbon-neutral-hosting",
+      "category": "Eco-Tech",
+      "readTime": "10 min read",
+      "title": "The Green Imperative: Carbon Neutral Hosting",
+      "date": "Oct 12, 2024",
+      "author": {
+        "name": "Lina Meyer",
+        "role": "Sustainability Program Lead",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBrKdf3qZCzCNaVVNXeF1hecJqitCgHL1grTjwOapTa2ccouSJulsPLaDKYkcFOt3fv2_92O0qxfJugygvK4VRXdd16cvoT_9T1IvRFofcqI9psDCjWP7O3_xOIjDT9eQKpj9oBpS2o3BrujHz6kNPuaRWwLuOWbxlIh8uyCet0cwSNpanZw0h1h18AzeMr7hY47gLzN9FWxSGI0sNJ3pK5xFb78d2rcH4sEU9AmZHDMCiC7rPRJ8cudwCszHkKh4CK8zoQuEv11alu"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBrKdf3qZCzCNaVVNXeF1hecJqitCgHL1grTjwOapTa2ccouSJulsPLaDKYkcFOt3fv2_92O0qxfJugygvK4VRXdd16cvoT_9T1IvRFofcqI9psDCjWP7O3_xOIjDT9eQKpj9oBpS2o3BrujHz6kNPuaRWwLuOWbxlIh8uyCet0cwSNpanZw0h1h18AzeMr7hY47gLzN9FWxSGI0sNJ3pK5xFb78d2rcH4sEU9AmZHDMCiC7rPRJ8cudwCszHkKh4CK8zoQuEv11alu",
+        "alt": "Interior of a green data center with sustainable cooling technologies."
+      },
+      "intro": "Sustainable hosting blends renewable energy procurement with advanced cooling and efficient hardware utilization.",
+      "toc": [
+        { "id": "section-1", "label": "Energy Sourcing" },
+        { "id": "section-2", "label": "Cooling Innovation" },
+        { "id": "section-3", "label": "Lifecycle Efficiency" }
+      ],
+      "body": [
+        { "type": "heading", "id": "section-1", "text": "Energy Sourcing" },
+        { "type": "paragraph", "text": "Renewable PPAs and on site generation reduce grid dependency while keeping costs predictable." },
+        { "type": "heading", "id": "section-2", "text": "Cooling Innovation" },
+        { "type": "paragraph", "text": "Liquid cooling and airflow optimization reduce power draw and extend equipment life." },
+        { "type": "heading", "id": "section-3", "text": "Lifecycle Efficiency" },
+        { "type": "paragraph", "text": "Hardware refresh cycles and reuse programs minimize waste and maintain high performance per watt." }
+      ],
+      "callout": {
+        "title": "Build greener workloads",
+        "description": "Learn how to align infrastructure goals with sustainability targets.",
+        "ctaLabel": "Contact sustainability team",
+        "ctaHref": "/contact"
+      }
+    },
+    {
+      "slug": "bare-metal-vs-virtualization",
+      "category": "Hardware",
+      "readTime": "20 min read",
+      "title": "Bare Metal vs. Virtualization: Making the Choice",
+      "date": "Oct 08, 2024",
+      "author": {
+        "name": "Alex Hoffman",
+        "role": "Systems Architect",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuC9M4iGSVNxGjr08Hy9RYEFgWVqC5JEe8W0jWnQ40lgeCaUzYMsQWIN70e9B2GoCrZl-7v5r19URBRjfnl-Nz3_s0ql8NljtebPr8ZPnc41wswna4dhVzsf66I4pBhrUF5bRswneGl2S6rm8Odobpb5sMjRMuOEsaoTC--bYshXAEOZwK4S79VNhAkj9UzkL7NZ21r1i42mdPzfGpfhT_6DYrI1m48ltECN9ol5hgAzsPnrDQ3A122sf5ES_LjkFZ7Cu0NOiPVFOQpO"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC9M4iGSVNxGjr08Hy9RYEFgWVqC5JEe8W0jWnQ40lgeCaUzYMsQWIN70e9B2GoCrZl-7v5r19URBRjfnl-Nz3_s0ql8NljtebPr8ZPnc41wswna4dhVzsf66I4pBhrUF5bRswneGl2S6rm8Odobpb5sMjRMuOEsaoTC--bYshXAEOZwK4S79VNhAkj9UzkL7NZ21r1i42mdPzfGpfhT_6DYrI1m48ltECN9ol5hgAzsPnrDQ3A122sf5ES_LjkFZ7Cu0NOiPVFOQpO",
+        "alt": "Macro shot of a CPU processor being installed into a motherboard."
+      },
+      "intro": "Choosing between bare metal and virtualization comes down to workload predictability, compliance, and performance goals.",
+      "toc": [
+        { "id": "section-1", "label": "Performance Baseline" },
+        { "id": "section-2", "label": "Operational Flexibility" },
+        { "id": "section-3", "label": "Cost Modeling" }
+      ],
+      "body": [
+        { "type": "heading", "id": "section-1", "text": "Performance Baseline" },
+        { "type": "paragraph", "text": "Bare metal offers predictable performance with no hypervisor overhead for compute intensive workloads." },
+        { "type": "heading", "id": "section-2", "text": "Operational Flexibility" },
+        { "type": "paragraph", "text": "Virtualization enables rapid provisioning, snapshots, and multi tenant isolation for variable demand." },
+        { "type": "heading", "id": "section-3", "text": "Cost Modeling" },
+        { "type": "paragraph", "text": "Model total cost across hardware, licensing, and staffing to understand the real delta over time." }
+      ],
+      "callout": {
+        "title": "Need workload guidance?",
+        "description": "We can map the best fit for your compute profile.",
+        "ctaLabel": "Request a consultation",
+        "ctaHref": "/contact"
+      }
+    },
+    {
+      "slug": "south-east-asia-expansion",
+      "category": "Global",
+      "readTime": "7 min read",
+      "title": "Expanding Your Digital Presence to South East Asia",
+      "date": "Oct 05, 2024",
+      "author": {
+        "name": "Putri Safira",
+        "role": "Regional Growth Lead",
+        "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBT3tNYvbqzC3BboDy5xyRErDAaSD4ow569k-u0Tq5vV05ZA5ozwsDbN86w2ozjfnvvIRgvKwidxU-XpUm19RqlOvan_R2PHzfix0VOWbtPUN0DLOVfIzKWaBU23_Nghae-ik82InOOdP96fyaullKBsrXRh1wBumhk8z6AMluikw2Oakta1tZHu-LUNgH986RNkSZeygKCDJENOOednWc3GKvvzoeDsVQGre9Iq2OHNxsPUewIsVDBPTfQEy_t-MXjlzEVrwXADq93"
+      },
+      "heroImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBT3tNYvbqzC3BboDy5xyRErDAaSD4ow569k-u0Tq5vV05ZA5ozwsDbN86w2ozjfnvvIRgvKwidxU-XpUm19RqlOvan_R2PHzfix0VOWbtPUN0DLOVfIzKWaBU23_Nghae-ik82InOOdP96fyaullKBsrXRh1wBumhk8z6AMluikw2Oakta1tZHu-LUNgH986RNkSZeygKCDJENOOednWc3GKvvzoeDsVQGre9Iq2OHNxsPUewIsVDBPTfQEy_t-MXjlzEVrwXADq93",
+        "alt": "City skyline at dusk with glowing data lines representing connectivity."
+      },
+      "intro": "Regional expansion requires a balance of local performance, regulatory compliance, and partner ecosystems.",
+      "toc": [
+        { "id": "section-1", "label": "Market Entry" },
+        { "id": "section-2", "label": "Latency Planning" },
+        { "id": "section-3", "label": "Regional Compliance" }
+      ],
+      "body": [
+        { "type": "heading", "id": "section-1", "text": "Market Entry" },
+        { "type": "paragraph", "text": "Jakarta and Singapore deliver strong connectivity and mature cloud ecosystems for fast entry." },
+        { "type": "heading", "id": "section-2", "text": "Latency Planning" },
+        { "type": "paragraph", "text": "Strategic routing and peering reduce round trip time for key metro populations." },
+        { "type": "heading", "id": "section-3", "text": "Regional Compliance" },
+        { "type": "paragraph", "text": "Local data residency requirements should be addressed early to avoid deployment delays." }
+      ],
+      "callout": {
+        "title": "Expand with confidence",
+        "description": "Our regional specialists can guide your market rollout.",
+        "ctaLabel": "Speak with the team",
+        "ctaHref": "/contact"
+      }
+    }
+  ],
+  "footer": {
+    "brand": {
+      "name": "Cloud Host",
+      "description": "Premium cloud hosting solutions with a focus on speed, security, and world-class support."
+    },
+    "certifications": [
+      { "name": "ISO 9001", "logoSrc": "/assets/icons/iso_9001.webp", "href": "/about#about-certifications" },
+      { "name": "ISO 14001", "logoSrc": "/assets/icons/iso_14001.webp", "href": "/about#about-certifications" },
+      { "name": "ISO 37001", "logoSrc": "/assets/icons/iso_37001.webp", "href": "/about#about-certifications" },
+      { "name": "ISO 20000-1", "logoSrc": "/assets/icons/iso_20000_1.webp", "href": "/about#about-certifications" },
+      { "name": "ISO 45001", "logoSrc": "/assets/icons/iso_45001.webp", "href": "/about#about-certifications" },
+      { "name": "ISO 27001", "logoSrc": "/assets/icons/iso_27001.webp", "href": "/about#about-certifications" }
+    ],
+    "socials": [
+      { "label": "Facebook", "href": "https://facebook.com/cloudhost", "iconSrc": "/assets/icons/social-facebook-gray.svg" },
+      { "label": "Instagram", "href": "https://instagram.com/cloudhost", "iconSrc": "/assets/icons/social-instagram-gray.svg" },
+      { "label": "X", "href": "https://x.com/cloudhost", "iconSrc": "/assets/icons/social-x-gray.svg" },
+      { "label": "LinkedIn", "href": "https://linkedin.com/company/cloudhost", "iconSrc": "/assets/icons/social-linkedin-gray.svg" },
+      { "label": "YouTube", "href": "https://youtube.com/@cloudhost", "iconSrc": "/assets/icons/social-youtube-gray.svg" }
+    ],
+    "sections": [
+      {
+        "title": "Products",
+        "links": [
+          { "label": "Cloud Hosting", "href": "#" },
+          { "label": "Elite VPS", "href": "#" },
+          { "label": "Dedicated Servers", "href": "#" },
+          { "label": "Domain Names", "href": "/domains" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "/about" },
+          { "label": "Certifications", "href": "/about#about-certifications" },
+          { "label": "Affiliate Program", "href": "#" },
+          { "label": "Privacy Policy", "href": "#" },
+          { "label": "Terms of Service", "href": "#" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Contact Support", "href": "#" },
+          { "label": "Knowledge Base", "href": "#" },
+          { "label": "Status Page", "href": "#" },
+          { "label": "SLA Guarantee", "href": "#" }
+        ]
+      }
+    ],
+    "bottom": {
+      "copyright": "Copyright 2024 Cloud Host. All rights reserved.",
+      "links": [
+        { "label": "Legal", "href": "#" },
+        { "label": "Cookies", "href": "#" },
+        { "label": "Security", "href": "#" }
+      ]
+    }
+  }
+}
