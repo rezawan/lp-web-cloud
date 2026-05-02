@@ -24,16 +24,44 @@ export function ProductsHeroSection({ content }: ProductsHeroSectionProps) {
 
   return (
     <header className="relative pt-32 pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-24 right-0 h-72 w-72 rounded-full bg-blue-200/70 blur-[120px] dark:bg-blue-500/25"></div>
+        <div className="absolute -bottom-24 left-0 h-80 w-80 rounded-full bg-cyan-200/60 blur-[140px] dark:bg-cyan-500/20"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-white/70 via-transparent to-white/20 dark:from-slate-950/70 dark:to-slate-950/10"></div>
+      </div>
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-left">
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-100/80 px-3 py-1 text-xs font-bold uppercase tracking-widest text-blue-700 dark:bg-blue-900/30 dark:text-blue-200">
+              <span className="inline-flex h-2 w-2 rounded-full bg-blue-600 dark:bg-blue-300"></span>
+              Enterprise-ready hosting
+            </div>
             <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
               {headline}
             </h1>
             <p className="text-slate-600 dark:text-slate-400 text-lg max-w-xl mb-12">
               {description}
             </p>
+            {/* <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                { label: '99.99% uptime', value: 'SLA backed' },
+                { label: '18 regions', value: 'Global edge' },
+                { label: '24/7 support', value: '15 min avg' },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-slate-200 bg-white/70 p-4 shadow-sm backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/60"
+                >
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                    {item.label}
+                  </p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div> */}
           </div>
 
           {/* Right Image */}
