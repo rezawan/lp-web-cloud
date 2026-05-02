@@ -66,7 +66,7 @@ export function SecuritySection({ content }: SecuritySectionProps) {
             <Image src={image.src} alt={image.alt} fill className="object-cover rounded-2xl" />
           </div>
 
-          <div className="absolute top-8 right-8 bg-white/90 dark:bg-slate-900/90 backdrop-blur p-6 rounded-xl shadow-xl border border-white/50 dark:border-slate-800/50">
+          <div className="absolute top-8 right-8 bg-surface-container-lowest/90 dark:bg-surface-container/90 backdrop-blur p-6 rounded-xl shadow-xl border border-border/50">
             <div className="flex items-center gap-4 mb-4">
               <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
               <span className="font-bold text-slate-900 dark:text-white">{statusTitle}</span>

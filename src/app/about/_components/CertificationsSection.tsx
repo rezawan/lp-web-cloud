@@ -51,7 +51,7 @@ export function CertificationsSection({ content, sectionId }: CertificationsSect
             className="group text-center"
             aria-label={cert.name}
           >
-            <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 mb-3 transition-all group-hover:shadow-xl group-hover:-translate-y-1">
+            <div className="bg-card p-5 rounded-2xl shadow-sm border border-border mb-3 transition-all group-hover:shadow-xl group-hover:-translate-y-1">
               <div className="aspect-square flex items-center justify-center">
                 <Image
                   src={cert.logoSrc}

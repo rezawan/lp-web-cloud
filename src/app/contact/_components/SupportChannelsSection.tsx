@@ -27,7 +27,7 @@ const getChannelIcon = (title: string) => {
 
 export function SupportChannelsSection({ content }: SupportChannelsSectionProps) {
   return (
-    <section className="py-12 -mt-10 lg:-mt-12 relative z-10">
+    <section className="py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         {content.items.map((channel) => {
           const Icon = getChannelIcon(channel.title);
@@ -62,7 +62,7 @@ export function SupportChannelsSection({ content }: SupportChannelsSectionProps)
               </p>
 
               {channel.featured ? (
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 font-bold">
+                <Button className="bg-white text-blue-600 hover:bg-blue-50 dark:bg-blue-100 dark:text-blue-600 dark:hover:bg-blue-200 font-bold">
                   {channel.action}
                 </Button>
               ) : (

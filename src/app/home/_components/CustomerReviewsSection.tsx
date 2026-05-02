@@ -104,7 +104,7 @@ export function CustomerReviewsSection({ content }: CustomerReviewsSectionProps)
           <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
             {summary.description}
           </p>
-          <Button className="bg-slate-900 hover:bg-slate-800 text-white font-bold px-7 py-6">
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-7 py-6">
             {summary.cta}
           </Button>
         </div>

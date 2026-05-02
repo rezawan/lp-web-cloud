@@ -79,7 +79,7 @@
           "title": "The Beginning",
           "description": "First boutique VPS hosting service launched in Jakarta.",
           "icon": "rocket",
-          "image": "/assets/images/unamed (4).png",
+          "image": "/assets/2014.avif",
           "imageAlt": "Jakarta Office"
         },
         {
@@ -87,7 +87,7 @@
           "title": "Enterprise Pivot",
           "description": "Introduced Tier III Data Center services for corporate clients.",
           "icon": "briefcase",
-          "image": "/assets/images/unamed (4).png",
+          "image": "/assets/images/server-rack.png",
           "imageAlt": "Enterprise DC"
         },
         {
@@ -95,7 +95,7 @@
           "title": "Cloud Revolution",
           "description": "Launched Cloud Host Platform with NVMe-only storage.",
           "icon": "cloud",
-          "image": "/assets/images/unamed (4).png",
+          "image": "/assets/images/products1.png",
           "imageAlt": "NVMe Cloud"
         },
         {
@@ -103,7 +103,7 @@
           "title": "Global Expansion",
           "description": "Opened regional nodes in Singapore, Tokyo, and Sydney.",
           "icon": "globe",
-          "image": "/assets/images/unamed (4).png",
+          "image": "/assets/2024.webp",
           "imageAlt": "Global Nodes"
         }
       ]
@@ -127,11 +127,11 @@
       "id": "about-clients",
       "heading": "Powering the world's most innovative teams",
       "items": [
-        { "name": "Google", "logo": "/assets/images/unamed (4).png" },
-        { "name": "IBM", "logo": "/assets/images/unamed (4).png" },
-        { "name": "Netflix", "logo": "/assets/images/unamed (4).png" },
-        { "name": "Microsoft", "logo": "/assets/images/unamed (4).png" },
-        { "name": "Slack", "logo": "/assets/images/unamed (4).png" }
+        { "name": "Google", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "IBM", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "Netflix", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "Microsoft", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "Slack", "logoSrc": "/assets/logo-placeholder.svg" }
       ]
     },
     {

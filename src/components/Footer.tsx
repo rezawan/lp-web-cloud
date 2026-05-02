@@ -34,7 +34,7 @@ export function Footer() {
   const socialLinks = footerContent.socials ?? [];
 
   return (
-    <footer className="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+    <footer className="bg-surface-container-low dark:bg-surface-container w-full border-t border-border">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 py-12 lg:px-12 max-w-7xl mx-auto">
         {/* Brand Section */}
         <div className="space-y-4">
@@ -77,7 +77,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-white/70 transition-colors hover:border-blue-500 dark:border-slate-700 dark:bg-slate-900"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card transition-colors hover:border-blue-500 dark:hover:border-blue-500"
               >
                 <Image
                   src={item.iconSrc}
@@ -101,7 +101,7 @@ export function Footer() {
                 className="group inline-flex flex-col items-center gap-2"
                 aria-label={cert.name}
               >
-                <div className="rounded-lg bg-white/80 p-1.5 ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
+                <div className="rounded-lg bg-card p-1.5 ring-1 ring-border">
                   <Image
                     src={cert.logoSrc}
                     alt={cert.name}

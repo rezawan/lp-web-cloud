@@ -74,7 +74,7 @@ export function HeroSection({ content = DEFAULT_CONTENT }: HeroSectionProps) {
               <Button
                 variant="outline"
                 size="lg"
-                className="h-12 lg:h-14 px-6 lg:px-8 text-base lg:text-lg font-semibold rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800"
+                className="h-12 lg:h-14 px-6 lg:px-8 text-base lg:text-lg font-semibold rounded-xl bg-surface-container-lowest dark:bg-surface-container text-foreground dark:text-foreground border border-border hover:bg-surface-container-low dark:hover:bg-surface-container-high"
               >
                 {content.ctas[1]?.label ?? 'View Pricing'}
               </Button>

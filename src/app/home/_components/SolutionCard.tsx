@@ -79,7 +79,7 @@ export function SolutionCard(
   // Determine styles based on variant
   const variantStyles = {
     default: {
-      container: 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800',
+      container: 'bg-card border border-border',
       iconBg: 'bg-blue-100 dark:bg-blue-900/30',
       iconColor: 'text-blue-600 dark:text-blue-400',
       titleColor: 'text-slate-900 dark:text-white',
@@ -87,7 +87,7 @@ export function SolutionCard(
       ctaColor: 'text-blue-600 dark:text-blue-400',
     },
     featured: {
-      container: 'md:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800',
+      container: 'md:col-span-2 bg-card border border-border',
       iconBg: 'bg-blue-600',
       iconColor: 'text-white',
       titleColor: 'text-slate-900 dark:text-white',
@@ -103,8 +103,8 @@ export function SolutionCard(
       ctaColor: 'text-white',
     },
     dark: {
-      container: 'bg-slate-900 border border-slate-800',
-      iconBg: 'bg-slate-800',
+      container: 'bg-surface-container border border-border',
+      iconBg: 'bg-surface-container-high',
       iconColor: 'text-slate-300',
       titleColor: 'text-white',
       descColor: 'text-slate-400',

@@ -1,16 +1,23 @@
+'use client';
+
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, A11y } from 'swiper/modules';
+import 'swiper/css';
+
 type Partner = {
-  id: number;
+  id?: number;
   name: string;
-  logoText: string;
+  logoSrc: string;
 };
 
 const partners: Partner[] = [
-  { id: 1, name: 'Nexa Systems', logoText: 'NX' },
-  { id: 2, name: 'DataPulse', logoText: 'DP' },
-  { id: 3, name: 'OrbitWare', logoText: 'OW' },
-  { id: 4, name: 'Skyline Apps', logoText: 'SA' },
-  { id: 5, name: 'CoreBit Labs', logoText: 'CB' },
-  { id: 6, name: 'Vertex Cloud', logoText: 'VC' },
+  { id: 1, name: 'Nexa Systems', logoSrc: '/assets/logo-placeholder.svg' },
+  { id: 2, name: 'DataPulse', logoSrc: '/assets/logo-placeholder.svg' },
+  { id: 3, name: 'OrbitWare', logoSrc: '/assets/logo-placeholder.svg' },
+  { id: 4, name: 'Skyline Apps', logoSrc: '/assets/logo-placeholder.svg' },
+  { id: 5, name: 'CoreBit Labs', logoSrc: '/assets/logo-placeholder.svg' },
+  { id: 6, name: 'Vertex Cloud', logoSrc: '/assets/logo-placeholder.svg' },
 ];
 
 interface PartnersSectionContent {
@@ -40,19 +47,58 @@ export function PartnersSection({ content }: PartnersSectionProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+        <Swiper
+          modules={[Autoplay, A11y]}
+          spaceBetween={16}
+          loop={items.length > 1}
+          speed={700}
+          autoplay={{ delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          breakpoints={{
+            0: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
+          }}
+          aria-label="Partners logo carousel"
+        >
           {items.map((partner, index) => (
-            <article
-              key={partner.id || index}
-              className="bg-surface-container-low rounded-2xl border border-outline-variant/25 p-5 flex flex-col items-center text-center gap-3"
-            >
-              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-blue-800 text-white font-extrabold text-sm flex items-center justify-center">
-                {partner.logoText}
-              </div>
-              <p className="text-sm font-semibold text-on-surface leading-tight">{partner.name}</p>
-            </article>
+            <SwiperSlide key={partner.id ?? index}>
+              <article className="bg-surface-container-low rounded-2xl border border-outline-variant/25 p-5 flex flex-col items-center text-center gap-3 h-full">
+                <div className="relative h-8 w-24">
+                  <Image
+                    src={partner.logoSrc}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 96px, 120px"
+                  />
+                </div>
+                <p className="text-sm font-semibold text-on-surface leading-tight">{partner.name}</p>
+              </article>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+
+        <noscript>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mt-6">
+            {items.map((partner, index) => (
+              <article
+                key={`noscript-${partner.id ?? index}`}
+                className="bg-surface-container-low rounded-2xl border border-outline-variant/25 p-5 flex flex-col items-center text-center gap-3"
+              >
+                <div className="relative h-8 w-24">
+                  <Image
+                    src={partner.logoSrc}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 96px, 120px"
+                  />
+                </div>
+                <p className="text-sm font-semibold text-on-surface leading-tight">{partner.name}</p>
+              </article>
+            ))}
+          </div>
+        </noscript>
       </div>
     </section>
   );

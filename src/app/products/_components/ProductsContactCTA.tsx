@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { MessageCircle, Mail, HeadsetIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ProductsContactCTAContent {
   heading: string;
   description: string;
-  ctas: Array<{ label: string }>;
+  ctas: Array<{ label: string; href?: string }>;
   helpdeskCard: {
     title: string;
     subtitle: string;
@@ -22,7 +23,7 @@ export function ProductsContactCTA({ content }: ProductsContactCTAProps) {
   const description =
     content?.description ??
     'Our expert team is available 24/7/365 to assist you with any technical hurdles or billing inquiries.';
-  const ctas = content?.ctas ?? [{ label: 'Live Chat' }, { label: 'Email Support' }];
+  const ctas = content?.ctas ?? [{ label: 'Live Chat', href: '/contact' }, { label: 'Email Support', href: '/contact' }];
   const helpdeskCard = content?.helpdeskCard ?? {
     title: '24/7 Helpdesk',
     subtitle: 'Average response: 15min',
@@ -51,17 +52,25 @@ export function ProductsContactCTA({ content }: ProductsContactCTAProps) {
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <Button
-              className="bg-white text-blue-600 hover:bg-blue-50 flex items-center gap-2 font-bold px-8 py-4"
+              asChild
+              size="lg"
+              className="h-12 rounded-xl bg-white px-7 text-base font-semibold text-blue-700 shadow-xl shadow-black/20 transition-all hover:-translate-y-0.5 hover:bg-blue-50"
             >
-              <MessageCircle className="w-5 h-5" />
-              {ctas[0]?.label ?? 'Live Chat'}
+              <Link href={ctas[0]?.href ?? '/contact'}>
+                <MessageCircle className="w-5 h-5" />
+                {ctas[0]?.label ?? 'Live Chat'}
+              </Link>
             </Button>
             <Button
+              asChild
+              size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 flex items-center gap-2 font-bold px-8 py-4"
+              className="h-12 rounded-xl border-white/35 bg-white/10 px-7 text-base font-semibold text-white shadow-lg shadow-black/10 backdrop-blur-xs transition-colors hover:bg-white/20 hover:text-white"
             >
-              <Mail className="w-5 h-5" />
-              {ctas[1]?.label ?? 'Email Support'}
+              <Link href={ctas[1]?.href ?? '/contact'}>
+                <Mail className="w-5 h-5" />
+                {ctas[1]?.label ?? 'Email Support'}
+              </Link>
             </Button>
           </div>
         </div>

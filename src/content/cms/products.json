@@ -38,8 +38,29 @@
       }
     },
     {
+      "type": "product-tabs",
+      "id": "products-tabs",
+      "heading": "Pick the platform that matches your workload",
+      "tabs": [
+        { "label": "Web Hosting", "icon": "globe", "description": "Optimized for speed and simplicity." },
+        { "label": "Turbo", "icon": "zap", "description": "Extra horsepower for peak traffic." },
+        { "label": "VPS", "icon": "server", "description": "Dedicated resources and root access." },
+        { "label": "Enterprise", "icon": "shield", "description": "Compliance-ready infrastructure." }
+      ]
+    },
+    {
       "type": "pricing-plans",
       "id": "products-pricing",
+      "billing": {
+        "monthlyLabel": "Monthly billing",
+        "annualLabel": "Annual billing",
+        "note": "Save 20% with annual commitments. Cancel anytime."
+      },
+      "regions": [
+        { "id": "us", "label": "North America (USD)", "multiplier": 1, "currencySymbol": "$" },
+        { "id": "eu", "label": "Europe (USD)", "multiplier": 1.08, "currencySymbol": "$" },
+        { "id": "apac", "label": "Asia Pacific (USD)", "multiplier": 0.96, "currencySymbol": "$" }
+      ],
       "plans": [
         {
           "name": "GO",
@@ -98,6 +119,69 @@
           ],
           "cta": "Get Started"
         }
+      ]
+    },
+    {
+      "type": "included-features",
+      "id": "products-included",
+      "label": "Exciting Features",
+      "heading": "All Plans Included",
+      "description": "Everything you need to launch faster and scale safely.",
+      "items": [
+        {
+          "title": "Flexible Control",
+          "description": "Full control panels with role-based access and automation hooks.",
+          "icon": "settings"
+        },
+        {
+          "title": "Filtered Bandwidth",
+          "description": "Smart traffic filtering keeps your sites responsive and protected.",
+          "icon": "shield"
+        },
+        {
+          "title": "Improve Site Speed",
+          "description": "NVMe storage and edge caching for faster page delivery.",
+          "icon": "gauge"
+        },
+        {
+          "title": "Premium Tooling",
+          "description": "One-click installs, staging environments, and Git deploys.",
+          "icon": "sparkles"
+        },
+        {
+          "title": "Dedicated Power",
+          "description": "Guaranteed CPU allocations on every plan tier.",
+          "icon": "cpu"
+        },
+        {
+          "title": "Maximum Security",
+          "description": "WAF rules, malware scanning, and automated backups.",
+          "icon": "lock"
+        },
+        {
+          "title": "Always-on Support",
+          "description": "24/7 global support engineers ready to help.",
+          "icon": "lifebuoy"
+        },
+        {
+          "title": "Resilient Storage",
+          "description": "Multi-zone replication keeps your data safe.",
+          "icon": "database"
+        }
+      ]
+    },
+    {
+      "type": "os-grid",
+      "id": "products-os",
+      "heading": "Available OS templates",
+      "description": "Deploy in minutes with curated images optimized for security and performance.",
+      "items": [
+        { "name": "Ubuntu LTS", "icon": "terminal", "description": "Stable, long-term support images." },
+        { "name": "Debian", "icon": "server", "description": "Minimal, reliable server builds." },
+        { "name": "AlmaLinux", "icon": "shield", "description": "Enterprise-ready RHEL compatible." },
+        { "name": "Rocky Linux", "icon": "mountain", "description": "Community-driven RHEL alternative." },
+        { "name": "Windows Server", "icon": "monitor", "description": "Compatible with .NET workloads." },
+        { "name": "Fedora", "icon": "cpu", "description": "Latest kernels for modern stacks." }
       ]
     },
     {

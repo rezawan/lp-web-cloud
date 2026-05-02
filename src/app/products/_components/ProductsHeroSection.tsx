@@ -6,7 +6,6 @@ import Image from 'next/image';
 interface ProductsHeroContent {
   headline: string;
   description: string;
-  tabs: string[];
   image: { src: string; alt: string };
   floatingBadge: { label: string; value: string };
 }
@@ -16,7 +15,6 @@ interface ProductsHeroSectionProps {
 }
 
 export function ProductsHeroSection({ content }: ProductsHeroSectionProps) {
-  const tabs = content?.tabs ?? ['Web Hosting', 'Turbo', 'VPS', 'Enterprise'];
   const headline = content?.headline ?? 'High-Performance Cloud Infrastructure';
   const description =
     content?.description ??
@@ -36,22 +34,6 @@ export function ProductsHeroSection({ content }: ProductsHeroSectionProps) {
             <p className="text-slate-600 dark:text-slate-400 text-lg max-w-xl mb-12">
               {description}
             </p>
-
-            {/* Tabs */}
-            <div className="flex-wrap gap-2 p-1.5 bg-slate-200/50 dark:bg-slate-800 rounded-xl inline-flex border border-slate-300/20 dark:border-slate-700">
-              {tabs.map((tab, index) => (
-                <button
-                  key={tab}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                    index === 0
-                      ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-sm'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400'
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Right Image */}

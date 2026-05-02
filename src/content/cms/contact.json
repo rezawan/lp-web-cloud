@@ -91,7 +91,14 @@
       "id": "contact-trusted-by",
       "heading": "Trusted by Industry Leaders",
       "description": "Powering the next generation of global infrastructure",
-      "items": ["Nexa Systems", "CoreScale", "ByteGrid", "InfraNova", "SkyCompute", "DataSphere"]
+      "items": [
+        { "name": "Nexa Systems", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "CoreScale", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "ByteGrid", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "InfraNova", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "SkyCompute", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "DataSphere", "logoSrc": "/assets/logo-placeholder.svg" }
+      ]
     }
   ],
   "footer": {

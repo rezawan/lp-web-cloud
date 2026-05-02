@@ -199,12 +199,12 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --card: #111827;
+  --card-foreground: #e2e8f0;
+  --popover: #111827;
+  --popover-foreground: #e2e8f0;
   --primary: oklch(0.424 0.199 265.638);
   --primary-foreground: oklch(0.97 0.014 254.604);
   --secondary: oklch(0.274 0.006 286.033);
@@ -230,6 +230,50 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --surface: #0f172a;
+  --surface-bright: #1f2937;
+  --surface-dim: #0b1220;
+  --surface-variant: #1f2a44;
+  --surface-container: #111827;
+  --surface-container-low: #0b1220;
+  --surface-container-lowest: #070c16;
+  --surface-container-high: #1b2435;
+  --surface-container-highest: #243146;
+  --surface-tint: #b2c5ff;
+  --on-surface: #e2e2e6;
+  --on-surface-variant: #c1c5d2;
+  --outline: #8b8f9b;
+  --outline-variant: #414552;
+  --inverse-surface: #e2e2e6;
+  --inverse-on-surface: #1a1c20;
+  --inverse-primary: #003d9b;
+  --on-background: #e2e2e6;
+  --on-primary: #001848;
+  --primary-container: #0040a2;
+  --on-primary-container: #c4d2ff;
+  --primary-fixed: #dae2ff;
+  --primary-fixed-dim: #b2c5ff;
+  --on-primary-fixed: #001848;
+  --on-primary-fixed-variant: #0040a2;
+  --on-secondary: #e2e2e6;
+  --secondary-container: #344573;
+  --on-secondary-container: #dae2ff;
+  --secondary-fixed: #dae2ff;
+  --secondary-fixed-dim: #b4c5fb;
+  --on-secondary-fixed: #021945;
+  --on-secondary-fixed-variant: #344573;
+  --tertiary: #ffb59b;
+  --on-tertiary: #4b1a00;
+  --tertiary-container: #812800;
+  --on-tertiary-container: #ffc6b2;
+  --tertiary-fixed: #ffdbcf;
+  --tertiary-fixed-dim: #ffb59b;
+  --on-tertiary-fixed: #380d00;
+  --on-tertiary-fixed-variant: #812800;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
 }
 
 @layer base {

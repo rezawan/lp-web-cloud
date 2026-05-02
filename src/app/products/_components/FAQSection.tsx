@@ -37,23 +37,33 @@ export function FAQSection({ content }: FAQSectionProps) {
   ];
 
   const heading = content?.heading ?? "Explore FAQ's";
-
   return (
     <SectionContainer bgColor="lighter" className="py-20">
-      <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-12 text-center">{heading}</h2>
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">{heading}</h2>
+        <p className="text-sm text-slate-600 dark:text-slate-300 mb-10">Helpful answers to common questions about our hosting, migration, and support.</p>
+      </div>
 
-      <Accordion type="single" collapsible defaultValue="faq-1" className="mx-auto max-w-3xl space-y-4">
+      <Accordion
+        type="single"
+        collapsible
+        defaultValue="faq-0"
+        className="mx-auto max-w-3xl space-y-4"
+      >
         {faqItems.map((item, index) => (
           <AccordionItem
             key={item.question}
             value={`faq-${index}`}
-            className="rounded-2xl border-none bg-surface-container-low px-6"
+            className="rounded-2xl border border-outline-variant/10 bg-card shadow-sm overflow-hidden"
           >
-            <AccordionTrigger className="gap-4 py-6 text-left text-lg font-bold text-on-surface hover:no-underline **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:shrink-0 **:data-[slot=accordion-trigger-icon]:text-primary">
-              {item.question}
+            <AccordionTrigger className="w-full px-6 py-5 text-left">
+              <div className="flex items-start gap-4 w-full">
+                <span className="flex-none inline-flex items-center justify-center h-8 w-8 rounded-full bg-primary/10 text-primary font-semibold text-xs">{index + 1}</span>
+                <span className="flex-1 text-base md:text-lg font-semibold text-on-surface dark:text-white">{item.question}</span>
+              </div>
             </AccordionTrigger>
 
-            <AccordionContent className="mt-0 pb-6 text-base leading-relaxed text-on-surface-variant">
+            <AccordionContent className="px-6 pb-6 pt-0 text-sm leading-relaxed text-on-surface-variant bg-surface-container-lowest">
               {item.answer}
             </AccordionContent>
           </AccordionItem>

@@ -96,7 +96,7 @@
           "description": "Real humans. Real engineers. 24/7/365 availability with a 15-minute response guarantee."
         },
         {
-          "variant": "dark",
+          "variant": "default",
           "title": "Tier III Certified Infrastructure",
           "description": "Our data centers meet the highest global standards for availability and power redundancy, featuring N+1 configurations."
         },
@@ -200,12 +200,12 @@
       "heading": "Our Partners",
       "description": "We collaborate with trusted technology and infrastructure brands.",
       "items": [
-        { "name": "Nexa Systems", "logoText": "NX" },
-        { "name": "DataPulse", "logoText": "DP" },
-        { "name": "OrbitWare", "logoText": "OW" },
-        { "name": "Skyline Apps", "logoText": "SA" },
-        { "name": "CoreBit Labs", "logoText": "CB" },
-        { "name": "Vertex Cloud", "logoText": "VC" }
+        { "name": "Nexa Systems", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "DataPulse", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "OrbitWare", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "Skyline Apps", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "CoreBit Labs", "logoSrc": "/assets/logo-placeholder.svg" },
+        { "name": "Vertex Cloud", "logoSrc": "/assets/logo-placeholder.svg" }
       ]
     },
     {

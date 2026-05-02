@@ -12,15 +12,44 @@ interface PricingPlan {
   tier: string;
   price: string;
   period: string;
+  monthlyPrice?: string;
+  annualPrice?: string;
   features: PricingFeature[];
   featured?: boolean;
 }
 
-interface PricingCardProps {
-  plan: PricingPlan;
+interface PricingRegion {
+  id: string;
+  label: string;
+  multiplier: number;
+  currencySymbol?: string;
 }
 
-export function PricingCard({ plan }: PricingCardProps) {
+interface PricingCardProps {
+  plan: PricingPlan;
+  billingCycle: 'monthly' | 'annual';
+  regions: PricingRegion[];
+  regionId: string;
+  onRegionChange: (regionId: string) => void;
+  activeRegion?: PricingRegion;
+}
+
+export function PricingCard({
+  plan,
+  billingCycle,
+  regions,
+  regionId,
+  onRegionChange,
+  activeRegion,
+}: PricingCardProps) {
+  const annualBase = parseFloat(plan.annualPrice ?? plan.price);
+  const monthlyBase = parseFloat(plan.monthlyPrice ?? (annualBase / 12).toFixed(2));
+  const basePrice = billingCycle === 'monthly' ? monthlyBase : annualBase;
+  const regionMultiplier = activeRegion?.multiplier ?? 1;
+  const currencySymbol = activeRegion?.currencySymbol ?? '$';
+  const price = (basePrice * regionMultiplier).toFixed(2);
+  const periodLabel = billingCycle === 'monthly' ? '/month' : '/year';
+
   return (
     <div
       className={cn(
@@ -43,14 +72,35 @@ export function PricingCard({ plan }: PricingCardProps) {
           {plan.tier}
         </span>
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-1">{plan.name}</h3>
+        <div className="mt-4">
+          <label className="text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            Region pricing
+          </label>
+          <select
+            value={regionId}
+            onChange={(event) => onRegionChange(event.target.value)}
+            className="mt-2 w-full rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-2 text-sm text-slate-700 dark:text-slate-200"
+          >
+            {regions.map((region) => (
+              <option key={region.id} value={region.id}>
+                {region.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Pricing */}
       <div className="mb-8">
         <div className="flex items-baseline gap-1">
-          <span className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">${plan.price}</span>
-          <span className="text-slate-600 dark:text-slate-400">{plan.period}</span>
+          <span className="text-4xl font-extrabold text-blue-600 dark:text-blue-400">
+            {currencySymbol}{price}
+          </span>
+          <span className="text-slate-600 dark:text-slate-400">{periodLabel}</span>
         </div>
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
+          {billingCycle === 'monthly' ? 'Billed monthly. Cancel anytime.' : 'Billed annually. Best value.'}
+        </p>
       </div>
 
       {/* Features */}

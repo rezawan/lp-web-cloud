@@ -1,7 +1,12 @@
+import Image from 'next/image';
+
 interface TrustedByContent {
   heading: string;
   description: string;
-  items: string[];
+  items: Array<{
+    name: string;
+    logoSrc: string;
+  }>;
 }
 
 interface TrustedBySectionProps {
@@ -22,10 +27,15 @@ export function TrustedBySection({ content }: TrustedBySectionProps) {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 opacity-70">
           {content.items.map((partner) => (
             <div
-              key={partner}
-              className="h-14 rounded-lg border border-outline-variant/50 bg-surface-container-lowest flex items-center justify-center text-xs md:text-sm font-semibold text-on-surface-variant"
+              key={partner.name}
+              className="rounded-lg border border-outline-variant/50 bg-surface-container-lowest flex flex-col items-center justify-center p-4 gap-2"
             >
-              {partner}
+              <div className="relative h-6 w-16 md:h-7 md:w-20">
+                <Image src={partner.logoSrc} alt={`${partner.name} logo`} fill className="object-contain" />
+              </div>
+              <span className="text-xs mt-2 font-semibold text-on-surface-variant text-center">
+                {partner.name}
+              </span>
             </div>
           ))}
         </div>

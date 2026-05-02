@@ -105,7 +105,7 @@ export function TimelineSection({ content }: TimelineSectionProps) {
             <div key={milestone.year} className={`flex ${isReverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 items-center`}>
               {/* Content */}
               <div className={`md:w-1/2 ${isReverse ? 'md:pr-12' : 'md:pl-12'}`}>
-                <div className="group p-6 bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all">
+                <div className="group p-6 bg-card rounded-xl shadow-md border border-border hover:shadow-lg transition-all">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-blue-600 dark:text-blue-400 font-black text-2xl">{milestone.year}</span>
                     <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -119,7 +119,7 @@ export function TimelineSection({ content }: TimelineSectionProps) {
 
               {/* Center Circle */}
               <div className="md:w-auto flex justify-center">
-                <div className="w-12 h-12 bg-white dark:bg-slate-900 rounded-full border-4 border-blue-600 flex items-center justify-center shadow-lg z-10 relative">
+                <div className="w-12 h-12 bg-card rounded-full border-4 border-blue-600 flex items-center justify-center shadow-lg z-10 relative">
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
               </div>
