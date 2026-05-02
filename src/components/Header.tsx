@@ -79,7 +79,7 @@ export function Header() {
         },
       ],
     },
-    { label: 'Servers', href: '#' },
+    { label: 'Servers', href: '/products' },
     { label: 'Domains', href: '/domains' },
     // { label: 'Addons', href: '#' },
     { label: 'About', href: '/about' },
