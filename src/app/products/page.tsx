@@ -41,7 +41,7 @@ export default function ProductsPage() {
       <AvailableOSSection content={osGrid} />
       <ComparisonTable content={comparison} />
       <FeaturesGrid content={features} />
-      <AdvantageSection content={advantages} />
+      {/* <AdvantageSection content={advantages} /> */}
       <FAQSection content={faq} />
       <ProductsContactCTA content={contactCta} />
     </main>
