@@ -61,56 +61,58 @@ export function ComparisonTable({ content }: ComparisonTableProps) {
   return (
     <SectionContainer bgColor="light">
       <div className="mb-16 text-center">
-        <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-4">{heading}</h2>
-        <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        <h2 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-4">{heading}</h2>
+        <div className="w-24 h-1.5 bg-linear-to-r from-blue-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="bg-slate-200 dark:bg-slate-800">
-              <th className="p-6 text-slate-900 dark:text-white font-bold border-b border-slate-300 dark:border-slate-700">
-                Features
-              </th>
-              <th className="p-6 text-blue-600 dark:text-blue-400 font-extrabold border-b border-slate-300 dark:border-slate-700">
-                GO
-              </th>
-              <th className="p-6 text-blue-600 dark:text-blue-400 font-extrabold border-b border-slate-300 dark:border-slate-700">
-                STARTER
-              </th>
-              <th className="p-6 text-blue-600 dark:text-blue-400 font-extrabold border-b border-slate-300 dark:border-slate-700">
-                MEDIUM
-              </th>
-              <th className="p-6 text-blue-600 dark:text-blue-400 font-extrabold border-b border-slate-300 dark:border-slate-700">
-                ADVANCED
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white dark:bg-slate-950">
-            {comparisonData.map((row, idx) => (
-              <tr
-                key={row.feature}
-                className={idx % 2 === 1 ? 'bg-slate-50 dark:bg-slate-900/50' : ''}
-              >
-                <td className="p-6 border-b border-slate-200 dark:border-slate-800 font-semibold text-slate-900 dark:text-white">
-                  {row.feature}
-                </td>
-                <td className="p-6 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
-                  {row.go}
-                </td>
-                <td className="p-6 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
-                  {row.starter}
-                </td>
-                <td className="p-6 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
-                  {row.medium}
-                </td>
-                <td className="p-6 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300">
-                  {row.advanced}
-                </td>
+      <div className="overflow-x-auto rounded-2xl">
+        <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-xl bg-white dark:bg-slate-950">
+          <table className="w-full text-left border-separate border-spacing-0">
+            <thead>
+              <tr className="bg-linear-to-r from-blue-600 to-blue-700 dark:from-blue-900 dark:to-blue-800">
+                <th className="px-6 py-4 text-white font-bold text-sm uppercase tracking-wide">
+                  Features
+                </th>
+                <th className="px-6 py-4 text-white font-extrabold text-sm uppercase tracking-wide">
+                  GO
+                </th>
+                <th className="px-6 py-4 text-white font-extrabold text-sm uppercase tracking-wide">
+                  STARTER
+                </th>
+                <th className="px-6 py-4 text-white font-extrabold text-sm uppercase tracking-wide">
+                  MEDIUM
+                </th>
+                <th className="px-6 py-4 text-white font-extrabold text-sm uppercase tracking-wide">
+                  ADVANCED
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {comparisonData.map((row, idx) => (
+                <tr
+                  key={row.feature}
+                  className="border-b border-slate-200 dark:border-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors duration-200"
+                >
+                  <td className="px-6 py-5 font-semibold text-slate-900 dark:text-white text-sm">
+                    {row.feature}
+                  </td>
+                  <td className="px-6 py-5 text-slate-600 dark:text-slate-300 text-sm font-medium">
+                    {row.go}
+                  </td>
+                  <td className="px-6 py-5 text-slate-600 dark:text-slate-300 text-sm font-medium">
+                    {row.starter}
+                  </td>
+                  <td className="px-6 py-5 text-slate-600 dark:text-slate-300 text-sm font-medium">
+                    {row.medium}
+                  </td>
+                  <td className="px-6 py-5 text-slate-600 dark:text-slate-300 text-sm font-medium">
+                    {row.advanced}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </SectionContainer>
   );
