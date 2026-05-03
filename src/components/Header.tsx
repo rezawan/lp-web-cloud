@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Cloud, Menu, X, ChevronDown, Globe, Zap, Server, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
@@ -32,9 +33,32 @@ interface MenuItem {
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  const isActivePath = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
+  const navLinkClasses = (href: string) =>
+    `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+      isActivePath(href)
+        ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400'
+        : 'text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:bg-blue-50/50 dark:hover:bg-slate-800'
+    }`;
+
+  const triggerClasses = (href: string) =>
+    `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+      isActivePath(href)
+        ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-400 font-semibold'
+        : 'text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:bg-blue-50/50 dark:hover:bg-slate-800'
+    }`;
 
   const navItems: MenuItem[] = [
-    { label: 'Home', href: '/' },
+    { label: 'Home', href: '/home' },
     {
       label: 'Web Hosting',
       href: '/products',
@@ -120,14 +144,7 @@ export function Header() {
               if (!item.children) {
                 return (
                   <NavigationMenuItem key={item.label}>
-                    <Link
-                      href={item.href}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        item.label === 'Web Hosting'
-                          ? 'text-blue-700 dark:text-blue-400 font-bold'
-                          : 'text-slate-600 dark:text-slate-400 hover:text-blue-700'
-                      }`}
-                    >
+                    <Link href={item.href} className={navLinkClasses(item.href)}>
                       {item.label}
                     </Link>
                   </NavigationMenuItem>
@@ -137,11 +154,7 @@ export function Header() {
               return (
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuTrigger
-                    className={`px-3 py-2 rounded-lg text-sm font-medium ${
-                      item.label === 'Web Hosting'
-                        ? 'text-blue-700 dark:text-blue-400 font-bold'
-                        : 'text-slate-600 dark:text-slate-400'
-                    }`}
+                    className={triggerClasses(item.href)}
                   >
                     {item.label}
                   </NavigationMenuTrigger>
@@ -153,20 +166,36 @@ export function Header() {
                           <NavigationMenuLink
                             key={child.label}
                             asChild
-                            className="flex items-start gap-2 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer group"
+                            className={`flex items-start gap-2 p-2 rounded-lg transition-colors cursor-pointer group ${
+                              isActivePath(child.href)
+                                ? 'bg-blue-50 dark:bg-blue-950/30 ring-1 ring-blue-200 dark:ring-blue-900'
+                                : 'hover:bg-slate-100 dark:hover:bg-slate-800'
+                            }`}
                           >
                             <Link href={child.href}>
                               {child.icon && (
-                                <div className="shrink-0 w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 group-hover:text-blue-600 transition-colors">
+                                <div className={`shrink-0 w-9 h-9 rounded-lg flex items-center justify-center transition-colors ${
+                                  isActivePath(child.href)
+                                    ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300'
+                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 group-hover:text-blue-600'
+                                }`}>
                                   {child.icon}
                                 </div>
                               )}
                               <div className="flex-1 min-w-0">
-                                <div className="font-semibold text-slate-900 dark:text-white text-sm">
+                                <div className={`text-sm ${
+                                  isActivePath(child.href)
+                                    ? 'font-semibold text-blue-700 dark:text-blue-300'
+                                    : 'font-semibold text-slate-900 dark:text-white'
+                                }`}>
                                   {child.label}
                                 </div>
                                 {child.description && (
-                                  <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                                  <div className={`text-xs mt-0.5 ${
+                                    isActivePath(child.href)
+                                      ? 'text-blue-600/80 dark:text-blue-300/80'
+                                      : 'text-slate-500 dark:text-slate-400'
+                                  }`}>
                                     {child.description}
                                   </div>
                                 )}
@@ -187,7 +216,11 @@ export function Header() {
                               <NavigationMenuLink
                                 key={link.label}
                                 asChild
-                                className="block px-2 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                                className={`block px-2 py-1.5 text-sm rounded-lg transition-colors cursor-pointer ${
+                                  isActivePath(link.href)
+                                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/30 dark:text-blue-300'
+                                    : 'text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                }`}
                               >
                                 <Link href={link.href}>
                                   {link.label}
@@ -244,7 +277,11 @@ export function Header() {
                           openDropdown === item.label ? null : item.label
                         )
                       }
-                      className="w-full flex items-center justify-between py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors font-medium"
+                      className={`w-full flex items-center justify-between py-2 transition-colors font-medium ${
+                        isActivePath(item.href)
+                          ? 'text-blue-700 dark:text-blue-400'
+                          : 'text-slate-600 dark:text-slate-400 hover:text-blue-700'
+                      }`}
                     >
                       {item.label}
                       <ChevronDown
@@ -259,20 +296,36 @@ export function Header() {
                           <Link
                             key={child.label}
                             href={child.href}
-                            className="flex items-start gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                            className={`flex items-start gap-3 p-2 rounded-lg transition-colors ${
+                              isActivePath(child.href)
+                                ? 'bg-blue-50 dark:bg-blue-950/30 ring-1 ring-blue-200 dark:ring-blue-900'
+                                : 'hover:bg-slate-100 dark:hover:bg-slate-800'
+                            }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {child.icon && (
-                              <div className="shrink-0 w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 text-sm">
+                              <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm ${
+                                isActivePath(child.href)
+                                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300'
+                                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+                              }`}>
                                 {child.icon}
                               </div>
                             )}
                             <div className="flex-1 min-w-0">
-                              <div className="font-medium text-slate-900 dark:text-white text-sm">
+                              <div className={`text-sm ${
+                                isActivePath(child.href)
+                                  ? 'font-semibold text-blue-700 dark:text-blue-300'
+                                  : 'font-medium text-slate-900 dark:text-white'
+                              }`}>
                                 {child.label}
                               </div>
                               {child.description && (
-                                <div className="text-xs text-slate-500 dark:text-slate-400">
+                                <div className={`text-xs ${
+                                  isActivePath(child.href)
+                                    ? 'text-blue-600/80 dark:text-blue-300/80'
+                                    : 'text-slate-500 dark:text-slate-400'
+                                }`}>
                                   {child.description}
                                 </div>
                               )}
@@ -289,7 +342,11 @@ export function Header() {
                               <Link
                                 key={link.label}
                                 href={link.href}
-                                className="block px-2 py-2 text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                                className={`block px-2 py-2 text-sm rounded-lg transition-colors ${
+                                  isActivePath(link.href)
+                                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-950/30 dark:text-blue-300'
+                                    : 'text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                }`}
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {link.label}
@@ -303,7 +360,11 @@ export function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block py-2 text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-colors"
+                    className={`block py-2 transition-colors ${
+                      isActivePath(item.href)
+                        ? 'text-blue-700 dark:text-blue-400 font-semibold'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-blue-700'
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
