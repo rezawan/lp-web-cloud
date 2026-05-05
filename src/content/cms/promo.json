@@ -1,0 +1,132 @@
+{
+  "page": "promo",
+  "route": "/promo",
+  "meta": {
+    "title": "Promos | Cloud Host",
+    "description": "Exclusive hosting promos and limited-time offers on cloud, VPS, dedicated servers, and colocation."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "promo-hero",
+      "badge": "Limited Availability",
+      "headline": "Exclusive Promos &",
+      "highlight": "Limited Offers",
+      "description": "Elevate your digital infrastructure with high-performance solutions. Save up to 60% on premium cloud hosting, VPS, and enterprise dedicated servers.",
+      "ctas": [
+        { "label": "Explore All Deals", "href": "/products" },
+        { "label": "Support Center", "href": "/contact" }
+      ]
+    },
+    {
+      "type": "filters",
+      "id": "promo-filters",
+      "items": [
+        { "label": "All Promos", "active": true },
+        { "label": "Cloud Hosting" },
+        { "label": "Managed VPS" },
+        { "label": "Dedicated Servers" },
+        { "label": "Colocation" },
+        { "label": "Domains" }
+      ]
+    },
+    {
+      "type": "promos",
+      "id": "promo-grid",
+      "items": [
+        {
+          "title": "35% Off Cloud VPS",
+          "label": "New Clients",
+          "description": "Experience extreme speed with NVMe-backed virtual servers. Perfect for high-traffic applications and scaling businesses.",
+          "code": "CLOUDVPS35",
+          "tag": "Active Offer",
+          "image": {
+            "src": "https://lh3.googleusercontent.com/aida/ADBb0ujgGtMFIIVI6UF4egt8gbMFQgLJSoxHGvM8bQ359zYOt02Dxw3Y9Z9LDYA55IKSpI_himYfbVSqYwUiW7m72PeSgXwnSoDG1Qq4nMeAI6iybLYbkiZFfNIrYl-WeHGgVH1HR2Bhoa1NLiCnBJJtfCNf9-3lcgOi1Lg5k1bwUtud3fsuk-cMxim_YvfgCjj7v-NHi5fo-1lRfKC39UdLDD1vOtZ-ng3wS9rf-iqov9DZSMEUWxa19uRAyy7vHYh-er35QC7r3StVEA",
+            "alt": "Clean server room with glowing blue LED lights"
+          }
+        },
+        {
+          "title": "Free Domain & SSL",
+          "label": "Annual Plan",
+          "description": "Get your .com domain and enterprise-grade SSL certificate absolutely free with any Cloud Hosting annual subscription.",
+          "code": "FREESTART24",
+          "tag": "Limited Time",
+          "image": {
+            "src": "https://lh3.googleusercontent.com/aida/ADBb0ujZ97xc5QjjYqzDY1BVUrXgGMo3GoPVtI5G8omcJzmmgYXPAmxK1ERhv2PyJ2cBvPi23YrNAUf-6Xzc4CsvggrqYx86bYepvehZmRSHxGEKOUqlhX3vMIj_UxpJ-eauJPTPghhqLnAMo8rZh_gIMnnmY6Laz2BkDbPuq6-RhKei7izDGFXaU9JVIFunL5kP7oP5IW0nbKe0Ky6oFcJg1GEB2doFUCNEyyFSig9kf8lJbBuMYo4QrrJrx2elZFdQoVNv403S9qxJwu8",
+            "alt": "Modern workspace with laptop and tablet"
+          }
+        },
+        {
+          "title": "Colocation Special",
+          "label": "2U Rack",
+          "description": "Premium Tier-3 data center space in Jakarta. Secure your infrastructure with 99.9% uptime and redundant power systems.",
+          "code": "COLO15",
+          "tag": "Enterprise",
+          "image": {
+            "src": "https://lh3.googleusercontent.com/aida/ADBb0uiygpO4nz0mj2ZUtg31VbbJ2d8EKUlMkyTdmvq8PazY2UYq_tNpCL_juTKu107ZxYtoClO20KEbmKlBuNMYq9Aiu3En2i6DJt8Pvq-DnYjpZXyCq3cGIpV_ddagYjps-z-9Nhr8BdKiFlXOtWHlPRVwRjFiB3TAg9cVt8sMcbfs1d8H4_seB4uYeyAawLcxNSGYKGJeClAlqM45AXA24J2CWj8w7x8t59ColiX8-ctbnSV-xwEnCzBGXwSIK7Bs5HEOKeTyH3VS_FA",
+            "alt": "Corporate data center lobby"
+          }
+        },
+        {
+          "title": "WP Pro Managed",
+          "label": "50% Off",
+          "description": "Fast-track your WordPress performance. We handle updates, security, and optimization while you focus on growth.",
+          "code": "WORDPRESS50",
+          "tag": "Ending Soon",
+          "image": {
+            "src": "https://lh3.googleusercontent.com/aida/ADBb0uh1xzrjflLsZo722I59qp5MvWEjkR8MLg-L6mxoiU6bVzl-AunX9AAKXJiUeHkUDwkdknfduIbUyIAKVITLzxLCTmamgdCtYNOcW-nhtfVFlV8DAInnzZ4vhP_V8yBJlq1KhREoGirmyoiZGU7Y12DfQdF6SJ5Xm8B6n4O9Wb0LBg6USpjaEWJ3oFZ_CXmGHjO09K7Lmi70qeJE4Afq8xeHgs8-IjLKvYdIDp9-h29JazUAF1inSl9yW_DHnScg_ohCvTgXyF6IER8",
+            "alt": "Command center with data dashboards"
+          }
+        },
+        {
+          "title": "Bare Metal Power",
+          "label": "Intro Deal",
+          "description": "Dedicated resources with zero noisy neighbors. Launch your Bare Metal server today and get first month 20% off.",
+          "code": "METALPOWER",
+          "tag": "Active Offer",
+          "image": {
+            "src": "https://lh3.googleusercontent.com/aida/ADBb0ugR8E2vDUEgdQWnyqYpxqhYQ2EGBhy1VGwcH0j3IxG-OKiQQ0F1X1Dd8dLVIhA7xMWhLZmI3jMAhDx8JOp6dJmZwHD4FvgjJI0aI7U7S6dYWk_A1gPSoWTjkDi_ikisctCDnqza4ULc_gB8fuLTlIFvUoCkax2YhbnvSEAOTF8Rjm-7cwQixwWQImOet_EYsZb1q8WMuRAW6Od-a6-gfm4foIbdQPOIDd-x9SIhcXOIOd94mrGT-uLeqW6lzvNmcNmAS8DcQCsozpM",
+            "alt": "Cloud computing nodes visualization"
+          }
+        },
+        {
+          "title": "Global CDN Add-on",
+          "label": "6-Month Free",
+          "description": "Speed up content delivery to your global audience. Activate CDN on any hosting plan and get 6 months on us.",
+          "code": "GLOBALCDN",
+          "tag": "Web Exclusive",
+          "image": {
+            "src": "https://lh3.googleusercontent.com/aida/ADBb0ugwvhEDL3yYPy7CrlWzYRn5ojI64AUA61FIeaO6_rjb9IHK9mnUQx-66RhvJbXHa4fx_WzrKLLOCRwp9vTyWgHaXwXAswZxUa5ASminYANDpXwS_s9xGBFLA4735grYlt-8MImSnkKI39BmmFSYudClg1f2i0xYROx9y4A-HSmSapRf8jXiMPR1d5smZpySx9fXGCzf79hK44WRhXhYej_F1XVfH-FyKnY5MLVAsiqXwXWA9aSbgFQlbnrMXfSSEZrISoXY4Bu1pfw",
+            "alt": "Glowing global fiber network visualization"
+          }
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "id": "promo-newsletter",
+      "heading": "Missed a Deal?",
+      "description": "Do not worry, new infrastructure offers launch every week. Subscribe to get flash sales and exclusive enterprise discounts.",
+      "placeholder": "Enter your email address",
+      "button": "Subscribe",
+      "disclaimer": "By subscribing, you agree to our Privacy Policy and will receive marketing emails from Cloud Host."
+    },
+    {
+      "type": "final-cta",
+      "id": "promo-final-cta",
+      "heading": "Need a Custom Enterprise Quote?",
+      "highlight": "Enterprise Quote?",
+      "description": "High-performance infrastructure requires tailored solutions. Our technical sales team is ready to design a bespoke environment that fits your exact latency and scaling requirements.",
+      "primaryCta": { "label": "Contact Sales Team", "href": "/contact" },
+      "secondaryCta": { "label": "View Price List", "href": "/products" },
+      "image": {
+        "src": "https://lh3.googleusercontent.com/aida/ADBb0ui3OEmXHNLnLSaxVsGw_r2nYpVVsgEWrxebZ9Wqkt5sq4-kvuI85bXpK8TqbyS_HLvPeOcNZHBLm2uySUxBn4a3jaNt6_VXsw9rlQmoxq3Lyf5iVx-ehghWnbVpZ_H1sTm0r4W4IGKlt3iGiUxZRSuJ8SagEjjoBJSjEX-43oy5ecS4svjt8VL_cFfOudyq7g4OHplLwQRe3-hH9Mfd1I3OIi_f-33Ag54pQNopTa1Y8rzPvSpODEIEe0GLsv-skcM6GXUL3NMjDSQ",
+        "alt": "Team of IT engineers collaborating in a conference room"
+      },
+      "statCard": {
+        "label": "Certified",
+        "description": "99.9% Network Uptime Guarantee across all regions."
+      }
+    }
+  ]
+}

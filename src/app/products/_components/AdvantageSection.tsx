@@ -2,6 +2,7 @@
 
 import { Settings, Lock, Zap } from 'lucide-react';
 import { SectionContainer } from '@/components/SectionContainer';
+import { ICON_COLORS } from '@/lib/iconColors';
 
 interface Advantage {
   icon: React.ComponentType<{ className?: string }>;
@@ -18,6 +19,7 @@ interface AdvantageSectionContent {
 interface AdvantageSectionProps {
   content?: AdvantageSectionContent;
 }
+
 
 export function AdvantageSection({ content }: AdvantageSectionProps) {
   const advantages: Advantage[] = (content?.items ?? [
@@ -57,13 +59,14 @@ export function AdvantageSection({ content }: AdvantageSectionProps) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        {advantages.map((advantage) => {
+        {advantages.map((advantage, index) => {
           const Icon = advantage.icon;
+          const colors = ICON_COLORS[index % ICON_COLORS.length];
 
           return (
             <div key={advantage.title} className="text-center group">
-              <div className="w-24 h-24 bg-blue-100 dark:bg-blue-900/20 rounded-3xl mx-auto flex items-center justify-center mb-8 group-hover:bg-blue-600 dark:group-hover:bg-blue-600 transition-colors duration-300">
-                <Icon className="w-12 h-12 text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors duration-300" />
+              <div className={`w-24 h-24 rounded-3xl mx-auto flex items-center justify-center mb-8 transition-colors duration-300 ${colors.bg}`}>
+                <Icon className={`w-12 h-12 transition-colors duration-300 ${colors.text}`} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">{advantage.title}</h3>
               <p className="text-slate-600 dark:text-slate-400">{advantage.description}</p>

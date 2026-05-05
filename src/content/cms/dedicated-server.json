@@ -1,0 +1,183 @@
+{
+  "page": "dedicated-server",
+  "route": "/dedicated-server",
+  "meta": {
+    "title": "Dedicated Servers | Cloud Host",
+    "description": "Enterprise-grade dedicated servers with exclusive hardware, Tier-3 data centers, and 99.9% uptime SLA."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "dedicated-hero",
+      "badge": "Dedicated Solutions",
+      "headline": "Ultimate Power.",
+      "highlight": "Zero Compromise.",
+      "description": "Unleash enterprise performance with raw hardware exclusivity. No noisy neighbors, no shared resources-just pure, dedicated computing power backed by a 99.9% uptime SLA.",
+      "ctas": [
+        { "label": "Select Your Server", "href": "/products" },
+        { "label": "Free Consultation", "href": "/contact" }
+      ],
+      "image": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCOFluYSHNrnTf14W6dbSCvwUiaWGo6Teua-umsvup24PNvM4E_j-35UvWtt4t01iuUFQ5uxPolpzHrz5XZOzLAeSHCY_nuzmDo-AeXEJ7DTD7DpOizUVCkkQfPcPlTz66sOWBzBh8jLl-nqcxOgMlMWPdB8MgM5gse1bEV-iZANQfav60D-3xi6AXDcN_3-F7j91jH5pe6CzJlBmUPGmrof04L0MdvlgorVLBBWtq3QsGtzX4hJHEFgZY1CtoyXEE2gZKuiFYtkZvl",
+        "alt": "Next-gen dedicated server architecture with glowing blue components"
+      }
+    },
+    {
+      "type": "server-selection",
+      "id": "dedicated-selection",
+      "heading": "Choose Your Dedicated Performance",
+      "billing": {
+        "primary": "Monthly",
+        "secondary": "Yearly (Save 15%)"
+      },
+      "columns": [
+        "Processor Model",
+        "CPU Core Specs",
+        "Memory / RAM",
+        "Storage Config",
+        "Pricing & Action"
+      ],
+      "servers": [
+        {
+          "name": "Dual Xeon E5 2680 V4",
+          "location": "Jakarta, ID (Tier-3)",
+          "cpu": "28 Cores / 56 Threads",
+          "ram": "64GB DDR4 ECC",
+          "storage": "2x 480GB NVMe SSD",
+          "price": "Rp 2.450k",
+          "priceSuffix": "per month",
+          "cta": "Configure"
+        },
+        {
+          "name": "Dual Xeon E5 2697 V4",
+          "location": "Jakarta, ID (Tier-3)",
+          "cpu": "36 Cores / 72 Threads",
+          "ram": "128GB DDR4 ECC",
+          "storage": "2x 960GB NVMe SSD",
+          "price": "Rp 3.800k",
+          "priceSuffix": "per month",
+          "cta": "Configure",
+          "badge": "Best Value"
+        },
+        {
+          "name": "AMD EPYC 7551P",
+          "location": "Jakarta, ID (Tier-3)",
+          "cpu": "32 Cores / 64 Threads",
+          "ram": "256GB DDR4 ECC",
+          "storage": "4x 1.9TB NVMe SSD",
+          "price": "Rp 5.950k",
+          "priceSuffix": "per month",
+          "cta": "Configure"
+        }
+      ]
+    },
+    {
+      "type": "advantages",
+      "id": "dedicated-advantages",
+      "heading": "6 Advantages of Cloud Host Dedicated Servers",
+      "description": "We do not just provide hardware; we provide the architectural foundation for your digital growth without limits.",
+      "items": [
+        {
+          "title": "Ultimate Performance",
+          "description": "Full access to raw CPU and RAM power without noisy neighbor interference from other users.",
+          "icon": "gauge"
+        },
+        {
+          "title": "Stability First",
+          "description": "Isolated resources ensure your applications remain stable even during peak traffic surges.",
+          "icon": "bolt"
+        },
+        {
+          "title": "Maximal Security",
+          "description": "Complete control over firewalls and security configurations to protect sensitive corporate data.",
+          "icon": "shield-check"
+        },
+        {
+          "title": "Full Root Control",
+          "description": "Total freedom to install OS, applications, and custom kernel optimizations for your specific needs.",
+          "icon": "settings"
+        },
+        {
+          "title": "99.9% Uptime SLA",
+          "description": "Tier-3 data center infrastructure with redundant systems ensures your services stay online 24/7.",
+          "icon": "cloud"
+        },
+        {
+          "title": "Scalable Hardware",
+          "description": "Easily upgrade storage capacity or memory as your data and traffic requirements grow.",
+          "icon": "arrow-up"
+        }
+      ]
+    },
+    {
+      "type": "use-cases",
+      "id": "dedicated-use-cases",
+      "heading": "Who Needs a Dedicated Server?",
+      "description": "Infrastructure solutions for workloads that demand precision and speed.",
+      "backgroundImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCExY-qtscNzgdmnswaubDw9JE22aI3mQVnpaDKd-0kp4_yavdjTm1ioNdp4TAdtn4OPXLhsIikusbJ2P5EIwCH9FJIO1aA_U33WAWgjEM2fcEirqb1czFngHHI47hoiPrIgP3ElFdrw68hA4YQtxLNLDBrxUCAOeX52ZJjPKwilX7_OSYjia_h4KDWPGQ_ifk4MgxKkRoee3cc0iH0xPsykHr6xUH41Q6JEWY9GKG_8uuhzTNcq82Pitjf16puqo4hOSWzZS9NNhq1",
+        "alt": "Network grid background"
+      },
+      "items": [
+        {
+          "title": "Database Server",
+          "description": "Ideal for big data processing and intensive database transactions requiring high I/O.",
+          "icon": "database"
+        },
+        {
+          "title": "Game Server",
+          "description": "Provides low latency and connection stability for thousands of real-time players.",
+          "icon": "gamepad"
+        },
+        {
+          "title": "Enterprise Apps",
+          "description": "Run ERP, CRM, and internal corporate apps with high-level data security.",
+          "icon": "building"
+        },
+        {
+          "title": "Streaming Media",
+          "description": "Dedicated unlimited bandwidth for high-quality video and audio transmission without buffering.",
+          "icon": "rss"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "dedicated-faq",
+      "heading": "Frequently Asked Questions",
+      "description": "Everything you need to know about our Dedicated Server solutions.",
+      "items": [
+        {
+          "question": "How does Dedicated Server differ from VPS?",
+          "answer": "With VPS, you share physical hardware with other users virtually. With a Dedicated Server, you rent the entire physical hardware exclusively. There are no noisy neighbors; all CPU, RAM, and disk resources are yours alone."
+        },
+        {
+          "question": "Do I get full root access?",
+          "answer": "Yes. You have full root access by default, giving you total control over the OS, software, and security configuration."
+        },
+        {
+          "question": "What is the typical setup time?",
+          "answer": "Most servers are provisioned within 24 hours after payment confirmation. Custom builds may take slightly longer depending on hardware availability."
+        },
+        {
+          "question": "Does Cloud Host provide managed services?",
+          "answer": "Yes. We offer managed service tiers that include OS updates, security hardening, monitoring, and proactive maintenance."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "dedicated-cta",
+      "heading": "Ready to Scale Your Infrastructure?",
+      "description": "Upgrade your architecture today and experience the tangible performance difference for your digital business success.",
+      "ctas": [
+        { "label": "Select Your Server", "href": "/products" },
+        { "label": "View Semi-Dedicated", "href": "/products" }
+      ],
+      "backgroundImage": {
+        "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAiv_2dFUliGY2bm-HLpu117SufMKkeuBHV01t2K_UMtTK_JE1d9OYDgkp_KBTRc5hIqlABqvrwRdp3JCXZZwl7SpjCOdhDhTooDHNXsL50-TA92WbkmoYm75ZAgHShfgupaR479_ILqPbBr_qK_-UHLnfwPmEIwj3sBGThzZg0dsiYMXZa21FIU7Ik6slshioHoo7TPw3LMfdqAFEMmY-Z_j1dTqRLeg5236dP86HfVxbSopqFh9yEptIKFPvJ2tToFFk7B1fdTZzt",
+        "alt": "Abstract infrastructure"
+      }
+    }
+  ]
+}

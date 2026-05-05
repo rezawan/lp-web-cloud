@@ -1,5 +1,6 @@
 import { ShieldCheck, Zap, Code } from 'lucide-react';
 import { SectionContainer } from '@/components/SectionContainer';
+import { ICON_COLORS } from '@/lib/iconColors';
 
 interface Feature {
   icon: React.ComponentType<{ className?: string }>;
@@ -15,6 +16,7 @@ interface FeaturesGridContent {
 interface FeaturesGridProps {
   content?: FeaturesGridContent;
 }
+
 
 export function FeaturesGrid({ content }: FeaturesGridProps) {
   const features: Feature[] = (content?.items ?? [
@@ -50,16 +52,17 @@ export function FeaturesGrid({ content }: FeaturesGridProps) {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {features.map((feature) => {
+        {features.map((feature, index) => {
           const Icon = feature.icon;
+          const colors = ICON_COLORS[index % ICON_COLORS.length];
 
           return (
             <div
               key={feature.title}
               className="bg-white dark:bg-slate-900 p-8 rounded-xl flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow border border-slate-200 dark:border-slate-800"
             >
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0">
-                <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <div className={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 ${colors.bg}`}>
+                <Icon className={`w-6 h-6 ${colors.text}`} />
               </div>
               <div>
                 <h4 className="font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h4>

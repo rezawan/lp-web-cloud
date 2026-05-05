@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CloudForce Kinetic - Dedicated Server Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b4c5fb",
+                    "secondary-container": "#b6c8fe",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-fixed-variant": "#344573",
+                    "tertiary": "#7b2600",
+                    "on-tertiary-fixed": "#380d00",
+                    "primary": "#003d9b",
+                    "on-tertiary-container": "#ffc6b2",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#b2c5ff",
+                    "tertiary-fixed-dim": "#ffb59b",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "on-surface-variant": "#434654",
+                    "on-secondary-container": "#415382",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-fixed": "#021945",
+                    "tertiary-container": "#a33500",
+                    "on-surface": "#191c1e",
+                    "on-primary-container": "#c4d2ff",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-fixed": "#dae2ff",
+                    "outline-variant": "#c3c6d6",
+                    "secondary": "#4c5d8d",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#0052cc",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#dae2ff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#812800",
+                    "on-background": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#001848",
+                    "surface-bright": "#f7f9fb",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#0c56d0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "outline": "#737685",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2d3133"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f7f9fb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .kinetic-gradient { background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%); }
+        .card-row { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-row:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -15px rgba(0, 61, 155, 0.1); }
+    </style>
+</head>
+<body class="antialiased text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-md sticky top-0 z-50 shadow-[0_12px_32px_rgba(0,24,72,0.04)]">
+<div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+<div class="text-xl font-extrabold tracking-tight text-blue-900 dark:text-white">CloudForce Kinetic</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 font-medium" href="#">Compute</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Storage</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Network</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Pricing</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-white transition-colors" href="#">Enterprise</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400 font-medium px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-900 rounded transition-all">Log In</button>
+<button class="kinetic-gradient text-white font-bold px-6 py-2.5 rounded-lg active:scale-95 transform transition-transform">Deploy Now</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-40">
+<div class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-3/5">
+<span class="inline-block py-1 px-3 mb-6 bg-secondary-container text-on-secondary-fixed-variant rounded-full text-sm font-bold tracking-widest uppercase">Dedicated Solutions</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
+                        Ultimate Power. <br/><span class="text-primary">Zero Compromise.</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl">
+                        Unleash enterprise performance with raw hardware exclusivity. No noisy neighbors, no shared resources—just pure, dedicated computing power backed by a 99.9% uptime SLA.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="kinetic-gradient text-white text-lg font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow active:scale-95">Select Your Server</button>
+<button class="bg-surface-container-high text-on-primary-fixed-variant text-lg font-bold px-8 py-4 rounded-lg hover:bg-surface-container-highest transition-colors active:scale-95">Free Consultation</button>
+</div>
+</div>
+<div class="lg:w-2/5 relative">
+<div class="absolute -z-10 w-[500px] h-[500px] bg-primary-container/10 rounded-full blur-3xl -top-10 -right-20"></div>
+<img alt="Next-Gen Dedicated Server Architecture" class="w-full h-auto rounded-xl shadow-2xl" data-alt="A futuristic, high-performance server visualization with glowing blue components and data stream overlays representing extreme speed and dedicated power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOFluYSHNrnTf14W6dbSCvwUiaWGo6Teua-umsvup24PNvM4E_j-35UvWtt4t01iuUFQ5uxPolpzHrz5XZOzLAeSHCY_nuzmDo-AeXEJ7DTD7DpOizUVCkkQfPcPlTz66sOWBzBh8jLl-nqcxOgMlMWPdB8MgM5gse1bEV-iZANQfav60D-3xi6AXDcN_3-F7j91jH5pe6CzJlBmUPGmrof04L0MdvlgorVLBBWtq3QsGtzX4hJHEFgZY1CtoyXEE2gZKuiFYtkZvl"/>
+</div>
+</div>
+</section>
+<!-- Modernized Server Selection -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-on-surface mb-6">Choose Your Dedicated Performance</h2>
+<div class="inline-flex p-1 bg-surface-container-high rounded-lg">
+<button class="px-8 py-2 bg-white text-primary font-bold rounded shadow-sm">Monthly</button>
+<button class="px-8 py-2 text-on-surface-variant font-semibold">Yearly (Save 15%)</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Column Labels (Visible only on Desktop) -->
+<div class="hidden lg:grid grid-cols-12 px-10 py-4 text-xs font-bold uppercase tracking-widest text-on-surface-variant opacity-60">
+<div class="col-span-3">Processor Model</div>
+<div class="col-span-2">CPU Core Specs</div>
+<div class="col-span-2">Memory / RAM</div>
+<div class="col-span-2">Storage Config</div>
+<div class="col-span-3 text-right">Pricing &amp; Action</div>
+</div>
+<!-- Server Card 1 -->
+<div class="card-row bg-white rounded-2xl border border-outline-variant p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-6 lg:gap-0">
+<div class="lg:col-span-3">
+<h3 class="text-xl font-bold text-on-surface leading-tight mb-1">Dual Xeon E5 2680 V4</h3>
+<div class="flex items-center gap-2 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Jakarta, ID (TIER-3)
+                            </div>
+</div>
+<div class="lg:col-span-2">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1 lg:hidden">CPU</p>
+<p class="text-on-surface font-semibold">28 Cores / 56 Threads</p>
+</div>
+<div class="lg:col-span-2">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1 lg:hidden">RAM</p>
+<p class="text-on-surface font-semibold">64GB DDR4 ECC</p>
+</div>
+<div class="lg:col-span-2">
+<p class="text-xs text-on-surface-variant font-bold uppercase mb-1 lg:hidden">Storage</p>
+<p class="text-on-surface font-semibold">2x 480GB NVMe SSD</p>
+</div>
+<div class="lg:col-span-3 flex items-center justify-between lg:justify-end gap-6">
+<div class="text-right">
+<p class="text-2xl font-extrabold text-primary leading-none">Rp 2.450k</p>
+<p class="text-xs text-on-surface-variant">per month</p>
+</div>
+<button class="bg-primary hover:bg-primary-container text-white font-bold py-3 px-8 rounded-xl transition-colors shadow-lg shadow-primary/20">Configure</button>
+</div>
+</div>
+<!-- Server Card 2 (Highlight/Popular) -->
+<div class="card-row bg-white rounded-2xl border-2 border-primary p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-6 lg:gap-0 relative">
+<div class="absolute -top-4 left-10 bg-primary text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">Best Value</div>
+<div class="lg:col-span-3">
+<h3 class="text-xl font-bold text-on-surface leading-tight mb-1">Dual Xeon E5 2697 V4</h3>
+<div class="flex items-center gap-2 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Jakarta, ID (TIER-3)
+                            </div>
+</div>
+<div class="lg:col-span-2">
+<p class="text-on-surface font-semibold">36 Cores / 72 Threads</p>
+</div>
+<div class="lg:col-span-2">
+<p class="text-on-surface font-semibold">128GB DDR4 ECC</p>
+</div>
+<div class="lg:col-span-2">
+<p class="text-on-surface font-semibold">2x 960GB NVMe SSD</p>
+</div>
+<div class="lg:col-span-3 flex items-center justify-between lg:justify-end gap-6">
+<div class="text-right">
+<p class="text-2xl font-extrabold text-primary leading-none">Rp 3.800k</p>
+<p class="text-xs text-on-surface-variant">per month</p>
+</div>
+<button class="kinetic-gradient text-white font-bold py-3 px-8 rounded-xl transition-transform active:scale-95 shadow-lg shadow-primary/20">Configure</button>
+</div>
+</div>
+<!-- Server Card 3 -->
+<div class="card-row bg-white rounded-2xl border border-outline-variant p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-12 items-center gap-6 lg:gap-0">
+<div class="lg:col-span-3">
+<h3 class="text-xl font-bold text-on-surface leading-tight mb-1">AMD EPYC™ 7551P</h3>
+<div class="flex items-center gap-2 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Jakarta, ID (TIER-3)
+                            </div>
+</div>
+<div class="lg:col-span-2">
+<p class="text-on-surface font-semibold">32 Cores / 64 Threads</p>
+</div>
+<div class="lg:col-span-2">
+<p class="text-on-surface font-semibold">256GB DDR4 ECC</p>
+</div>
+<div class="lg:col-span-2">
+<p class="text-on-surface font-semibold">4x 1.9TB NVMe SSD</p>
+</div>
+<div class="lg:col-span-3 flex items-center justify-between lg:justify-end gap-6">
+<div class="text-right">
+<p class="text-2xl font-extrabold text-primary leading-none">Rp 5.950k</p>
+<p class="text-xs text-on-surface-variant">per month</p>
+</div>
+<button class="bg-primary hover:bg-primary-container text-white font-bold py-3 px-8 rounded-xl transition-colors shadow-lg shadow-primary/20">Configure</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Propositions -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-extrabold text-on-surface mb-6 leading-tight">6 Advantages of Herza Dedicated Servers</h2>
+<p class="text-on-surface-variant text-lg">We don't just provide hardware; we provide the architectural foundation for your digital growth without limits.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Performance -->
+<div class="bg-white p-10 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,24,72,0.06)] transition-all">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">speed</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-4">Ultimate Performance</h3>
+<p class="text-on-surface-variant">Full access to raw CPU and RAM power without 'noisy neighbor' interference from other users.</p>
+</div>
+<!-- Stability -->
+<div class="bg-white p-10 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,24,72,0.06)] transition-all">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-4">Stability First</h3>
+<p class="text-on-surface-variant">Isolated resources ensure your applications remain stable even during peak traffic surges.</p>
+</div>
+<!-- Security -->
+<div class="bg-white p-10 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,24,72,0.06)] transition-all">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-4">Maximal Security</h3>
+<p class="text-on-surface-variant">Complete control over firewalls and security configurations to protect sensitive corporate data.</p>
+</div>
+<!-- Full Control -->
+<div class="bg-white p-10 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,24,72,0.06)] transition-all">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">settings_input_component</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-4">Full Root Control</h3>
+<p class="text-on-surface-variant">Total freedom to install OS, applications, and custom kernel optimizations for your specific needs.</p>
+</div>
+<!-- Reliability -->
+<div class="bg-white p-10 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,24,72,0.06)] transition-all">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_done</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-4">99.9% Uptime SLA</h3>
+<p class="text-on-surface-variant">Tier-3 data center infrastructure with redundant systems ensures your services stay online 24/7.</p>
+</div>
+<!-- Easy Upgrades -->
+<div class="bg-white p-10 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_32px_rgba(0,24,72,0.06)] transition-all">
+<div class="w-16 h-16 bg-primary-fixed flex items-center justify-center rounded-lg mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">upgrade</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-4">Scalable Hardware</h3>
+<p class="text-on-surface-variant">Easily upgrade storage capacity or memory as your data and traffic requirements grow.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Use Case Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Network Grid" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCExY-qtscNzgdmnswaubDw9JE22aI3mQVnpaDKd-0kp4_yavdjTm1ioNdp4TAdtn4OPXLhsIikusbJ2P5EIwCH9FJIO1aA_U33WAWgjEM2fcEirqb1czFngHHI47hoiPrIgP3ElFdrw68hA4YQtxLNLDBrxUCAOeX52ZJjPKwilX7_OSYjia_h4KDWPGQ_ifk4MgxKkRoee3cc0iH0xPsykHr6xUH41Q6JEWY9GKG_8uuhzTNcq82Pitjf16puqo4hOSWzZS9NNhq1"/>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold mb-4">Who Needs a Dedicated Server?</h2>
+<p class="text-primary-fixed/80 text-lg">Infrastructure solutions for workloads that demand precision and speed.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-4xl mb-6">database</span>
+<h4 class="text-xl font-bold mb-3">Database Server</h4>
+<p class="text-sm text-white/70">Ideal for Big Data processing and intensive database transactions requiring high I/O.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-4xl mb-6">sports_esports</span>
+<h4 class="text-xl font-bold mb-3">Game Server</h4>
+<p class="text-sm text-white/70">Provides low latency and connection stability for thousands of real-time players.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-4xl mb-6">apartment</span>
+<h4 class="text-xl font-bold mb-3">Enterprise Apps</h4>
+<p class="text-sm text-white/70">Run ERP, CRM, and internal corporate apps with high-level data security.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10">
+<span class="material-symbols-outlined text-4xl mb-6">cast</span>
+<h4 class="text-xl font-bold mb-3">Streaming Media</h4>
+<p class="text-sm text-white/70">Dedicated unlimited bandwidth for high-quality video and audio transmission without buffering.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-3xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-on-surface mb-4">Frequently Asked Questions</h2>
+<p class="text-on-surface-variant">Everything you need to know about our Dedicated Server solutions.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-lg p-6 shadow-sm">
+<button class="flex justify-between items-center w-full text-left font-bold text-on-surface group">
+<span>How does Dedicated Server differ from VPS?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="mt-4 text-on-surface-variant leading-relaxed">
+                            With VPS, you share physical hardware with other users virtually. With a Dedicated Server, you rent the entire physical hardware exclusively. There are no noisy neighbors; all CPU, RAM, and disk resources are yours alone.
+                        </div>
+</div>
+<div class="bg-white rounded-lg p-6 shadow-sm">
+<button class="flex justify-between items-center w-full text-left font-bold text-on-surface group">
+<span>Do I get full Root access?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+</div>
+<div class="bg-white rounded-lg p-6 shadow-sm">
+<button class="flex justify-between items-center w-full text-left font-bold text-on-surface group">
+<span>What is the typical setup time?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+</div>
+<div class="bg-white rounded-lg p-6 shadow-sm">
+<button class="flex justify-between items-center w-full text-left font-bold text-on-surface group">
+<span>Does Herza provide Managed Services?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary-container rounded-3xl p-12 lg:p-20 relative overflow-hidden flex flex-col items-center text-center">
+<div class="absolute inset-0 opacity-20">
+<img alt="Abstract Infrastructure" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiv_2dFUliGY2bm-HLpu117SufMKkeuBHV01t2K_UMtTK_JE1d9OYDgkp_KBTRc5hIqlABqvrwRdp3JCXZZwl7SpjCOdhDhTooDHNXsL50-TA92WbkmoYm75ZAgHShfgupaR479_ILqPbBr_qK_-UHLnfwPmEIwj3sBGThzZg0dsiYMXZa21FIU7Ik6slshioHoo7TPw3LMfdqAFEMmY-Z_j1dTqRLeg5236dP86HfVxbSopqFh9yEptIKFPvJ2tToFFk7B1fdTZzt"/>
+</div>
+<div class="relative z-10 max-w-3xl">
+<h2 class="text-4xl lg:text-6xl font-extrabold text-white mb-8 tracking-tight">Ready to Scale Your Infrastructure?</h2>
+<p class="text-xl text-primary-fixed/90 mb-12">Upgrade your architecture today and experience the tangible performance difference for your digital business success.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-white text-primary text-lg font-extrabold px-10 py-5 rounded-lg shadow-xl hover:-translate-y-1 transition-all active:scale-95">Select Your Server</button>
+<button class="bg-white/10 backdrop-blur-md border-2 border-white/20 text-white text-lg font-bold px-10 py-5 rounded-lg hover:bg-white/20 transition-all active:scale-95">View Semi-Dedicated</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-bold text-blue-900 dark:text-white">CloudForce Infrastructure</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 CloudForce Infrastructure. High-Performance Architecture.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">SLA Guarantee</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>

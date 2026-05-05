@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Promos &amp; Special Offers | Herza.id</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "secondary": "#4c5d8d",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-tertiary-fixed-variant": "#812800",
+                        "surface-container": "#eceef0",
+                        "primary": "#003d9b",
+                        "outline-variant": "#c3c6d6",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#0052cc",
+                        "surface-bright": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "inverse-primary": "#b2c5ff",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed": "#021945",
+                        "surface-variant": "#e0e3e5",
+                        "outline": "#737685",
+                        "secondary-fixed": "#dae2ff",
+                        "secondary-fixed-dim": "#b4c5fb",
+                        "on-secondary-fixed-variant": "#344573",
+                        "secondary-container": "#b6c8fe",
+                        "on-background": "#191c1e",
+                        "tertiary": "#7b2600",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#ffc6b2",
+                        "primary-fixed": "#dae2ff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001848",
+                        "tertiary-container": "#a33500",
+                        "surface": "#f7f9fb",
+                        "on-surface-variant": "#434654",
+                        "on-primary-container": "#c4d2ff",
+                        "surface-tint": "#0c56d0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#380d00",
+                        "tertiary-fixed-dim": "#ffb59b",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-dim": "#d8dadc",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#415382",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f7f9fb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .promo-gradient { background: linear-gradient(135deg, #003d9b 0%, #0052cc 100%); }
+        .card-shadow { box-shadow: 0 12px 32px rgba(0, 24, 72, 0.06); }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_12px_32px_rgba(0,24,72,0.06)]">
+<div class="flex justify-between items-center w-full px-8 h-20 max-w-screen-2xl mx-auto font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="text-2xl font-black tracking-tighter text-[#003d9b] dark:text-blue-500">Herza.id</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#434654] dark:text-slate-400 font-medium hover:text-[#003d9b] dark:hover:text-blue-300 transition-all duration-300" href="#">Cloud Hosting</a>
+<a class="text-[#434654] dark:text-slate-400 font-medium hover:text-[#003d9b] dark:hover:text-blue-300 transition-all duration-300" href="#">Dedicated Servers</a>
+<a class="text-[#434654] dark:text-slate-400 font-medium hover:text-[#003d9b] dark:hover:text-blue-300 transition-all duration-300" href="#">Colocation</a>
+<a class="text-[#003d9b] dark:text-blue-400 font-bold border-b-2 border-[#003d9b] dark:border-blue-400 pb-1" href="#">Solutions</a>
+<a class="text-[#434654] dark:text-slate-400 font-medium hover:text-[#003d9b] dark:hover:text-blue-300 transition-all duration-300" href="#">Support</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden lg:block text-[#434654] font-semibold hover:opacity-80 px-4 py-2">Contact Sales</button>
+<button class="promo-gradient text-white px-6 py-2.5 rounded font-bold active:scale-[0.98] transition-transform shadow-lg shadow-primary/20">Client Area</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 relative z-10 flex flex-col items-center text-center">
+<span class="inline-block py-1.5 px-4 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold tracking-widest uppercase mb-6">Limited Availability</span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8 max-w-4xl">
+                    Exclusive Promos &amp; <span class="text-primary">Limited Offers</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+                    Elevate your digital infrastructure with high-performance solutions. Save up to 60% on premium cloud hosting, VPS, and enterprise dedicated servers.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="promo-gradient text-white px-8 py-4 rounded-lg font-bold text-lg shadow-xl shadow-primary/25 hover:brightness-110 transition-all">Explore All Deals</button>
+<button class="bg-surface-container-lowest text-on-surface px-8 py-4 rounded-lg font-bold text-lg card-shadow hover:bg-surface-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">help</span> Support Center
+                    </button>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl"></div>
+</section>
+<!-- Filter Bar -->
+<section class="sticky top-20 z-40 bg-white/90 backdrop-blur-md border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 py-4 overflow-x-auto">
+<div class="flex items-center space-x-2 min-w-max">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold transition-all">All Promos</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold hover:bg-surface-container-highest transition-all">Cloud Hosting</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold hover:bg-surface-container-highest transition-all">Managed VPS</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold hover:bg-surface-container-highest transition-all">Dedicated Servers</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold hover:bg-surface-container-highest transition-all">Colocation</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold hover:bg-surface-container-highest transition-all">Domains</button>
+</div>
+</div>
+</section>
+<!-- Promo Grid -->
+<section class="py-20 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Promo Card 1 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden card-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist high-tech server room with glowing blue LED indicator lights on sleek black server racks. The perspective is professional and architectural, featuring soft volumetric lighting that creates a high-performance and reliable atmosphere. The image is rendered in a light-mode aesthetic with a palette of crisp whites and deep corporate blues." src="https://lh3.googleusercontent.com/aida/ADBb0ujgGtMFIIVI6UF4egt8gbMFQgLJSoxHGvM8bQ359zYOt02Dxw3Y9Z9LDYA55IKSpI_himYfbVSqYwUiW7m72PeSgXwnSoDG1Qq4nMeAI6iybLYbkiZFfNIrYl-WeHGgVH1HR2Bhoa1NLiCnBJJtfCNf9-3lcgOi1Lg5k1bwUtud3fsuk-cMxim_YvfgCjj7v-NHi5fo-1lRfKC39UdLDD1vOtZ-ng3wS9rf-iqov9DZSMEUWxa19uRAyy7vHYh-er35QC7r3StVEA"/>
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded text-[10px] font-black text-white uppercase tracking-widest">Active Offer</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-extrabold text-on-surface leading-tight">35% Off Cloud VPS</h3>
+<span class="text-tertiary font-bold text-sm">New Clients</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Experience extreme speed with NVMe-backed virtual servers. Perfect for high-traffic applications and scaling businesses.</p>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Promo Code</span>
+<span class="font-mono font-bold text-primary text-lg">HERZAVPS35</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded transition-colors text-primary" title="Copy Code">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="promo-gradient text-white py-3 rounded font-bold text-sm shadow-md shadow-primary/10">Claim Promo</button>
+<button class="bg-surface-container-high text-on-surface py-3 rounded font-bold text-sm">View Details</button>
+</div>
+</div>
+</div>
+<!-- Promo Card 2 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden card-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of a modern workspace with a high-end laptop showing abstract data visualizations on the screen. Beside it is a professional tablet and a designer coffee mug on a pristine white desk. The lighting is soft and natural, coming from a large office window, reflecting a high-performance productivity mood with a sophisticated blue and white color scheme." src="https://lh3.googleusercontent.com/aida/ADBb0ujZ97xc5QjjYqzDY1BVUrXgGMo3GoPVtI5G8omcJzmmgYXPAmxK1ERhv2PyJ2cBvPi23YrNAUf-6Xzc4CsvggrqYx86bYepvehZmRSHxGEKOUqlhX3vMIj_UxpJ-eauJPTPghhqLnAMo8rZh_gIMnnmY6Laz2BkDbPuq6-RhKei7izDGFXaU9JVIFunL5kP7oP5IW0nbKe0Ky6oFcJg1GEB2doFUCNEyyFSig9kf8lJbBuMYo4QrrJrx2elZFdQoVNv403S9qxJwu8"/>
+<div class="absolute top-4 left-4 bg-tertiary px-3 py-1 rounded text-[10px] font-black text-white uppercase tracking-widest">Limited Time</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-extrabold text-on-surface leading-tight">Free Domain &amp; SSL</h3>
+<span class="text-primary font-bold text-sm">Annual Plan</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Get your .com domain and enterprise-grade SSL certificate absolutely free with any Cloud Hosting annual subscription.</p>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Promo Code</span>
+<span class="font-mono font-bold text-primary text-lg">FREESTART24</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded transition-colors text-primary" title="Copy Code">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="promo-gradient text-white py-3 rounded font-bold text-sm shadow-md shadow-primary/10">Claim Promo</button>
+<button class="bg-surface-container-high text-on-surface py-3 rounded font-bold text-sm">View Details</button>
+</div>
+</div>
+</div>
+<!-- Promo Card 3 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden card-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide angle view of an ultra-modern corporate data center lobby featuring clean architectural lines, polished glass surfaces, and a minimalist digital information kiosk. The space is flooded with bright, even lighting, conveying security and technological advancement. The aesthetic is professional and airy, dominated by shades of slate blue, white, and silver." src="https://lh3.googleusercontent.com/aida/ADBb0uiygpO4nz0mj2ZUtg31VbbJ2d8EKUlMkyTdmvq8PazY2UYq_tNpCL_juTKu107ZxYtoClO20KEbmKlBuNMYq9Aiu3En2i6DJt8Pvq-DnYjpZXyCq3cGIpV_ddagYjps-z-9Nhr8BdKiFlXOtWHlPRVwRjFiB3TAg9cVt8sMcbfs1d8H4_seB4uYeyAawLcxNSGYKGJeClAlqM45AXA24J2CWj8w7x8t59ColiX8-ctbnSV-xwEnCzBGXwSIK7Bs5HEOKeTyH3VS_FA"/>
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded text-[10px] font-black text-white uppercase tracking-widest">Enterprise</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-extrabold text-on-surface leading-tight">Colocation Special</h3>
+<span class="text-tertiary font-bold text-sm">2U Rack</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Premium Tier-3 data center space in Jakarta. Secure your infrastructure with 99.9% uptime and redundant power systems.</p>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Promo Code</span>
+<span class="font-mono font-bold text-primary text-lg">HERZACOLO15</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded transition-colors text-primary" title="Copy Code">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="promo-gradient text-white py-3 rounded font-bold text-sm shadow-md shadow-primary/10">Claim Promo</button>
+<button class="bg-surface-container-high text-on-surface py-3 rounded font-bold text-sm">View Details</button>
+</div>
+</div>
+</div>
+<!-- Promo Card 4 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden card-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional business executive pointing at a large wall-mounted digital dashboard displaying real-time global server network health and traffic analytics. The room is a high-tech command center with sleek dark furniture and bright glowing screens. The lighting is focused and dramatic, highlighting a sense of high-performance control and enterprise reliability." src="https://lh3.googleusercontent.com/aida/ADBb0uh1xzrjflLsZo722I59qp5MvWEjkR8MLg-L6mxoiU6bVzl-AunX9AAKXJiUeHkUDwkdknfduIbUyIAKVITLzxLCTmamgdCtYNOcW-nhtfVFlV8DAInnzZ4vhP_V8yBJlq1KhREoGirmyoiZGU7Y12DfQdF6SJ5Xm8B6n4O9Wb0LBg6USpjaEWJ3oFZ_CXmGHjO09K7Lmi70qeJE4Afq8xeHgs8-IjLKvYdIDp9-h29JazUAF1inSl9yW_DHnScg_ohCvTgXyF6IER8"/>
+<div class="absolute top-4 left-4 bg-tertiary px-3 py-1 rounded text-[10px] font-black text-white uppercase tracking-widest">Ending Soon</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-extrabold text-on-surface leading-tight">WP Pro Managed</h3>
+<span class="text-primary font-bold text-sm">50% Off</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Fast-track your WordPress performance. We handle the updates, security, and optimization while you focus on growth.</p>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Promo Code</span>
+<span class="font-mono font-bold text-primary text-lg">WORDPRESS50</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded transition-colors text-primary" title="Copy Code">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="promo-gradient text-white py-3 rounded font-bold text-sm shadow-md shadow-primary/10">Claim Promo</button>
+<button class="bg-surface-container-high text-on-surface py-3 rounded font-bold text-sm">View Details</button>
+</div>
+</div>
+</div>
+<!-- Promo Card 5 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden card-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A conceptual 3D rendering of cloud computing nodes connected by glowing geometric lines against a clean, bright background. The composition is balanced and elegant, featuring a professional light-mode aesthetic. Soft shadows and a palette of corporate blues and soft grays emphasize a high-performance architectural feel for a modern tech brand." src="https://lh3.googleusercontent.com/aida/ADBb0ugR8E2vDUEgdQWnyqYpxqhYQ2EGBhy1VGwcH0j3IxG-OKiQQ0F1X1Dd8dLVIhA7xMWhLZmI3jMAhDx8JOp6dJmZwHD4FvgjJI0aI7U7S6dYWk_A1gPSoWTjkDi_ikisctCDnqza4ULc_gB8fuLTlIFvUoCkax2YhbnvSEAOTF8Rjm-7cwQixwWQImOet_EYsZb1q8WMuRAW6Od-a6-gfm4foIbdQPOIDd-x9SIhcXOIOd94mrGT-uLeqW6lzvNmcNmAS8DcQCsozpM"/>
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded text-[10px] font-black text-white uppercase tracking-widest">Active Offer</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-extrabold text-on-surface leading-tight">Bare Metal Power</h3>
+<span class="text-tertiary font-bold text-sm">Intro Deal</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Dedicated resources with zero noisy neighbors. Launch your Bare Metal server today and get first month 20% off.</p>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Promo Code</span>
+<span class="font-mono font-bold text-primary text-lg">METALPOWER</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded transition-colors text-primary" title="Copy Code">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="promo-gradient text-white py-3 rounded font-bold text-sm shadow-md shadow-primary/10">Claim Promo</button>
+<button class="bg-surface-container-high text-on-surface py-3 rounded font-bold text-sm">View Details</button>
+</div>
+</div>
+</div>
+<!-- Promo Card 6 -->
+<div class="group bg-surface-container-lowest rounded-xl overflow-hidden card-shadow flex flex-col hover:translate-y-[-4px] transition-all duration-300">
+<div class="relative h-56">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An abstract visualization of global high-speed fiber optic networks as glowing threads of light weaving through a dark blue stylized globe. The background is a crisp white, creating a clean high-performance editorial aesthetic. The lighting is luminous and kinetic, representing fast data transmission and reliable network infrastructure for a global tech provider." src="https://lh3.googleusercontent.com/aida/ADBb0ugwvhEDL3yYPy7CrlWzYRn5ojI64AUA61FIeaO6_rjb9IHK9mnUQx-66RhvJbXHa4fx_WzrKLLOCRwp9vTyWgHaXwXAswZxUa5ASminYANDpXwS_s9xGBFLA4735grYlt-8MImSnkKI39BmmFSYudClg1f2i0xYROx9y4A-HSmSapRf8jXiMPR1d5smZpySx9fXGCzf79hK44WRhXhYej_F1XVfH-FyKnY5MLVAsiqXwXWA9aSbgFQlbnrMXfSSEZrISoXY4Bu1pfw"/>
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded text-[10px] font-black text-white uppercase tracking-widest">Web Exclusive</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-extrabold text-on-surface leading-tight">Global CDN Add-on</h3>
+<span class="text-primary font-bold text-sm">6-Month Free</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Speed up content delivery to your global audience. Activate CDN on any hosting plan and get 6 months on us.</p>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider">Promo Code</span>
+<span class="font-mono font-bold text-primary text-lg">HERZAGLOBAL</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded transition-colors text-primary" title="Copy Code">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="promo-gradient text-white py-3 rounded font-bold text-sm shadow-md shadow-primary/10">Claim Promo</button>
+<button class="bg-surface-container-high text-on-surface py-3 rounded font-bold text-sm">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Missed a Deal Section -->
+<section class="bg-white py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary rounded-2xl p-12 lg:p-20 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12">
+<!-- Background Graphics -->
+<div class="absolute top-0 right-0 w-full h-full opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+</div>
+<div class="relative z-10 max-w-xl text-center lg:text-left">
+<h2 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-6">Missed a Deal?</h2>
+<p class="text-on-primary-container text-lg leading-relaxed mb-0">
+                            Don't worry, new high-performance infrastructure offers launch every week. Subscribe to our newsletter to be the first to know about upcoming flash sales and exclusive enterprise discounts.
+                        </p>
+</div>
+<div class="relative z-10 w-full max-w-md">
+<div class="bg-white/10 p-2 rounded-xl backdrop-blur-sm">
+<form class="flex flex-col sm:flex-row gap-2">
+<input class="flex-grow bg-white border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary-container text-on-surface" placeholder="Enter your email address" type="email"/>
+<button class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-surface-container-low transition-colors" type="submit">Subscribe</button>
+</form>
+</div>
+<p class="text-white/60 text-xs mt-4 text-center lg:text-left">By subscribing, you agree to our <a class="underline" href="#">Privacy Policy</a> and will receive marketing emails from Herza.id.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section (Asymmetric) -->
+<section class="py-24 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<h2 class="text-3xl md:text-4xl font-extrabold text-on-surface mb-6">Need a Custom <span class="text-primary">Enterprise Quote?</span></h2>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed max-w-2xl">
+                    High-performance infrastructure requires tailored solutions. Our technical sales team is ready to design a bespoke environment that fits your exact latency and scaling requirements.
+                </p>
+<div class="flex items-center gap-6">
+<button class="bg-on-surface text-white px-8 py-4 rounded-lg font-bold shadow-lg">Contact Sales Team</button>
+<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">
+                        View Price List <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square bg-surface-container-high rounded-3xl overflow-hidden">
+<img class="w-full h-full object-cover grayscale-0 group-hover:grayscale-0 transition-all duration-700" data-alt="A portrait of a diverse team of professional IT engineers working collaboratively in a modern glass-walled conference room. They are discussing technical architectural diagrams on a large high-resolution display. The environment is clean and professional with bright, natural lighting. The color palette reflects high-end enterprise standards with neutral grays and professional blues." src="https://lh3.googleusercontent.com/aida/ADBb0ui3OEmXHNLnLSaxVsGw_r2nYpVVsgEWrxebZ9Wqkt5sq4-kvuI85bXpK8TqbyS_HLvPeOcNZHBLm2uySUxBn4a3jaNt6_VXsw9rlQmoxq3Lyf5iVx-ehghWnbVpZ_H1sTm0r4W4IGKlt3iGiUxZRSuJ8SagEjjoBJSjEX-43oy5ecS4svjt8VL_cFfOudyq7g4OHplLwQRe3-hH9Mfd1I3OIi_f-33Ag54pQNopTa1Y8rzPvSpODEIEe0GLsv-skcM6GXUL3NMjDSQ"/>
+</div>
+<!-- Float elements -->
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-outline-variant/10 max-w-[200px]">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-bold uppercase tracking-widest">Certified</span>
+</div>
+<p class="text-xs text-on-surface-variant font-medium">99.9% Network Uptime Guarantee across all regions.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 mt-auto bg-[#f7f9fb] dark:bg-slate-950 border-t border-[#c3c6d6]/20 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] text-sm">
+<div class="space-y-6">
+<div class="text-lg font-bold text-[#003d9b] dark:text-blue-500">Herza.id</div>
+<p class="text-[#434654] dark:text-slate-400 leading-relaxed">
+                    High-performance infrastructure provider specializing in enterprise-grade cloud hosting and dedicated server solutions.
+                </p>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">share</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-lg">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Products</h4>
+<ul class="space-y-4">
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Cloud Hosting</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Dedicated Servers</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">VPS Hosting</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Colocation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">About Us</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Partners</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Careers</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Contact Sales</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Knowledge Base</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Network Status</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Legal Docs</a></li>
+<li><a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] transition-colors" href="#">Support Ticket</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[#434654] dark:text-slate-400 text-xs">© 2024 Herza.id. High-Performance Infrastructure.</p>
+<div class="flex gap-6">
+<a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] text-xs" href="#">SLA Guarantee</a>
+<a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] text-xs" href="#">Privacy Policy</a>
+<a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] text-xs" href="#">Terms of Service</a>
+<a class="text-[#434654] dark:text-slate-400 hover:text-[#003d9b] text-xs" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</body></html>

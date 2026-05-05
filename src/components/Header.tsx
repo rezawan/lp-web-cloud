@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { ICON_COLORS } from '@/lib/iconColors';
 
 interface SubMenuItem {
   label: string;
@@ -162,47 +163,51 @@ export function Header() {
                     <div className="flex gap-4 p-2 w-full">
                       {/* Main Menu Items - Left Side */}
                       <div className="flex-1 min-w-[320px]  space-y-1">
-                        {item.children.map((child) => (
-                          <NavigationMenuLink
-                            key={child.label}
-                            asChild
-                            className={`flex items-start gap-2 p-2 rounded-lg transition-colors cursor-pointer group ${
-                              isActivePath(child.href)
-                                ? 'bg-blue-50 dark:bg-blue-950/30 ring-1 ring-blue-200 dark:ring-blue-900'
-                                : 'hover:bg-slate-100 dark:hover:bg-slate-800'
-                            }`}
-                          >
-                            <Link href={child.href}>
-                              {child.icon && (
-                                <div className={`shrink-0 w-9 h-9 rounded-lg flex items-center justify-center transition-colors ${
-                                  isActivePath(child.href)
-                                    ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30 group-hover:text-blue-600'
-                                }`}>
-                                  {child.icon}
-                                </div>
-                              )}
-                              <div className="flex-1 min-w-0">
-                                <div className={`text-sm ${
-                                  isActivePath(child.href)
-                                    ? 'font-semibold text-blue-700 dark:text-blue-300'
-                                    : 'font-semibold text-slate-900 dark:text-white'
-                                }`}>
-                                  {child.label}
-                                </div>
-                                {child.description && (
-                                  <div className={`text-xs mt-0.5 ${
+                        {item.children.map((child, index) => {
+                          const colors = ICON_COLORS[index % ICON_COLORS.length];
+
+                          return (
+                            <NavigationMenuLink
+                              key={child.label}
+                              asChild
+                              className={`flex items-start gap-2 p-2 rounded-lg transition-colors cursor-pointer group ${
+                                isActivePath(child.href)
+                                  ? 'bg-blue-50 dark:bg-blue-950/30 ring-1 ring-blue-200 dark:ring-blue-900'
+                                  : 'hover:bg-slate-100 dark:hover:bg-slate-800'
+                              }`}
+                            >
+                              <Link href={child.href}>
+                                {child.icon && (
+                                  <div className={`shrink-0 w-9 h-9 rounded-lg flex items-center justify-center transition-colors ${
                                     isActivePath(child.href)
-                                      ? 'text-blue-600/80 dark:text-blue-300/80'
-                                      : 'text-slate-500 dark:text-slate-400'
+                                      ? `${colors.bg} ${colors.text}`
+                                      : `${colors.bg} ${colors.text} group-hover:brightness-95`
                                   }`}>
-                                    {child.description}
+                                    {child.icon}
                                   </div>
                                 )}
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                        ))}
+                                <div className="flex-1 min-w-0">
+                                  <div className={`text-sm ${
+                                    isActivePath(child.href)
+                                      ? 'font-semibold text-blue-700 dark:text-blue-300'
+                                      : 'font-semibold text-slate-900 dark:text-white'
+                                  }`}>
+                                    {child.label}
+                                  </div>
+                                  {child.description && (
+                                    <div className={`text-xs mt-0.5 ${
+                                      isActivePath(child.href)
+                                        ? 'text-blue-600/80 dark:text-blue-300/80'
+                                        : 'text-slate-500 dark:text-slate-400'
+                                    }`}>
+                                      {child.description}
+                                    </div>
+                                  )}
+                                </div>
+                              </Link>
+                            </NavigationMenuLink>
+                          );
+                        })}
                       </div>
 
                       {/* Additional Links Section - Right Side */}
@@ -292,46 +297,50 @@ export function Header() {
                     </button>
                     {openDropdown === item.label && (
                       <div className="pl-4 py-2 space-y-2 border-l-2 border-slate-200 dark:border-slate-700">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            className={`flex items-start gap-3 p-2 rounded-lg transition-colors ${
-                              isActivePath(child.href)
-                                ? 'bg-blue-50 dark:bg-blue-950/30 ring-1 ring-blue-200 dark:ring-blue-900'
-                                : 'hover:bg-slate-100 dark:hover:bg-slate-800'
-                            }`}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {child.icon && (
-                              <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm ${
+                        {item.children.map((child, index) => {
+                          const colors = ICON_COLORS[index % ICON_COLORS.length];
+
+                          return (
+                            <Link
+                              key={child.label}
+                              href={child.href}
+                              className={`flex items-start gap-3 p-2 rounded-lg transition-colors ${
                                 isActivePath(child.href)
-                                  ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300'
-                                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
-                              }`}>
-                                {child.icon}
-                              </div>
-                            )}
-                            <div className="flex-1 min-w-0">
-                              <div className={`text-sm ${
-                                isActivePath(child.href)
-                                  ? 'font-semibold text-blue-700 dark:text-blue-300'
-                                  : 'font-medium text-slate-900 dark:text-white'
-                              }`}>
-                                {child.label}
-                              </div>
-                              {child.description && (
-                                <div className={`text-xs ${
+                                  ? 'bg-blue-50 dark:bg-blue-950/30 ring-1 ring-blue-200 dark:ring-blue-900'
+                                  : 'hover:bg-slate-100 dark:hover:bg-slate-800'
+                              }`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.icon && (
+                                <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm ${
                                   isActivePath(child.href)
-                                    ? 'text-blue-600/80 dark:text-blue-300/80'
-                                    : 'text-slate-500 dark:text-slate-400'
+                                    ? `${colors.bg} ${colors.text}`
+                                    : `${colors.bg} ${colors.text}`
                                 }`}>
-                                  {child.description}
+                                  {child.icon}
                                 </div>
                               )}
-                            </div>
-                          </Link>
-                        ))}
+                              <div className="flex-1 min-w-0">
+                                <div className={`text-sm ${
+                                  isActivePath(child.href)
+                                    ? 'font-semibold text-blue-700 dark:text-blue-300'
+                                    : 'font-medium text-slate-900 dark:text-white'
+                                }`}>
+                                  {child.label}
+                                </div>
+                                {child.description && (
+                                  <div className={`text-xs ${
+                                    isActivePath(child.href)
+                                      ? 'text-blue-600/80 dark:text-blue-300/80'
+                                      : 'text-slate-500 dark:text-slate-400'
+                                  }`}>
+                                    {child.description}
+                                  </div>
+                                )}
+                              </div>
+                            </Link>
+                          );
+                        })}
                         {item.additionalLinks && item.additionalLinks.length > 0 && (
                           <>
                             <div className="border-t border-slate-200 dark:border-slate-700 my-2" />

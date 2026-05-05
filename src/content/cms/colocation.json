@@ -1,0 +1,191 @@
+{
+  "page": "colocation",
+  "route": "/colocation",
+  "meta": {
+    "title": "Colocation | Cloud Host",
+    "description": "Enterprise colocation services with Tier-3 facilities, redundant power, and 24/7 monitoring."
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "id": "colocation-hero",
+      "badge": "Tier-3 Certified Data Center",
+      "headline": "Your Server. Your Rack.",
+      "highlight": "World-Class Facilities.",
+      "description": "Securely house your infrastructure in our Tier-3 facilities. Experience 100% uptime, 24/7 onsite monitoring, and ultra-high bandwidth with redundant power systems.",
+      "ctas": [
+        { "label": "Select Rack Space", "href": "/products" }
+      ],
+      "startingPrice": {
+        "label": "Starting from",
+        "price": "Rp750.000",
+        "suffix": "/ month"
+      },
+      "image": {
+        "src": "/assets/images/server-rack.png",
+        "alt": "Futuristic data center interior with glowing server racks"
+      },
+      "statCard": {
+        "label": "Uptime Guarantee",
+        "value": "100.00% SLA",
+        "icon": "bolt"
+      }
+    },
+    {
+      "type": "pricing",
+      "id": "colocation-pricing",
+      "heading": "Choose Your Rack Space",
+      "billing": {
+        "primary": "Monthly",
+        "secondary": "Yearly (-15%)"
+      },
+      "plans": [
+        {
+          "name": "1U Colocation",
+          "price": "Rp750k",
+          "suffix": "/mo",
+          "features": [
+            "1 Dedicated IP",
+            "1 Gbps Port Speed",
+            "Unmetered Bandwidth",
+            "450 Watt Power"
+          ],
+          "cta": "Order 1U"
+        },
+        {
+          "name": "2U Colocation",
+          "price": "Rp1.450k",
+          "suffix": "/mo",
+          "features": [
+            "2 Dedicated IPs",
+            "1 Gbps Port Speed",
+            "Unmetered Bandwidth",
+            "450 Watt Power"
+          ],
+          "cta": "Order 2U",
+          "badge": "Most Popular"
+        },
+        {
+          "name": "4U Colocation",
+          "price": "Rp2.800k",
+          "suffix": "/mo",
+          "features": [
+            "5 Dedicated IPs",
+            "1 Gbps Port Speed",
+            "Unmetered Bandwidth",
+            "550 Watt Power"
+          ],
+          "cta": "Order 4U"
+        },
+        {
+          "name": "10U (1/4 Rack)",
+          "price": "Rp6.500k",
+          "suffix": "/mo",
+          "features": [
+            "/28 Subnet IP",
+            "1 Gbps Port Speed",
+            "Unmetered Bandwidth",
+            "1000 Watt Power"
+          ],
+          "cta": "Order 10U"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "id": "colocation-quote",
+      "heading": "Custom Rack or Full Rack?",
+      "description": "Need more space or specific power requirements? Our team can design a bespoke colocation solution for your enterprise growth.",
+      "cta": {
+        "label": "Contact Sales",
+        "href": "/contact"
+      }
+    },
+    {
+      "type": "facilities",
+      "id": "colocation-facilities",
+      "heading": "World-Class Data Center Facilities",
+      "description": "We prioritize reliability and security above all else. Our facilities are designed to exceed enterprise standards.",
+      "items": [
+        {
+          "title": "Always Online",
+          "description": "Redundant N+1 UPS systems backed by industrial-grade diesel generators ensure your servers never lose power.",
+          "icon": "power"
+        },
+        {
+          "title": "Power Redundancy",
+          "description": "Dual power feeds (A+B) are available for all rack spaces, providing ultimate fault tolerance for critical loads.",
+          "icon": "plug"
+        },
+        {
+          "title": "Precision Cooling",
+          "description": "Advanced CRAC units maintain optimal temperature and humidity levels using cold-aisle containment technology.",
+          "icon": "snowflake"
+        },
+        {
+          "title": "Multi-Homed Network",
+          "description": "Connected to multiple Tier-1 upstream providers and major Internet Exchanges for low-latency routing.",
+          "icon": "globe"
+        },
+        {
+          "title": "Physical Security",
+          "description": "24/7 onsite security personnel, biometric access control, and high-definition CCTV monitoring of all zones.",
+          "icon": "fingerprint"
+        },
+        {
+          "title": "Remote Hands 24/7",
+          "description": "Professional technicians available around the clock for reboots, cable swaps, and basic hardware troubleshooting.",
+          "icon": "headset"
+        }
+      ]
+    },
+    {
+      "type": "process",
+      "id": "colocation-process",
+      "heading": "Colocation Process",
+      "steps": [
+        {
+          "title": "Pick and Order",
+          "description": "Select the rack unit size and power specifications that fit your server hardware."
+        },
+        {
+          "title": "Ship Server",
+          "description": "Ship your hardware to our data center or visit us for a scheduled installation with our team."
+        },
+        {
+          "title": "Go Live",
+          "description": "Our engineers rack and stack your equipment, configure the network, and you are online."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "colocation-faq",
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is colocation server?",
+          "answer": "Colocation is a service where you provide your own server hardware, and we provide the physical space, power, cooling, and high-speed internet connectivity in our Tier-3 data center. It allows you to maintain full control over your hardware while leveraging enterprise-grade infrastructure."
+        },
+        {
+          "question": "How to access my server?",
+          "answer": "You can access your server remotely via SSH, RDP, or IPMI/iDRAC/KVM. For physical maintenance, you can schedule a visit to our data center during business hours or utilize our 24/7 Remote Hands service for urgent tasks."
+        },
+        {
+          "question": "Can I add IP addresses?",
+          "answer": "Yes, additional IP addresses can be requested at any time. We offer both single IPs and larger subnets (/29, /28, etc.) depending on your technical requirements and justification."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "id": "colocation-cta",
+      "heading": "Ready to Colocate Your Server?",
+      "description": "Join hundreds of enterprises that trust Cloud Host for their mission-critical infrastructure.",
+      "ctas": [
+        { "label": "Order Now", "href": "/products" },
+        { "label": "Consult with Expert", "href": "/contact" }
+      ]
+    }
+  ]
+}

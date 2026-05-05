@@ -10,6 +10,7 @@ import {
   Lock,
 } from 'lucide-react';
 import { SectionContainer } from '@/components/SectionContainer';
+import { ICON_COLORS } from '@/lib/iconColors';
 
 interface IncludedFeatureItem {
   title: string;
@@ -82,6 +83,7 @@ const DEFAULT_ITEMS: IncludedFeatureItem[] = [
   },
 ];
 
+
 export function IncludedFeaturesSection({ content }: IncludedFeaturesSectionProps) {
   const label = content?.label ?? 'Exciting Features';
   const heading = content?.heading ?? 'All Plans Included';
@@ -104,15 +106,16 @@ export function IncludedFeaturesSection({ content }: IncludedFeaturesSectionProp
         </p>
       </div>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((item) => {
+        {items.map((item, index) => {
           const Icon = ICONS[item.icon ?? 'sparkles'] ?? Sparkles;
+          const colors = ICON_COLORS[index % ICON_COLORS.length];
 
           return (
             <div
               key={item.title}
               className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-outline-variant/50 dark:bg-surface-container"
             >
-              <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-blue-600 dark:bg-surface-container-high dark:text-on-surface">
+              <span className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl ${colors.bg} ${colors.text}`}>
                 <Icon className="h-5 w-5" />
               </span>
               <h3 className="text-base font-bold text-slate-900 dark:text-on-surface">
